@@ -1,0 +1,1233 @@
+DoublePropotionalTest
+tREBOOT
+Memory detected!
+Initialize MS5611 Sensor
+Sensor detected!
+Ematch is asummed not being connected. Not cheking Ematch connection. If you want to, check the code line 90
+ launch threshold: 2.00 m
+ land threshold: -3.00 m
+Reading rate 10 ms
+0.0000000000 s -> 6.12 m
+It is now ascending.
+0.0179999995 s -> 11.15 m
+It is now ascending.
+0.1369999885 s -> 11.66 m
+It is now ascending.
+0.2549999952 s -> 12.51 m
+It is now ascending.
+0.3730000019 s -> 12.85 m
+It is now ascending.
+0.4920000076 s -> 13.87 m
+It is now ascending.
+0.6100000381 s -> 14.13 m
+It is now ascending.
+0.7289999961 s -> 14.64 m
+It is now ascending.
+0.8460000038 s -> 15.49 m
+It is now ascending.
+0.9649999618 s -> 16.34 m
+It is now ascending.
+1.0829999446 s -> 16.77 m
+It is now ascending.
+1.2020000219 s -> 17.62 m
+It is now ascending.
+1.3200000524 s -> 17.87 m
+It is now ascending.
+1.4379999637 s -> 18.64 m
+It is now ascending.
+1.5570000648 s -> 18.81 m
+It is now ascending.
+1.6749999523 s -> 19.75 m
+It is now ascending.
+1.7940000534 s -> 20.17 m
+It is now ascending.
+1.9110000610 s -> 20.60 m
+It is now ascending.
+2.0299999713 s -> 20.94 m
+It is now ascending.
+2.1480000019 s -> 21.28 m
+Apogee detecting going on.
+It is now ascending.
+2.2809998989 s -> 22.05 m
+It is now ascending.
+2.4000000953 s -> 22.65 m
+It is now ascending.
+2.5179998874 s -> 23.41 m
+It is now ascending.
+2.6359999179 s -> 23.67 m
+It is now ascending.
+2.7539999485 s -> 24.78 m
+It is now ascending.
+2.8870000839 s -> 25.12 m
+It is now ascending.
+3.0050001144 s -> 25.63 m
+It is now ascending.
+3.1240000724 s -> 26.65 m
+It is now ascending.
+3.2430000305 s -> 27.16 m
+It is now ascending.
+3.3599998950 s -> 27.50 m
+Apogee detecting going on.
+It is now ascending.
+3.4939999580 s -> 28.53 m
+It is now ascending.
+3.6110000610 s -> 29.38 m
+It is now ascending.
+3.7300000190 s -> 29.81 m
+It is now ascending.
+3.8480000495 s -> 30.91 m
+It is now ascending.
+3.9670000076 s -> 32.02 m
+It is now ascending.
+4.0989999771 s -> 32.45 m
+It is now ascending.
+4.2170000076 s -> 33.39 m
+It is now ascending.
+4.3359999656 s -> 33.65 m
+It is now ascending.
+4.4539999961 s -> 34.07 m
+It is now ascending.
+4.5729999542 s -> 35.27 m
+Apogee detecting going on.
+It is now ascending.
+4.7049999237 s -> 35.44 m
+It is now ascending.
+4.8239998817 s -> 36.55 m
+It is now ascending.
+4.9409999847 s -> 36.80 m
+It is now ascending.
+5.0599999427 s -> 37.40 m
+It is now ascending.
+5.1789999008 s -> 37.74 m
+It is now ascending.
+5.3109998703 s -> 38.85 m
+It is now ascending.
+5.4299998283 s -> 39.87 m
+It is now ascending.
+5.5479998588 s -> 40.56 m
+It is now ascending.
+5.6659998893 s -> 40.47 m
+It is now ascending.
+5.7839999198 s -> 41.24 m
+Apogee detecting going on.
+It is now ascending.
+5.9169998168 s -> 42.43 m
+It is now ascending.
+6.0359997749 s -> 43.03 m
+It is now ascending.
+6.1539998054 s -> 43.46 m
+It is now ascending.
+6.2729997634 s -> 44.66 m
+It is now ascending.
+6.3899998664 s -> 44.91 m
+It is now ascending.
+6.5240001678 s -> 46.79 m
+It is now ascending.
+6.6409997940 s -> 47.56 m
+It is now ascending.
+6.7600002288 s -> 47.73 m
+It is now ascending.
+6.8779997825 s -> 47.65 m
+It is now ascending.
+6.9970002174 s -> 48.84 m
+Apogee detecting going on.
+It is now ascending.
+7.1300001144 s -> 48.59 m
+It is now ascending.
+7.2470002174 s -> 49.95 m
+It is now ascending.
+7.3660001754 s -> 50.12 m
+It is now ascending.
+7.4840002059 s -> 50.38 m
+It is now ascending.
+7.6030001640 s -> 52.09 m
+It is now ascending.
+7.7350001335 s -> 51.75 m
+It is now ascending.
+7.8540000915 s -> 52.00 m
+It is now ascending.
+7.9710001945 s -> 51.92 m
+It is now ascending.
+8.0900001525 s -> 52.86 m
+It is now ascending.
+8.2080001831 s -> 53.11 m
+Apogee detecting going on.
+It is now ascending.
+8.3409996032 s -> 53.37 m
+It is now ascending.
+8.4600000381 s -> 54.14 m
+It is now ascending.
+8.5780000686 s -> 54.91 m
+It is now ascending.
+8.6960000991 s -> 55.42 m
+It is now ascending.
+8.8140001296 s -> 56.19 m
+It is now ascending.
+8.9469995498 s -> 56.62 m
+It is now ascending.
+9.0649995803 s -> 56.96 m
+It is now ascending.
+9.1840000152 s -> 57.47 m
+It is now ascending.
+9.3020000457 s -> 58.33 m
+It is now ascending.
+9.4200000762 s -> 58.16 m
+Apogee detecting going on.
+It is now ascending.
+9.5539999008 s -> 59.44 m
+It is now ascending.
+9.6709995269 s -> 60.12 m
+It is now ascending.
+9.7899999618 s -> 60.81 m
+It is now ascending.
+9.9079999923 s -> 61.58 m
+It is now ascending.
+10.0270004272 s -> 62.01 m
+It is now ascending.
+10.1590003967 s -> 62.61 m
+It is now ascending.
+10.2779998779 s -> 63.12 m
+It is now ascending.
+10.3950004577 s -> 64.32 m
+It is now ascending.
+10.5139999389 s -> 64.57 m
+It is now ascending.
+10.6319999694 s -> 65.00 m
+Apogee detecting going on.
+It is now ascending.
+10.7650003433 s -> 65.34 m
+It is now ascending.
+10.8839998245 s -> 66.29 m
+It is now ascending.
+11.0010004043 s -> 67.06 m
+It is now ascending.
+11.1199998855 s -> 67.74 m
+It is now ascending.
+11.2379999160 s -> 68.08 m
+It is now ascending.
+11.3710002899 s -> 68.60 m
+It is now ascending.
+11.4890003204 s -> 69.20 m
+It is now ascending.
+11.6079998016 s -> 70.14 m
+It is now ascending.
+11.7250003814 s -> 70.56 m
+It is now ascending.
+11.8439998626 s -> 71.08 m
+Apogee detecting going on.
+It is now ascending.
+11.9759998321 s -> 72.19 m
+It is now ascending.
+12.0950002670 s -> 72.70 m
+It is now ascending.
+12.2139997482 s -> 73.30 m
+It is now ascending.
+12.3319997787 s -> 74.16 m
+It is now ascending.
+12.4499998092 s -> 74.50 m
+It is now ascending.
+12.5830001831 s -> 75.28 m
+It is now ascending.
+12.7010002136 s -> 75.88 m
+It is now ascending.
+12.8190002441 s -> 76.22 m
+It is now ascending.
+12.9379997253 s -> 77.08 m
+It is now ascending.
+13.0570001602 s -> 77.42 m
+Apogee detecting going on.
+It is now ascending.
+13.1890001296 s -> 78.19 m
+It is now ascending.
+13.3079996109 s -> 78.70 m
+It is now ascending.
+13.4250001907 s -> 79.30 m
+It is now ascending.
+13.5439996719 s -> 79.64 m
+It is now ascending.
+13.6630001068 s -> 79.99 m
+It is now ascending.
+13.7950000762 s -> 80.67 m
+It is now ascending.
+13.9139995574 s -> 81.53 m
+It is now ascending.
+14.0310001373 s -> 81.96 m
+It is now ascending.
+14.1499996185 s -> 82.99 m
+It is now ascending.
+14.2679996490 s -> 83.24 m
+Apogee detecting going on.
+It is now ascending.
+14.4010000228 s -> 84.02 m
+It is now ascending.
+14.5200004577 s -> 85.04 m
+It is now ascending.
+14.6379995346 s -> 85.30 m
+It is now ascending.
+14.7559995651 s -> 85.82 m
+It is now ascending.
+14.8739995956 s -> 86.50 m
+It is now ascending.
+15.0069999694 s -> 87.27 m
+It is now ascending.
+15.1250000000 s -> 87.62 m
+It is now ascending.
+15.2440004348 s -> 87.87 m
+It is now ascending.
+15.3629999160 s -> 88.82 m
+It is now ascending.
+15.4799995422 s -> 89.42 m
+Apogee detecting going on.
+It is now ascending.
+15.6140003204 s -> 90.02 m
+It is now ascending.
+15.7309999465 s -> 91.05 m
+It is now ascending.
+15.8500003814 s -> 91.31 m
+It is now ascending.
+15.9680004119 s -> 92.25 m
+It is now ascending.
+16.0869998931 s -> 92.68 m
+It is now ascending.
+16.2199993133 s -> 93.54 m
+It is now ascending.
+16.3379993438 s -> 94.05 m
+It is now ascending.
+16.4559993743 s -> 94.57 m
+It is now ascending.
+16.5739994049 s -> 95.17 m
+It is now ascending.
+16.6930007934 s -> 95.34 m
+Apogee detecting going on.
+It is now ascending.
+16.8250007629 s -> 96.20 m
+It is now ascending.
+16.9440002441 s -> 96.88 m
+It is now ascending.
+17.0629997253 s -> 97.57 m
+It is now ascending.
+17.1800003051 s -> 98.69 m
+It is now ascending.
+17.2989997863 s -> 98.60 m
+It is now ascending.
+17.4309997558 s -> 99.72 m
+It is now ascending.
+17.5499992370 s -> 100.14 m
+It is now ascending.
+17.6679992675 s -> 100.32 m
+It is now ascending.
+17.7870006561 s -> 100.92 m
+It is now ascending.
+17.9039993286 s -> 101.61 m
+Apogee detecting going on.
+It is now ascending.
+18.0370006561 s -> 102.72 m
+It is now ascending.
+18.1560001373 s -> 103.24 m
+It is now ascending.
+18.2740001678 s -> 103.67 m
+It is now ascending.
+18.3929996490 s -> 104.53 m
+It is now ascending.
+18.5100002288 s -> 104.87 m
+It is now ascending.
+18.6439990997 s -> 105.73 m
+It is now ascending.
+18.7609996795 s -> 105.98 m
+It is now ascending.
+18.8799991607 s -> 106.50 m
+It is now ascending.
+18.9990005493 s -> 107.19 m
+It is now ascending.
+19.1170005798 s -> 107.79 m
+Apogee detecting going on.
+It is now ascending.
+19.2500000000 s -> 107.88 m
+It is now ascending.
+19.3680000305 s -> 108.99 m
+It is now ascending.
+19.4860000610 s -> 109.59 m
+It is now ascending.
+19.6040000915 s -> 110.02 m
+It is now ascending.
+19.7229995727 s -> 110.80 m
+It is now ascending.
+19.8560009002 s -> 111.66 m
+It is now ascending.
+19.9740009307 s -> 112.26 m
+It is now ascending.
+20.0930004119 s -> 112.26 m
+It is now ascending.
+20.2099990844 s -> 113.29 m
+It is now ascending.
+20.3290004730 s -> 113.37 m
+Apogee detecting going on.
+It is now ascending.
+20.4610004425 s -> 113.89 m
+It is now ascending.
+20.5799999237 s -> 114.58 m
+It is now ascending.
+20.6979999542 s -> 114.75 m
+It is now ascending.
+20.8169994354 s -> 115.53 m
+It is now ascending.
+20.9349994659 s -> 115.53 m
+It is now ascending.
+21.0669994354 s -> 116.30 m
+It is now ascending.
+21.1860008239 s -> 116.30 m
+It is now ascending.
+21.3040008544 s -> 116.99 m
+It is now ascending.
+21.4230003356 s -> 116.81 m
+It is now ascending.
+21.5400009155 s -> 117.07 m
+Apogee detecting going on.
+It is now ascending.
+21.6739997863 s -> 117.59 m
+It is now ascending.
+21.7919998168 s -> 118.19 m
+It is now ascending.
+21.9099998474 s -> 118.54 m
+It is now ascending.
+22.0289993286 s -> 118.71 m
+It is now ascending.
+22.1469993591 s -> 118.88 m
+It is now ascending.
+22.2800006866 s -> 118.88 m
+It is now ascending.
+22.3980007171 s -> 119.31 m
+It is now ascending.
+22.5160007476 s -> 119.57 m
+It is now ascending.
+22.6340007781 s -> 119.31 m
+It is now ascending.
+22.7530002593 s -> 119.91 m
+Apogee detecting going on.
+It is now ascending.
+22.8850002288 s -> 119.74 m
+It is now ascending.
+23.0039997100 s -> 120.00 m
+It is now ascending.
+23.1219997406 s -> 119.82 m
+It is now ascending.
+23.2399997711 s -> 119.48 m
+It is now ascending.
+23.3589992523 s -> 119.57 m
+It is now ascending.
+23.4909992218 s -> 120.00 m
+It is now ascending.
+23.6100006103 s -> 120.69 m
+It is now ascending.
+23.7280006408 s -> 120.51 m
+It is now ascending.
+23.8470001220 s -> 120.60 m
+It is now ascending.
+23.9640007019 s -> 120.26 m
+Apogee detecting going on.
+It is now ascending.
+24.0970001220 s -> 119.91 m
+It is now ascending.
+24.2159996032 s -> 119.74 m
+It is now ascending.
+24.3339996337 s -> 119.22 m
+It is now ascending.
+24.4529991149 s -> 119.22 m
+It is now ascending.
+24.5709991455 s -> 118.45 m
+It is now ascending.
+24.7040004730 s -> 118.62 m
+It is now ascending.
+24.8209991455 s -> 118.45 m
+It is now ascending.
+24.9400005340 s -> 117.42 m
+It is now ascending.
+25.0590000152 s -> 117.16 m
+It is now ascending.
+25.1770000457 s -> 116.47 m
+Apogee detecting going on.
+It is now ascending.
+25.3099994659 s -> 116.13 m
+It is now ascending.
+25.4279994964 s -> 115.44 m
+It is now ascending.
+25.5459995269 s -> 115.70 m
+It is now ascending.
+25.6639995574 s -> 115.35 m
+It is now ascending.
+25.7830009460 s -> 114.92 m
+It is now ascending.
+25.9160003662 s -> 115.01 m
+It is now ascending.
+26.0340003967 s -> 114.67 m
+It is now ascending.
+26.1529998779 s -> 113.98 m
+It is now ascending.
+26.2700004577 s -> 113.89 m
+It is now ascending.
+26.3889999389 s -> 114.24 m
+Apogee detecting going on.
+Apogee detected.
+ Drogue released  
+It is now Descending.
+1760
+26.5209999084 s -> 112.34 m
+Main deployed
+It is now Descending
+26.6399993896 s -> 111.91 m
+It is now Descending
+26.7590007781 s -> 110.97 m
+It is now Descending
+26.8770008087 s -> 110.71 m
+It is now Descending
+26.9950008392 s -> 110.28 m
+It is now Descending
+27.1270008087 s -> 109.85 m
+It is now Descending
+27.2460002899 s -> 109.51 m
+It is now Descending
+27.3640003204 s -> 108.39 m
+It is now Descending
+27.4829998016 s -> 108.39 m
+It is now Descending
+27.6019992828 s -> 107.88 m
+It is now Descending
+27.7339992523 s -> 107.36 m
+It is now Descending
+27.8519992828 s -> 106.76 m
+It is now Descending
+27.9699993133 s -> 106.16 m
+It is now Descending
+28.0890007019 s -> 105.73 m
+It is now Descending
+28.2070007324 s -> 105.47 m
+It is now Descending
+28.3400001525 s -> 105.13 m
+It is now Descending
+28.4580001831 s -> 104.35 m
+It is now Descending
+28.5760002136 s -> 104.18 m
+It is now Descending
+28.6949996948 s -> 103.67 m
+It is now Descending
+28.8129997253 s -> 103.32 m
+It is now Descending
+28.9459991455 s -> 102.89 m
+It is now Descending
+29.0639991760 s -> 102.38 m
+It is now Descending
+29.1830005645 s -> 101.78 m
+It is now Descending
+29.2999992370 s -> 101.86 m
+It is now Descending
+29.4190006256 s -> 101.78 m
+It is now Descending
+29.5520000457 s -> 101.35 m
+It is now Descending
+29.6700000762 s -> 101.35 m
+It is now Descending
+29.7889995574 s -> 100.75 m
+It is now Descending
+29.9069995880 s -> 100.66 m
+It is now Descending
+30.0249996185 s -> 100.49 m
+It is now Descending
+30.1569995880 s -> 99.89 m
+It is now Descending
+30.2759990692 s -> 99.72 m
+It is now Descending
+30.3950004577 s -> 99.29 m
+It is now Descending
+30.5130004882 s -> 98.94 m
+It is now Descending
+30.6319999694 s -> 98.77 m
+It is now Descending
+30.7639999389 s -> 98.94 m
+It is now Descending
+30.8819999694 s -> 99.03 m
+It is now Descending
+31.0000000000 s -> 98.77 m
+It is now Descending
+31.1189994812 s -> 98.77 m
+It is now Descending
+31.2369995117 s -> 98.34 m
+It is now Descending
+31.3700008392 s -> 97.83 m
+It is now Descending
+31.4890003204 s -> 97.66 m
+It is now Descending
+31.6060009002 s -> 97.05 m
+It is now Descending
+31.7250003814 s -> 96.63 m
+It is now Descending
+31.8430004119 s -> 95.94 m
+It is now Descending
+31.9759998321 s -> 95.34 m
+It is now Descending
+32.0950012207 s -> 94.65 m
+It is now Descending
+32.2130012512 s -> 93.88 m
+It is now Descending
+32.3310012817 s -> 93.71 m
+It is now Descending
+32.4490013122 s -> 93.28 m
+It is now Descending
+32.5820007324 s -> 93.19 m
+It is now Descending
+32.7000007629 s -> 92.51 m
+It is now Descending
+-32.7169990539 s -> 93.02 m
+It is now Descending
+-32.5979995727 s -> 93.28 m
+It is now Descending
+-32.4809989929 s -> 92.93 m
+It is now Descending
+-32.3479995727 s -> 93.28 m
+It is now Descending
+-32.2299995422 s -> 93.02 m
+It is now Descending
+-32.1110000610 s -> 92.16 m
+It is now Descending
+-31.9930000305 s -> 92.16 m
+It is now Descending
+-31.8740005493 s -> 91.65 m
+It is now Descending
+-31.7409992218 s -> 91.73 m
+It is now Descending
+-31.6240005493 s -> 91.56 m
+It is now Descending
+-31.5049991607 s -> 91.91 m
+It is now Descending
+-31.3869991302 s -> 92.33 m
+It is now Descending
+-31.2679996490 s -> 91.48 m
+It is now Descending
+-31.1359996795 s -> 90.53 m
+It is now Descending
+-31.0170001983 s -> 91.56 m
+It is now Descending
+-30.8990001678 s -> 91.13 m
+It is now Descending
+-30.7810001373 s -> 91.13 m
+It is now Descending
+-30.6620006561 s -> 90.02 m
+It is now Descending
+-30.5300006866 s -> 90.19 m
+It is now Descending
+-30.4109992980 s -> 89.68 m
+It is now Descending
+-30.2929992675 s -> 90.45 m
+It is now Descending
+-30.1749992370 s -> 89.42 m
+It is now Descending
+-30.0559997558 s -> 89.33 m
+It is now Descending
+-29.9239997863 s -> 89.16 m
+It is now Descending
+-29.8050003051 s -> 88.47 m
+It is now Descending
+-29.6870002746 s -> 88.65 m
+It is now Descending
+-29.5680007934 s -> 87.79 m
+It is now Descending
+-29.4510002136 s -> 87.53 m
+It is now Descending
+-29.3169994354 s -> 87.02 m
+It is now Descending
+-29.1989994049 s -> 86.76 m
+It is now Descending
+-29.0809993743 s -> 86.85 m
+It is now Descending
+-28.9619998931 s -> 86.16 m
+It is now Descending
+-28.8439998626 s -> 85.56 m
+It is now Descending
+-28.7110004425 s -> 85.47 m
+It is now Descending
+-28.5939998626 s -> 85.47 m
+It is now Descending
+-28.4750003814 s -> 85.47 m
+It is now Descending
+-28.3560009002 s -> 85.04 m
+It is now Descending
+-28.2380008697 s -> 84.79 m
+It is now Descending
+-28.1049995422 s -> 84.19 m
+It is now Descending
+-27.9869995117 s -> 83.84 m
+It is now Descending
+-27.8689994812 s -> 84.10 m
+It is now Descending
+-27.7509994506 s -> 83.76 m
+It is now Descending
+-27.6319999694 s -> 83.67 m
+It is now Descending
+-27.4990005493 s -> 83.42 m
+It is now Descending
+-27.3810005187 s -> 82.56 m
+It is now Descending
+-27.2619991302 s -> 82.05 m
+It is now Descending
+-27.1450004577 s -> 82.56 m
+It is now Descending
+-27.0259990692 s -> 82.05 m
+It is now Descending
+-26.8939990997 s -> 80.93 m
+It is now Descending
+-26.7749996185 s -> 80.33 m
+It is now Descending
+-26.6569995880 s -> 79.73 m
+It is now Descending
+-26.5380001068 s -> 79.99 m
+It is now Descending
+-26.4209995269 s -> 79.56 m
+It is now Descending
+-26.2870006561 s -> 78.10 m
+It is now Descending
+-26.1690006256 s -> 77.85 m
+It is now Descending
+-26.0510005950 s -> 76.90 m
+It is now Descending
+-25.9319992065 s -> 77.16 m
+It is now Descending
+-25.8139991760 s -> 77.16 m
+It is now Descending
+-25.6809997558 s -> 76.22 m
+It is now Descending
+-25.5639991760 s -> 76.73 m
+It is now Descending
+-25.4449996948 s -> 76.05 m
+It is now Descending
+-25.3260002136 s -> 75.19 m
+It is now Descending
+-25.2080001831 s -> 74.85 m
+It is now Descending
+-25.0750007629 s -> 74.42 m
+It is now Descending
+-24.9570007324 s -> 73.48 m
+It is now Descending
+-24.8390007019 s -> 73.56 m
+It is now Descending
+-24.7210006713 s -> 73.22 m
+It is now Descending
+-24.6019992828 s -> 72.28 m
+It is now Descending
+-24.4689998626 s -> 72.02 m
+It is now Descending
+-24.3509998321 s -> 71.59 m
+It is now Descending
+-24.2320003509 s -> 71.25 m
+It is now Descending
+-24.1149997711 s -> 71.16 m
+It is now Descending
+-23.9960002899 s -> 70.14 m
+It is now Descending
+-23.8640003204 s -> 70.14 m
+It is now Descending
+-23.7450008392 s -> 70.05 m
+It is now Descending
+-23.6259994506 s -> 69.28 m
+It is now Descending
+-23.5079994201 s -> 68.77 m
+It is now Descending
+-23.3899993896 s -> 67.74 m
+It is now Descending
+-23.2569999694 s -> 68.94 m
+It is now Descending
+-23.1389999389 s -> 67.91 m
+It is now Descending
+-23.0209999084 s -> 67.57 m
+It is now Descending
+-22.9020004272 s -> 66.29 m
+It is now Descending
+-22.7830009460 s -> 65.86 m
+It is now Descending
+-22.6509990692 s -> 65.43 m
+It is now Descending
+-22.5319995880 s -> 65.69 m
+It is now Descending
+-22.4150009155 s -> 64.57 m
+It is now Descending
+-22.2959995269 s -> 64.57 m
+It is now Descending
+-22.1779994964 s -> 63.72 m
+It is now Descending
+-22.0450000762 s -> 63.03 m
+It is now Descending
+-21.9270000457 s -> 62.69 m
+It is now Descending
+-21.8090000152 s -> 61.32 m
+It is now Descending
+-21.6900005340 s -> 61.24 m
+It is now Descending
+-21.5720005035 s -> 60.90 m
+It is now Descending
+-21.4389991760 s -> 60.55 m
+It is now Descending
+-21.3209991455 s -> 60.30 m
+It is now Descending
+-21.2019996643 s -> 58.93 m
+It is now Descending
+-21.0849990844 s -> 58.84 m
+It is now Descending
+-20.9659996032 s -> 58.67 m
+It is now Descending
+-20.8339996337 s -> 57.39 m
+It is now Descending
+-20.7150001525 s -> 57.05 m
+It is now Descending
+-20.5970001220 s -> 57.05 m
+It is now Descending
+-20.4780006408 s -> 56.79 m
+It is now Descending
+-20.3600006103 s -> 56.79 m
+It is now Descending
+-20.2269992828 s -> 55.77 m
+It is now Descending
+-20.1089992523 s -> 55.77 m
+It is now Descending
+-19.9909992218 s -> 55.00 m
+It is now Descending
+-19.8719997406 s -> 54.57 m
+It is now Descending
+-19.7539997100 s -> 53.88 m
+It is now Descending
+-19.6210002899 s -> 53.54 m
+It is now Descending
+-19.5020008087 s -> 52.69 m
+It is now Descending
+-19.3850002288 s -> 52.26 m
+It is now Descending
+-19.2660007476 s -> 51.83 m
+It is now Descending
+-19.1480007171 s -> 51.58 m
+It is now Descending
+-19.0149993896 s -> 51.06 m
+It is now Descending
+-18.8969993591 s -> 49.61 m
+It is now Descending
+-18.7779998779 s -> 49.78 m
+It is now Descending
+-18.6609992980 s -> 49.01 m
+It is now Descending
+-18.5419998168 s -> 48.93 m
+It is now Descending
+-18.4090003967 s -> 48.41 m
+It is now Descending
+-18.2910003662 s -> 48.41 m
+It is now Descending
+-18.1720008850 s -> 48.07 m
+It is now Descending
+-18.0550003051 s -> 48.16 m
+It is now Descending
+-17.9360008239 s -> 47.73 m
+It is now Descending
+-17.8040008544 s -> 47.56 m
+It is now Descending
+-17.6849994659 s -> 47.39 m
+It is now Descending
+-17.5669994354 s -> 46.88 m
+It is now Descending
+-17.4479999542 s -> 46.62 m
+It is now Descending
+-17.3299999237 s -> 46.28 m
+It is now Descending
+-17.1970005035 s -> 45.85 m
+It is now Descending
+-17.0790004730 s -> 45.51 m
+It is now Descending
+-16.9610004425 s -> 45.00 m
+It is now Descending
+-16.8419990539 s -> 45.17 m
+It is now Descending
+-16.7240009307 s -> 44.14 m
+It is now Descending
+-16.5909996032 s -> 44.57 m
+It is now Descending
+-16.4720001220 s -> 44.49 m
+It is now Descending
+-16.3549995422 s -> 44.23 m
+It is now Descending
+-16.2360000610 s -> 43.46 m
+It is now Descending
+-16.1180000305 s -> 42.61 m
+It is now Descending
+-15.9849996566 s -> 42.86 m
+It is now Descending
+-15.8669996261 s -> 42.78 m
+It is now Descending
+-15.7480001449 s -> 41.67 m
+It is now Descending
+-15.6309995651 s -> 42.43 m
+It is now Descending
+-15.5120000839 s -> 40.82 m
+It is now Descending
+-15.3789997100 s -> 40.90 m
+It is now Descending
+-15.2609996795 s -> 40.98 m
+It is now Descending
+-15.1420001983 s -> 40.47 m
+It is now Descending
+-15.0249996185 s -> 40.56 m
+It is now Descending
+-14.9060001373 s -> 40.73 m
+It is now Descending
+-14.7729997634 s -> 40.47 m
+It is now Descending
+-14.6549997329 s -> 39.96 m
+It is now Descending
+-14.5360002517 s -> 39.36 m
+It is now Descending
+-14.4180002212 s -> 39.36 m
+It is now Descending
+-14.3000001907 s -> 39.11 m
+It is now Descending
+-14.1669998168 s -> 38.85 m
+It is now Descending
+-14.0489997863 s -> 38.94 m
+It is now Descending
+-13.9309997558 s -> 38.34 m
+It is now Descending
+-13.8120002746 s -> 38.17 m
+It is now Descending
+-13.6929998397 s -> 37.57 m
+It is now Descending
+-13.5609998703 s -> 37.40 m
+It is now Descending
+-13.4420003890 s -> 37.49 m
+It is now Descending
+-13.3249998092 s -> 37.23 m
+It is now Descending
+-13.2060003280 s -> 37.23 m
+It is now Descending
+-13.0880002975 s -> 36.29 m
+It is now Descending
+-12.9549999237 s -> 36.46 m
+It is now Descending
+-12.8360004425 s -> 36.46 m
+It is now Descending
+-12.7180004119 s -> 35.69 m
+It is now Descending
+-12.6000003814 s -> 35.95 m
+It is now Descending
+-12.4820003509 s -> 35.35 m
+It is now Descending
+-12.3489999771 s -> 35.18 m
+It is now Descending
+-12.2309999465 s -> 34.41 m
+It is now Descending
+-12.1120004653 s -> 34.67 m
+It is now Descending
+-11.9930000305 s -> 33.90 m
+It is now Descending
+-11.8760004043 s -> 34.41 m
+It is now Descending
+-11.7430000305 s -> 33.99 m
+It is now Descending
+-11.6250000000 s -> 32.96 m
+It is now Descending
+-11.5059995651 s -> 32.79 m
+It is now Descending
+-11.3879995346 s -> 32.79 m
+It is now Descending
+-11.2690000534 s -> 33.05 m
+It is now Descending
+-11.1359996795 s -> 32.37 m
+It is now Descending
+-11.0190000534 s -> 31.68 m
+It is now Descending
+-10.8999996185 s -> 31.68 m
+It is now Descending
+-10.7819995880 s -> 31.17 m
+It is now Descending
+-10.6630001068 s -> 30.57 m
+It is now Descending
+-10.5310001373 s -> 30.06 m
+It is now Descending
+-10.4119997024 s -> 29.89 m
+It is now Descending
+-10.2939996719 s -> 29.89 m
+It is now Descending
+-10.1759996414 s -> 28.87 m
+It is now Descending
+-10.0570001602 s -> 28.27 m
+It is now Descending
+-9.9250001907 s -> 28.53 m
+It is now Descending
+-9.8059997558 s -> 27.76 m
+It is now Descending
+-9.6879997253 s -> 26.31 m
+It is now Descending
+-9.5699996948 s -> 25.71 m
+It is now Descending
+-9.4519996643 s -> 25.54 m
+It is now Descending
+-9.3190002441 s -> 25.71 m
+It is now Descending
+-9.2010002136 s -> 24.26 m
+It is now Descending
+-9.0819997787 s -> 24.44 m
+It is now Descending
+-8.9630002975 s -> 23.92 m
+It is now Descending
+-8.8459997177 s -> 23.58 m
+It is now Descending
+-8.7130002975 s -> 22.48 m
+It is now Descending
+-8.5950002670 s -> 22.30 m
+It is now Descending
+-8.4759998321 s -> 21.20 m
+It is now Descending
+-8.3579998016 s -> 20.86 m
+It is now Descending
+-8.2390003204 s -> 20.17 m
+It is now Descending
+-8.1059999465 s -> 19.41 m
+It is now Descending
+-7.9889998435 s -> 19.32 m
+It is now Descending
+-7.8699998855 s -> 19.07 m
+It is now Descending
+-7.7519998550 s -> 18.38 m
+It is now Descending
+-7.6329998970 s -> 18.04 m
+It is now Descending
+-7.5009999275 s -> 17.53 m
+It is now Descending
+-7.3819999694 s -> 17.45 m
+It is now Descending
+-7.2639999389 s -> 17.19 m
+It is now Descending
+-7.1459999084 s -> 16.17 m
+It is now Descending
+-7.0269999504 s -> 16.17 m
+It is now Descending
+-6.8949999809 s -> 15.66 m
+It is now Descending
+-6.7760000228 s -> 14.89 m
+It is now Descending
+-6.6570000648 s -> 14.21 m
+It is now Descending
+-6.5399999618 s -> 14.38 m
+It is now Descending
+-6.4210000038 s -> 13.96 m
+It is now Descending
+-6.2890000343 s -> 13.11 m
+It is now Descending
+-6.1700000762 s -> 13.11 m
+It is now Descending
+-6.0520000457 s -> 12.51 m
+It is now Descending
+-5.9330000877 s -> 12.08 m
+It is now Descending
+-5.8159999847 s -> 11.49 m
+It is now Descending
+-5.6830000877 s -> 11.32 m
+It is now Descending
+-5.5650000572 s -> 10.55 m
+It is now Descending
+-5.4460000991 s -> 10.81 m
+It is now Descending
+-5.3270001411 s -> 10.55 m
+It is now Descending
+-5.2090001106 s -> 9.87 m
+It is now Descending
+-4.1900000572 s -> 11111.00 m
+It is now Descending
+-4.1710000038 s -> 8.08 m
+It is now Descending
+-4.0520000457 s -> 8.00 m
+It is now Descending
+-3.9340000152 s -> 8.51 m
+It is now Descending
+-3.8159999847 s -> 7.74 m
+It is now Descending
+-3.6970000267 s -> 7.23 m
+It is now Descending
+-3.5789999961 s -> 7.23 m
+It is now Descending
+-3.4600000381 s -> 6.21 m
+It is now Descending
+-3.3429999351 s -> 6.30 m
+It is now Descending
+-3.2239999771 s -> 6.38 m
+It is now Descending
+-3.1050000190 s -> 6.89 m
+It is now Descending
+-2.9869999885 s -> 6.98 m
+It is now Descending
+-2.8689999580 s -> 6.98 m
+It is now Descending
+-2.7509999275 s -> 7.40 m
+It is now Descending
+-2.5320000648 s -> 7.32 m
+It is now Descending
+-2.5260000228 s -> 22222.00 m
+It is now Descending
+-2.5039999485 s -> 6.89 m
+It is now Descending
+-2.3849999904 s -> 6.72 m
+It is now Descending
+-2.2679998874 s -> 7.23 m
+It is now Descending
+-2.1489999294 s -> 7.06 m
+It is now Descending
+-2.0309998989 s -> 6.64 m
+It is now Descending
+-1.9119998931 s -> 6.55 m
+It is now Descending
+-1.7929999828 s -> 6.55 m
+It is now Descending
+-1.6760000228 s -> 6.64 m
+It is now Descending
+-1.5570000648 s -> 6.98 m
+It is now Descending
+-1.4390000343 s -> 6.64 m
+It is now Descending
+-1.3200000524 s -> 6.12 m
+It is now Descending
+-1.2029999494 s -> 6.72 m
+It is now Descending
+-1.0839999961 s -> 6.38 m
+It is now Descending
+-0.8659999847 s -> 6.72 m
+It is now Descending
+-0.7469999790 s -> 6.47 m
+It is now Descending
+-0.6289999961 s -> 6.30 m
+It is now Descending
+-0.5099999904 s -> 6.47 m
+It is now Descending
+-0.3919999885 s -> 6.47 m
+It is now Descending
+-0.2739999771 s -> 6.72 m
+It is now Descending
+-0.1549999952 s -> 6.30 m
+It is now Descending
+-0.0370000004 s -> 6.21 m
+It is now Descending
+0.0820000076 s -> 6.30 m
+It is now Descending
+0.1989999961 s -> 6.47 m
+It is now Descending
+0.3179999828 s -> 6.30 m
+It is now Descending
+0.4369999885 s -> 6.30 m
+It is now Descending
+0.5550000190 s -> 6.12 m
+It is now Descending
+0.6729999542 s -> 6.21 m
+It is now Descending
+0.7909999847 s -> 6.30 m
+It is now Descending
+0.9100000381 s -> 6.04 m
+It is now Descending
+1.0279999971 s -> 6.38 m
+It is now Descending
+1.1469999551 s -> 6.64 m
+It is now Descending
+1.2649999856 s -> 6.38 m
+It is now Descending
+1.3830000114 s -> 6.21 m
+It is now Descending
+1.5019999504 s -> 6.55 m
+It is now Descending
+1.6199999809 s -> 5.96 m
+It is now Descending
+1.7380000114 s -> 6.30 m
+It is now Descending
+1.8559999465 s -> 6.21 m
+It is now Descending
+1.9750000000 s -> 6.30 m
+It is now Descending
+2.0940001010 s -> 6.12 m
+It is now Descending
+2.2109999656 s -> 6.21 m
+It is now Descending
+2.3299999237 s -> 6.47 m
+It is now Descending
+2.4479999542 s -> 6.12 m
+It is now Descending
+2.5669999122 s -> 5.96 m
+It is now Descending
+2.6849999427 s -> 6.38 m
+It is now Descending
+2.8029999732 s -> 6.38 m
+It is now Descending
+2.9219999313 s -> 6.04 m
+It is now Descending
+3.0399999618 s -> 5.70 m
+It is now Descending
+3.1589999198 s -> 6.04 m
+It is now Descending
+3.2760000228 s -> 6.21 m
+It is now Descending
+3.3949999809 s -> 6.12 m
+It is now Descending
+3.5130000114 s -> 6.04 m
+It is now Descending
+3.6319999694 s -> 6.21 m
+It is now Descending
+3.7509999275 s -> 6.47 m
+It is now Descending
+3.8680000305 s -> 6.38 m
+It is now Descending
+3.9869999885 s -> 6.12 m
+It is now Descending
+4.1050000190 s -> 6.21 m
+It is now Descending
+4.2239999771 s -> 6.12 m
+It is now Descending
+4.3410000801 s -> 6.38 m
+It is now Descending
+4.4600000381 s -> 5.87 m
+It is now Descending
+4.5789999961 s -> 5.78 m
+It is now Descending
+4.6970000267 s -> 5.45 m
+It is now Descending
+4.8150000572 s -> 5.53 m
+It is now Descending
+4.9330000877 s -> 5.27 m
+It is now Descending
+5.0520000457 s -> 5.45 m
+It is now Descending
+5.1700000762 s -> 5.27 m
+It is now Descending
+5.2890000343 s -> 5.61 m
+It is now Descending
+5.4070000648 s -> 5.36 m
+It is now Descending
+5.5250000953 s -> 4.68 m
+It is now Descending
+5.6440000534 s -> 4.85 m
+It is now Descending
+5.7620000839 s -> 4.42 m
+It is now Descending
+5.8800001144 s -> 4.68 m
+It is now Descending
+5.9980001449 s -> 4.94 m
+It is now Descending
+6.1170001029 s -> 5.02 m
+It is now Descending
+6.2360000610 s -> 4.51 m
+It is now Descending
+6.3540000915 s -> 4.34 m
+It is now Descending
+6.4720001220 s -> 4.25 m
+It is now Descending
+6.5900001525 s -> 4.25 m
+It is now Descending
+6.7090001106 s -> 4.08 m
+It is now Descending
+6.8270001411 s -> 4.25 m
+It is now Descending
+6.9450001716 s -> 3.57 m
+It is now Descending
+7.0640001296 s -> 3.66 m
+It is now Descending
+7.1820001602 s -> 3.23 m
+It is now Descending
+7.3010001182 s -> 3.15 m
+It is now Descending
+7.4190001487 s -> 2.21 m
