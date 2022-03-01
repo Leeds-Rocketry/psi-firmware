@@ -1,5 +1,5 @@
 /*
-04/12/2021: v4.1: More user interface is added
+  04/12/2021: v4.1: More user interface is added
 */
 
 #include <Arduino.h>
@@ -50,11 +50,11 @@ void setup() {
   Wire.begin();
   Wire.setClock(400000); //Most EEPROMs can run 400kHz and higher
   // Get reference pressure for relative altitude
-  address = 4000;
+  address = 1600;
   relativeAltitude = 0;
   readAltitude;
 
-  myMem.setMemorySize(512000/8); //In bytes. 512kbit = 64kbyte
+  myMem.setMemorySize(512000 / 8); //In bytes. 512kbit = 64kbyte
   myMem.setPageSize(128); //In bytes. Has 128 byte page size.
   myMem.enablePollForWriteComplete(); //Supports I2C polling of write completion
   myMem.setPageWriteTime(3); //3 ms max write time
@@ -62,21 +62,22 @@ void setup() {
 
   Serial.println("adding memory");
 
-  size_TestData = sizeof(test.test_data)/4;
 
-  
-  for(int j = 0; j < size_TestData;j++){
-    myMem.put(address,test.test_data[j]);
-    myMem.get(address,readAltitude);
+  size_TestData = sizeof(test.test_data) / 4;
+
+
+  for (int j = 0; j < size_TestData; j++) {
+    myMem.put(address, test.test_data[j]);
+    myMem.get(address, readAltitude);
     Serial.print("address ->" ); Serial.println(address);
     Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
     address = psi.EEPROM_Check(address);
   }
-  Serial.println("Memory added");
+  Serial.println("Memory added.");
   psi.buzzer_powerOn(Buzzer_Set);
 }
 
 
 void loop() {
- 
+
 }

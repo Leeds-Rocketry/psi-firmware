@@ -25,6 +25,7 @@ int battery_threshold = 400; //902;// 7.4/(8.4/1024)=902.095
 float relativeAltitude;
 int address;
 float readAltitude;
+float myRead_time;
 
 PSI psi;
 ExternalEEPROM myMem;
@@ -50,7 +51,7 @@ void setup() {
   Wire.begin();
   Wire.setClock(400000); //Most EEPROMs can run 400kHz and higher
   // Get reference pressure for relative altitude
-  address = 2400;
+  address = 800;
   relativeAltitude = 0;
   readAltitude;
 
@@ -60,21 +61,18 @@ void setup() {
   myMem.setPageWriteTime(3); //3 ms max write time
 
 
-  Serial.println("adding memory");
+  Serial.println("Adding memory");
 
-
+ 
   size_TestData = sizeof(test.test_data)/4;
 
-  
   for(int j = 0; j < size_TestData;j++){
     myMem.put(address,test.test_data[j]);
     myMem.get(address,readAltitude);
-    Serial.print("address ->" ); Serial.println(address);
     Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
     address = psi.EEPROM_Check(address);
   }
-  psi.buzzer_powerOn(Buzzer_Set);
-  Serial.println("Memory added.");
+    psi.buzzer_powerOn(Buzzer_Set);
 }
 
 

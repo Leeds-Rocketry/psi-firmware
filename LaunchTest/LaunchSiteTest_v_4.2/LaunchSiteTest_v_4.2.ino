@@ -28,8 +28,8 @@ float launch_threshold = 2; // The threshold altitude when EEPROM start to store
 float land_threshold = -3;
 int reading_rate = 10;
 int sample_size = 20;
-int shift_size = 1;
-int block_size = 10;
+int shift_size = 5;
+int block_size = 10; // block size is normally half of sample size
 
 double referencePressure;
 float  absoluteAltitude, relativeAltitude;
@@ -84,24 +84,24 @@ void setup() {
   //Detect status of EEPROM, Sensor, ematches and powerLow. Each has repective tone for buzzing when it goes wrong.
   // Tone: EEPROM(...), Sensor(_..), ematches(_ _.), powerLow(_ _ _)
   //Check EEPROM
-    /*
-  while (myMem.begin() == false)
-  {
+  /*
+    while (myMem.begin() == false)
+    {
     Serial.println("No memory detected. Freezing.");
     psi.buzzer_EEPROM(Buzzer_Set);
-  }
-  Serial.println("Memory detected!");
-  // Check Sensor
-  Serial.println("Initialize MS5611 Sensor");
-  while (!BMP.begin())
-  {
+    }
+    Serial.println("Memory detected!");
+    // Check Sensor
+    Serial.println("Initialize MS5611 Sensor");
+    while (!BMP.begin())
+    {
     Serial.println("Could not find a valid MS5611 sensor, check wiring!");
     psi.buzzer_sensor(Buzzer_Set);
-  }
-  digitalWrite(Sensor_Check, HIGH); // Sensor_Check_LED on when BMP inti right
-  Serial.println("Sensor detected!");
-  Serial.println("Ematch is asummed not being connected. Not cheking Ematch connection. If you want to, check the code line 90");
-  //Check Ematches connection
+    }
+    digitalWrite(Sensor_Check, HIGH); // Sensor_Check_LED on when BMP inti right
+    Serial.println("Sensor detected!");
+    Serial.println("Ematch is asummed not being connected. Not cheking Ematch connection. If you want to, check the code line 90");
+    //Check Ematches connection
 
     while (analogRead(Drogue_Connect)==0){
     Serial.println("Drogue Ematches not connected, Check!");
@@ -114,14 +114,14 @@ void setup() {
 
     digitalWrite(Ematch_Check,HIGH); // Ematches_Check_LED on when ematches connected right
 
-  //Check battery voltage
-  int battery_val = 0;
-  battery_val = analogRead(Battery_Check);
-  while (battery_val <= battery_threshold) {
+    //Check battery voltage
+    int battery_val = 0;
+    battery_val = analogRead(Battery_Check);
+    while (battery_val <= battery_threshold) {
     Serial.println("Battery voltage too low, Charge!");
     psi.buzzer_powerLow(Buzzer_Set);
-  }
-  // Get reference pressure for relative altitude
+    }
+    // Get reference pressure for relative altitude
 
   */
   myMem.setMemorySize(512000 / 8); //In bytes. 512kbit = 64kbyte
@@ -133,6 +133,7 @@ void setup() {
   MODE = 1;
   relativeAltitude = 0;
   base_count = 0;
+
 
 
   Serial.print(" launch threshold: ");
@@ -162,9 +163,6 @@ void setup() {
 
 void loop() {
   if (MODE == 1) {
-    myMem.get(address, myRead_time);
-    address = psi.EEPROM_Check(address);
-    Serial.print(myRead_time, DEC); Serial.print(" s -> ");
     myMem.get(address, relativeAltitude);
     address = psi.EEPROM_Check(address);
     Serial.print(relativeAltitude);
@@ -177,39 +175,41 @@ void loop() {
 
   if (MODE == 2 && ascending == true) { //ACTIVE FLIGHT_TEST mode
     Serial.println("It is now ascending.");
-    myMem.get(address, myRead_time);
-    address = psi.EEPROM_Check(address);
-    Serial.print(myRead_time, DEC); Serial.print(" s -> ");
     myMem.get(address, relativeAltitude);
     address = psi.EEPROM_Check(address);
     Serial.print(relativeAltitude);
     Serial.println(" m");
     sum_propotional = 0; // initial sum
-    if (address >= sample_size*8 && address >= last_address + shift_size*8 ) {
+    if (address >= sample_size * 8 && address >= last_address + shift_size * 4 ) {
       Serial.println("Apogee detecting going on.");
       // 4+8*19 =156.  8(address increment of two altitude data ) = 2 * sizeof(float).
       //80 = 8*10; detecte next round of next 10 altitude.
       for (int i = 0; i < sample_size; i++) {
-        myMem.get(address - 4 - 8 * (sample_size-1 - i), readAltitude[i]);
+        myMem.get(address - 4 - 8 * (sample_size - 1 - i), readAltitude[i]);
+
       }
-/*
       float xm1 = 0;
       xm1 = psi.simplp(readAltitude, readAltitude_LPfiltered, block_size, xm1);
       xm1 = psi.simplp(&readAltitude[block_size], &readAltitude_LPfiltered[block_size], block_size, xm1);
-      for (int i=0;i<sample_size;i++) {
-    printf("readAltitude[%d]=%f\treadAltitude_LPfiltered[%d]=%f\n",i,readAltitude[i],i,readAltitude_LPfiltered[i]);
-  }
-   */
-
+      readAltitude_LPfiltered[0] = 2 * readAltitude_LPfiltered[0];
+      /*
+      for (int i = 0; i < sample_size; i++) {
+        if (readAltitude[i] == 0) {
+          Serial.print("address is"); Serial.println(address);
+          Serial.print("readAltitude["); Serial.print(i); Serial.print("] = "); Serial.println(readAltitude[i]);
+          Serial.print("readAltitude_LPfiltered["); Serial.print(i); Serial.print("] = "); Serial.println(readAltitude_LPfiltered[i]);
+        }
+      }
+       */
       for (int i = 0; i < sample_size; i++) {
 
         /*
           Serial.print(readAltitude[i]);
           Serial.print("m, ");
         */
-        if (i  <=sample_size-1) {
-          propotional[i] = (readAltitude[i + 1] - readAltitude[0]) / (i + 1);
-          //propotional[i] = (readAltitude_LPfiltered[i + 1] - readAltitude_LPfiltered[0]) / (i + 1);
+        if (i  <= sample_size - 1) {
+          //propotional[i] = (readAltitude[i + 1] - readAltitude[0]) / (i + 1);
+          propotional[i] = (readAltitude_LPfiltered[i + 1] - readAltitude_LPfiltered[0]) / (i + 1);
           sum_propotional += propotional[i];
           /*
             Serial.print(propotional[i]);
@@ -221,7 +221,7 @@ void loop() {
           Serial.print("sum of gradient = " );
           Serial.print(sum_propotional);
           Serial.print(", ");
-
+ /*
           Serial.print(i);
           Serial.println("th data," );
         */
@@ -243,10 +243,6 @@ void loop() {
   }
   if (MODE == 3 && ascending == false) { //ACTIVE FLIGHT_TEST mode
     Serial.println("It is now Descending.");
-    myMem.get(address, myRead_time);
-    Serial.println(address);
-    address = psi.EEPROM_Check(address);
-    Serial.print(myRead_time, DEC); Serial.print(" s -> ");
     myMem.get(address, relativeAltitude);
     address = psi.EEPROM_Check(address);
     Serial.print(relativeAltitude);
@@ -262,11 +258,6 @@ void loop() {
   }
   if (MODE == 4 && ascending == false) { //ACTIVE FLIGHT_TEST mode
     Serial.println("It is now Descending");
-    if (address == 0) MODE = 5;
-    myMem.get(address, myRead_time);
-    address = psi.EEPROM_Check(address);
-    if (address == 0) MODE = 5;
-    Serial.print(myRead_time, DEC); Serial.print(" s -> ");
     myMem.get(address, relativeAltitude);
     address = psi.EEPROM_Check(address);
     Serial.print(relativeAltitude);

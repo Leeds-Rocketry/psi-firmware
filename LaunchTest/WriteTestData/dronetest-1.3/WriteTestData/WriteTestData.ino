@@ -8,7 +8,7 @@
 #include <SparkFun_External_EEPROM.h> //download link: https://github.com/sparkfun/SparkFun_External_EEPROM_Arduino_Library.git
 #include "TestData.h"
 
-//define relevant pins
+//define relevant pins 
 #define Drogue_Release 2   //set Drogue_Release pin
 #define Main_Release 3   //set Maine_Release pin
 #define Ematch_Check 6
@@ -74,7 +74,7 @@ void setup() {
     Serial.print(address, DEC); Serial.println(" th ");Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
     address = psi.EEPROM_Check(address);
   }
-psi.buzzer_powerOn(Buzzer_Set);
+  psi.buzzer_powerOn(Buzzer_Set);
   
 }
 

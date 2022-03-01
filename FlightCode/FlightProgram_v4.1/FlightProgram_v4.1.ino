@@ -8,18 +8,31 @@
   04/12/2021 V4.1: Tips to check battery_threshold is added.
   ==============================================
 */
+/*===============================================
+Update 13/2/2022
+Change on PSI.h: 
+  1.One Buzzer Buzzing function of EEPROM ereased is added
+  ==============================================
+*/
+/*===============================================
+Update 13/2/2022
+Change on PSI.h: 
+  1.Tuneing the active buzzer is now using digitalWrite function instead of tune() which used PWM.
+  ==============================================
+*/
+
 #include <Arduino.h>
-#include <Wire.h>         //includes Wire.h library for I2C interface
+#include <Wire.h>                                           
 #include "MS5611.h"
-#include "PSI.h"         // Specifical LURA PSI library.
-#include <SparkFun_External_EEPROM.h>   //External EEPORM library. download link: https://github.com/sparkfun/SparkFun_External_EEPROM_Arduino_Library.git
+#include "PSI.h"                              
+#include <SparkFun_External_EEPROM.h>                       //External EEPORM library. download link: https://github.com/sparkfun/SparkFun_External_EEPROM_Arduino_Library.git
 
 //define relevant pins
-#define Drogue_Release 2   //set Drogue_Release pin
-#define Main_Release 3   //set Maine_Release pin
+#define Drogue_Release 3    //e-match for drogue parachute
+#define Main_Release 2      //e-match for main parachute
 #define Ematch_Check 6
 #define Sensor_Check 7
-#define Buzzer_Set 8
+#define Buzzer_Set 8        //buzzer pin
 #define Main_Connect A0   //set Maine_Release pin
 #define Battery_Check A6
 #define Drogue_Connect A7   //set Drogue_Release pin
@@ -40,6 +53,9 @@ float EEPROM_MainMarK = 22222.0;
 int reading_rate = 100;
 float drogue_start_t;
 float main_start_t;
+
+int sample_size = 20;
+int shift_size = 10;
 
 double referencePressure;
 float  absoluteAltitude, relativeAltitude;
@@ -65,6 +81,26 @@ float buffer_sum_propotional[3] = {0};
 MS5611 BMP;
 PSI psi;
 ExternalEEPROM myMem;
+
+void EEPORM_Data_Store(){
+  realPressure =   BMP.readPressure();// Read true Pressure
+  relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
+  time_ms = millis() - referenceTime;
+  time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
+  myMem.put(address, time_s_float);
+  address = psi.EEPROM_Check(address);
+  myMem.put(address, relativeAltitude);  //mark in EEPROM
+  address = psi.EEPROM_Check(address);
+}
+
+void EEPORM_Mark_Store(float Mark){
+  time_ms = millis() - referenceTime;
+  time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
+  myMem.put(address, time_s_float);
+  address = psi.EEPROM_Check(address);
+  myMem.put(address, Mark);  //mark in EEPROM
+  address = psi.EEPROM_Check(address);
+}
 
 void checkSettings()
 {
@@ -129,6 +165,8 @@ void setup() {
     psi.buzzer_powerLow(Buzzer_Set);
   }
 
+  myMem.erase();
+  psi.buzzer_EEPROMEreased(Buzzer_Set);
   // Get reference pressure for relative altitude
   referencePressure = BMP.readPressure();
   // Check settings for EEPROM
@@ -166,126 +204,53 @@ void loop() {
   }
   if (MODE == 2 && ascending == 1) { //ACTIVE FLIGHT ascending mode
     //Get time and altitude and put them to EEPROM
-    realPressure =   BMP.readPressure();// Read true Pressure
-    relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
-    time_ms = millis() - referenceTime;
-    time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
-    myMem.put(address, time_s_float);
-    address = psi.EEPROM_Check(address);
-    myMem.put(address, relativeAltitude);
-    address = psi.EEPROM_Check(address);
-    /*
+    EEPORM_Data_Store();
+
     // When addresss >=160, it shows there are 20 altitude data already. Put them in a window and calculate the overall linear approximation  to determine the appeage.
     // If not. the window shifts to next 10 altitude data (data within 0.5 second).
     //window size 20 data. Shift by 10 data
-    if (address >= 160 && address >= last_address + 80 ) { // Allocating address. 8*20 =160.  8(address increment of two altitude data ) = 2 * sizeof(float). 80 = 8*10; shift the window to the next 10 altitude.
-      for (int i = 0; i < 20; i++) {
-        myMem.get(address - 4 - 8 * (19 - i), readAltitude[i]); //just get altitude at allocated address and put them in to the 20 number size window
+    if (address >= sample_size*8 && address >= last_address + shift_size*8 ) { // Allocating address. 8*20 =160.  8(address increment of two altitude data ) = 2 * sizeof(float). 80 = 8*10; shift the window to the next 10 altitude.
+      for (int i = 0; i < sample_size; i++) {
+        myMem.get(address - 4 - 8 * (sample_size - 1 - i), readAltitude[i]); //just get altitude at allocated address and put them in to the 20 number size window
       }
-      for (int i = 0; i < 20; i++) {
-        if (i + 1 <= 19) {
+      
+      for (int i = 0; i < sample_size; i++) {
+        if (i < sample_size - 1) {
           propotional[i] = (readAltitude[i + 1] - readAltitude[0]) / (i + 1); //Calculating every data's linear approximation compared to the first data.
+          sum_propotional += propotional[i];
         }
-        if (i < 19)sum_propotional += propotional[i]; //Sum up every data's linear approximation to get this window's whole linear approximation 
       }
-      */
-      /*
-//    window size 30 data. Shift by 10 data
-      if (address >= 240 && address >= last_address + 80 ) { // Start with first 30 data. The address start from 8*30 =240. 8(address increment of two altitude data ) = 2 * sizeof(float). 80 = 8*10; detecte next round of next 10 altitude.
-        for (int i = 0; i < 30; i++) {
-          myMem.get(address - 4 - 8 * (29 - i), readAltitude[i]);
-        }
-        for (int i = 0; i < 30; i++) {
-          if (i + 1 <= 29) {
-            propotional[i] = (readAltitude[i + 1] - readAltitude[0]) / (i + 1);
-          }
-          if (i < 29)sum_propotional += propotional[i];
-        }
-*/
-   // window size 10 data. Shift by 5 data
-      if (address >= 160 && address >= last_address + 8 ) { //Start with first 20 data. The address start from 8*20 =160. 8(address increment of two altitude data ) = 2 * sizeof(float). 80 = 8*10; detecte next round of next 10 altitude.
-        for (int i = 0; i < 10; i++) {
-          myMem.get(address - 4 - 8 * (9 - i), readAltitude[i]);
-        }
-        for (int i = 0; i < 10; i++) {
-          if (i + 1 <= 9) {
-            propotional[i] = (readAltitude[i + 1] - readAltitude[0]) / (i + 1);
-          }
-          if (i < 9)sum_propotional += propotional[i];
-        }
-
-/*    window size 20 data. Shift by 1 data
-      if (address >= 160 && address >= last_address + 8 ) { // Start with first 20 data. The address start from 8*20 =160.  8(address increment of two altitude data ) = 2 * sizeof(float). 80 = 8*10; detecte next round of next 10 altitude.
-        for (int i = 0; i < 20; i++) {
-          myMem.get(address - 4 - 8 * (19 - i), readAltitude[i]);
-        }
-        for (int i = 0; i < 20; i++) {
-          if (i + 1 <= 19) {
-            propotional[i] = (readAltitude[i + 1] - readAltitude[0]) / (i + 1);
-          }
-          if (i < 19)sum_propotional += propotional[i];
-        }
-*/
         buffer_sum_propotional[1] = buffer_sum_propotional[0];
         buffer_sum_propotional[0] = sum_propotional;
+        sum_propotional = 0;
         last_address = address;//detecte next round of next 10 altitude.
-      }
-      if (buffer_sum_propotional[0] < 0 && buffer_sum_propotional[1] < 0 ) { //apogee detection method now
-        digitalWrite(Drogue_Release, HIGH);
-        psi.buzzer_powerOn(Buzzer_Set);
-        time_ms = millis() - referenceTime;
-        time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
-        myMem.put(address, time_s_float);
-        address = psi.EEPROM_Check(address);
-        myMem.put(address, EEPROM_DrogueMarK);  //mark in EEPROM
-        address = psi.EEPROM_Check(address);
-        drogue_start_t = millis();
-        while (millis() - drogue_start_t  < ignition_duration) {
-          realPressure = BMP.readPressure();// Read true Pressure
-          relativeAltitude = BMP.getAltitude(realPressure, referencePressure);
-          time_ms = millis() - referenceTime;
-          time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float
-          myMem.put(address, time_s_float);
-          address = psi.EEPROM_Check(address);
-          myMem.put(address, relativeAltitude);
-          address = psi.EEPROM_Check(address);
-          delay(reading_rate);
-        }
+        if (buffer_sum_propotional[0] < 0 && buffer_sum_propotional[1] < 0 ) { //apogee detection method now
+          digitalWrite(Drogue_Release, HIGH);
+          psi.buzzer_powerOn(Buzzer_Set);
+          EEPORM_Mark_Store(EEPROM_DrogueMarK);     
+          drogue_start_t = millis();
+          while (millis() - drogue_start_t  < ignition_duration) {
+            EEPORM_Data_Store();
+            delay(reading_rate);
+          }
         digitalWrite(Drogue_Release, LOW);
         ascending = false;
         MODE++;                                  // Move to mode 3, flight descdending mode;
       }
+    }
+
       delay(reading_rate);
     }
     if (MODE == 3 && ascending == false) { //RECOVERY MODE
-      realPressure =   BMP.readPressure();// Read true Pressure
-      relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
-      time_ms = millis() - referenceTime;
-      time_s_float = psi.ms2s(time_ms);
-      myMem.put(address, time_s_float);
-      address = psi.EEPROM_Check(address);
-      myMem.put(address, relativeAltitude);
-      address = psi.EEPROM_Check(address);
+      EEPORM_Data_Store();      
       Serial.print(relativeAltitude);
       Serial.println(" m");
-      if (relativeAltitude < main_release_a) {    // Determine when to deploy main parachute
+      if (relativeAltitude <= main_release_a) {    // Determine when to deploy main parachute
         digitalWrite(Main_Release, HIGH);
-        time_ms = millis() - referenceTime;
-        time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
-        myMem.put(address, time_s_float);
-        address = psi.EEPROM_Check(address);
-        myMem.put(address, EEPROM_MainMarK);
-        address = psi.EEPROM_Check(address);
+        EEPORM_Mark_Store(EEPROM_MainMarK); 
         main_start_t = millis();
         while (millis() - main_start_t  < ignition_duration) {
-          realPressure = BMP.readPressure();// Read true Pressure
-          relativeAltitude = BMP.getAltitude(realPressure, referencePressure);
-          time_ms = millis() - referenceTime;
-          time_s_float = psi.ms2s(time_ms);
-          myMem.put(address, time_s_float);
-          address = psi.EEPROM_Check(address);
-          myMem.put(address, relativeAltitude);
-          address = psi.EEPROM_Check(address);
+          EEPORM_Data_Store();     
           delay(reading_rate);
         }
         digitalWrite(Main_Release, LOW);

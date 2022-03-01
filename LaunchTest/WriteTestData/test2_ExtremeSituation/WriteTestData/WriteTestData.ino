@@ -8,7 +8,7 @@
 #include <SparkFun_External_EEPROM.h> //download link: https://github.com/sparkfun/SparkFun_External_EEPROM_Arduino_Library.git
 #include "TestData.h"
 
-//define relevant pins
+//define relevant pins 
 #define Drogue_Release 2   //set Drogue_Release pin
 #define Main_Release 3   //set Maine_Release pin
 #define Ematch_Check 6
@@ -25,6 +25,7 @@ int battery_threshold = 400; //902;// 7.4/(8.4/1024)=902.095
 float relativeAltitude;
 int address;
 float readAltitude;
+float myRead_time;
 
 PSI psi;
 ExternalEEPROM myMem;
@@ -50,7 +51,7 @@ void setup() {
   Wire.begin();
   Wire.setClock(400000); //Most EEPROMs can run 400kHz and higher
   // Get reference pressure for relative altitude
-  address = 3200;
+  address = 0;
   relativeAltitude = 0;
   readAltitude;
 
@@ -60,21 +61,21 @@ void setup() {
   myMem.setPageWriteTime(3); //3 ms max write time
 
 
-  Serial.println("adding memory");
-
-
+  Serial.println("Ereasing memory");
+  myMem.erase();
+  Serial.println("Memory erased.");
   size_TestData = sizeof(test.test_data)/4;
 
   
   for(int j = 0; j < size_TestData;j++){
     myMem.put(address,test.test_data[j]);
     myMem.get(address,readAltitude);
-    Serial.print("address ->" ); Serial.println(address);
-    Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
+     Serial.print(j, DEC); Serial.println(" th ");
+    Serial.print(address, DEC); Serial.println(" th ");Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
     address = psi.EEPROM_Check(address);
   }
-  Serial.println("Memory added.");
   psi.buzzer_powerOn(Buzzer_Set);
+  
 }
 
 

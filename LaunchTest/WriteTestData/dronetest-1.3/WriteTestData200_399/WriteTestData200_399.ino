@@ -72,7 +72,7 @@ void setup() {
     Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
     address = psi.EEPROM_Check(address);
   }
-psi.buzzer_powerOn(Buzzer_Set);
+    psi.buzzer_powerOn(Buzzer_Set);
 }
 
 

@@ -22,7 +22,9 @@ public:
     void buzzer_sensor(int pin_address);
     void buzzer_ematch(int pin_address);
     void buzzer_powerLow(int pin_address);
-
+    void buzzer_EEPROMEreased(int pin_address);
+    float simplp (float *x,  float *y,
+               int M, float xm1);
 
 private:
     int buttonState = 0;

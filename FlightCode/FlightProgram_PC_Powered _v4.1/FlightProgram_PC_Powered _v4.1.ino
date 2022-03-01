@@ -68,6 +68,25 @@ MS5611 BMP;
 PSI psi;
 ExternalEEPROM myMem;
 
+void EEPORM_Data_Store() {
+  realPressure =   BMP.readPressure();// Read true Pressure
+  relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
+  time_ms = millis() - referenceTime;
+  time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
+  myMem.put(address, time_s_float);
+  address = psi.EEPROM_Check(address);
+  myMem.put(address, relativeAltitude);  //mark in EEPROM
+  address = psi.EEPROM_Check(address);
+}
+
+void EEPORM_Mark_Store(float Mark) {
+  time_ms = millis() - referenceTime;
+  time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
+  myMem.put(address, time_s_float);
+  address = psi.EEPROM_Check(address);
+  myMem.put(address, Mark);  //mark in EEPROM
+  address = psi.EEPROM_Check(address);
+}
 void checkSettings()
 {
   Serial.print("Oversampling: ");
@@ -180,14 +199,7 @@ void loop() {
     delay(reading_rate);
   }
   if (MODE == 2 && ascending == 1) { //ACTIVE FLIGHT ascending mode
-    realPressure = BMP.readPressure();// Read true Pressure
-    relativeAltitude = BMP.getAltitude(realPressure, referencePressure);
-    time_ms = millis() - referenceTime;
-    time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
-    myMem.put(address, time_s_float);
-    address = psi.EEPROM_Check(address);
-    myMem.put(address, relativeAltitude);
-    address = psi.EEPROM_Check(address);
+    EEPORM_Data_Store();
     Serial.print("relativeAltitude = ");
     Serial.print(relativeAltitude);
     Serial.println(" m");
@@ -195,13 +207,14 @@ void loop() {
     //Store them to an array and do the caculation to determine if rocket reach the apogee.
     // If not. the array moves to next 10 altitude data (data within 1 second).
     if (address >= 160 && address >= last_address + 80 ) {
+      Serial.println("Apogee detecting starts.");
       // 4+8*19 =156.  8(address increment of two altitude data ) = 2 * sizeof(float).
       //80 = 8*10; detecte next round of next 10 altitude.
       for (int i = 0; i < 20; i++) {
         myMem.get(address - 4 - 8 * (19 - i), readAltitude[i]);
       }
       for (int i = 0; i < 20; i++) {
-        Serial.println("Apogee detecting starts.");
+
         Serial.print(readAltitude[i]);
         Serial.print("m, ");
         if (i + 1 <= 19) {
@@ -222,30 +235,18 @@ void loop() {
       last_address = address;
       buffer_sum_propotional[1] = buffer_sum_propotional[0];
       buffer_sum_propotional[0] = sum_propotional;
-    }
-    if (buffer_sum_propotional[0] < 0 && buffer_sum_propotional[1] < 0) { //apogee detection method now
-      digitalWrite(Drogue_Release, HIGH);
-      realPressure = BMP.readPressure();// Read true Pressure
-      relativeAltitude = BMP.getAltitude(realPressure, referencePressure);
-      myMem.put(address, time_s_float);
-      address = psi.EEPROM_Check(address);
-      myMem.put(address, EEPROM_DrogueMarK);  //mark in EEPROM
-      address = psi.EEPROM_Check(address);
-      drogue_start_t = millis();//Serial.println(drogue_start_t);
-      Serial.println("Apogee detected.");
-      Serial.println(" Drogue released  ");     // For tesing. Can be deleted for real flight
-      while (millis() - drogue_start_t < ignition_duration) {
-        //Serial.println(drogue_start_t - millis());
-        //Serial.println(ignition_duration/1000);
-        realPressure = BMP.readPressure();// Read true Pressure
-        relativeAltitude = BMP.getAltitude(realPressure, referencePressure);
-        time_ms = millis() - referenceTime;
-        time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float
-        myMem.put(address, time_s_float);
-        address = psi.EEPROM_Check(address);
-        myMem.put(address, relativeAltitude);
-        address = psi.EEPROM_Check(address);
-        delay(reading_rate);
+      sum_propotional = 0;
+      if (buffer_sum_propotional[0] < 0 && buffer_sum_propotional[1] < 0) { //apogee detection method now
+        digitalWrite(Drogue_Release, HIGH);
+        EEPORM_Mark_Store(EEPROM_DrogueMarK);
+        Serial.println("Apogee detected.");
+        Serial.println(" Drogue released  ");     // For tesing. Can be deleted for real flight
+        while (millis() - drogue_start_t < ignition_duration) {
+          //Serial.println(drogue_start_t - millis());
+          //Serial.println(ignition_duration/1000);
+          EEPORM_Data_Store();
+          delay(reading_rate);
+        }
       }
       digitalWrite(Drogue_Release, LOW);
       ascending = false;
@@ -254,40 +255,21 @@ void loop() {
     delay(reading_rate);
   }
   if (MODE == 3 && ascending == false) { //RECOVERY MODE
-    realPressure =   BMP.readPressure();// Read true Pressure
-    relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
-    time_ms = millis() - referenceTime;
-    time_s_float = psi.ms2s(time_ms);
-    myMem.put(address, time_s_float);
-    address = psi.EEPROM_Check(address);
-    myMem.put(address, relativeAltitude);
-    address = psi.EEPROM_Check(address);
+    EEPORM_Data_Store();
     Serial.print("relativeAltitude = ");
     Serial.print(relativeAltitude);
     Serial.println(" m");
     if (relativeAltitude < main_release_a) {    // Determine when to deploy main parachute
       digitalWrite(Main_Release, HIGH);
 
-      time_ms = millis() - referenceTime;
-      time_s_float = psi.ms2s(time_ms);   // ms is transferred to second(float)
-      myMem.put(address, time_s_float);
-      address = psi.EEPROM_Check(address);
-      myMem.put(address, EEPROM_MainMarK);
-      address = psi.EEPROM_Check(address);
+      EEPORM_Mark_Store(EEPROM_MainMarK);
       Serial.print(" Altitude lower than Main Release Altitude: ");
       Serial.print(main_release_a);
       Serial.println(" m");
 
       main_start_t = millis();
       while (millis() - main_start_t  < ignition_duration) {
-        realPressure = BMP.readPressure();// Read true Pressure
-        relativeAltitude = BMP.getAltitude(realPressure, referencePressure);
-        time_ms = millis() - referenceTime;
-        time_s_float = psi.ms2s(time_ms);
-        myMem.put(address, time_s_float);
-        address = psi.EEPROM_Check(address);
-        myMem.put(address, relativeAltitude);
-        address = psi.EEPROM_Check(address);
+        EEPORM_Data_Store();
         delay(reading_rate);
       }
       Serial.println(" Main released!  ");
