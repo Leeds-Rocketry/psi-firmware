@@ -36,8 +36,8 @@ void setup(void)
     Serial.print(", ");
     i+=sizeof(float);
     float myRead_altitude;
-    //Serial.print(i, DEC);
-    //Serial.print(", ");
+    Serial.print(i, DEC);
+    Serial.print(", ");
     myMem.get(i, myRead_altitude);
     Serial.println(myRead_altitude, 4);
 

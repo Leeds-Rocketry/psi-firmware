@@ -83,62 +83,62 @@ float PSI::ms2s(unsigned long ms) {
 }
 
 void PSI::buzzer_EEPROM(int pin_address) {
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(500);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(500);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(500);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(1500);
 }
 void PSI::buzzer_sensor(int pin_address) {
 
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(1000);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(500);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(500);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(1500);
 }
 
 void PSI::buzzer_ematch(int pin_address) {
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(1000);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(1000);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(1000);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(1500);
 }
 
 void PSI::buzzer_powerLow(int pin_address) {
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(1000);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(1000);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(500);
-  tone(pin_address, 200);
+  digitalWrite(pin_address, HIGH);
   delay(1000);
-  noTone(pin_address);
+  digitalWrite(pin_address, LOW);
   delay(1500);
 }
 
@@ -146,7 +146,7 @@ void PSI::buzzer_powerOn(int pin_address) {
   digitalWrite(pin_address, HIGH);
   delay(500);
   digitalWrite(pin_address, LOW);
-  delay(500);
+
 }
 
 void PSI::buzzer_EEPROMEreased(int pin_address) {
@@ -155,5 +155,4 @@ void PSI::buzzer_EEPROMEreased(int pin_address) {
   digitalWrite(pin_address, LOW);
   delay(250);
   digitalWrite(pin_address, LOW);
-  delay(250);
 }
