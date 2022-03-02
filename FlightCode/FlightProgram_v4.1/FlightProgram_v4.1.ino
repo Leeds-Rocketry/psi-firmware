@@ -44,6 +44,7 @@
 #define disk1 0x50                                           //Address of 24LC256 eeprom chip
 
 //---Declare general variables. Can be changed according to different flight condition.---
+//Can these not be #define as well? Saves runtime memory
 int battery_threshold = 902;                                 // 7.4/(8.4/1024)=902.095
 unsigned int EEPORM_storage = 64000;                         //512k 24LC256 eeprom chip has 64k bytes
 unsigned long ignition_duration = 1500;                      // Time period for ematches to be ignited. In ms
@@ -59,6 +60,7 @@ int shift_size = 10;                                         //The numerr of dat
 bool enableEmatchCheck = false;
 
 //Variables used for sensor
+//Would recommend asigning a value on variable intialization
 double referencePressure;
 float  absoluteAltitude, relativeAltitude;
 long realPressure;
@@ -88,6 +90,7 @@ MS5611 BMP;
 PSI psi;
 ExternalEEPROM myMem;
 
+// Why are these here and not in a header file? Based on a lotof global variables so extremely hard to read - what goes in and what are results of the function?
 void EEPORM_Data_Store() {
   realPressure =   BMP.readPressure();
   relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
@@ -124,7 +127,7 @@ void setup() {
   pinMode(Buzzer_Set, OUTPUT);
   pinMode(Ematch_Check, OUTPUT);
   pinMode(Sensor_Check, OUTPUT);
-
+  
   digitalWrite(Ematch_Check, LOW);
   digitalWrite(Sensor_Check, LOW);
   digitalWrite(Drogue_Release, LOW);
@@ -151,6 +154,7 @@ void setup() {
   battery_val = analogRead(Battery_Check);
   while (battery_val <= battery_threshold) psi.buzzer_powerLow(Buzzer_Set);
   //---Settings for EEPROM---
+  //Why have serial comms (checkSettings()) when on launchpad? Not connected to anything anyways
   checkSettings();
   myMem.setMemorySize(512000 / 8); //In bytes. 512kbit = 64kbyte
   myMem.setPageSize(128); //In bytes. Has 128 byte page size.
@@ -163,6 +167,7 @@ void setup() {
 }
 
 void loop() {
+  // Describe MODE 1 here
   if (MODE == 1) {
     delay(reading_rate * 10);                                           //Lower beeping rate
     psi.buzzer_powerOn(Buzzer_Set);                                     //Keeps beeping indicating PSI's working status
@@ -179,6 +184,7 @@ void loop() {
       MODE++;
     }
   }
+  //Describe MODE 2 here
   if (MODE == 2 && ascending == 1) {
     EEPORM_Data_Store();
     float readAltitude[sample_size] = {0};                        //Read form last altitude data
@@ -192,6 +198,7 @@ void loop() {
       }                                        //Allocating the right address
       for (int i = 0; i < sample_size; i++) {
         if (i < sample_size - 1) {
+          //Your approximation does not inclue the time domain? 1 dimensional data here, is this right? Does this work?
           gradient[i] = (readAltitude[i + 1] - readAltitude[0]) / (i + 1);                                             //Calculating every linear approximation.
           sum_gradient += gradient[i];
         }
