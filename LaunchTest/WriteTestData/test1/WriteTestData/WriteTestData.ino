@@ -66,17 +66,27 @@ void setup() {
   Serial.println("Memory erased.");
   size_TestData = sizeof(test.test_data)/4;
 
-  
+ 
+  size_TestData = sizeof(test.test_data)/4;
+
   for(int j = 0; j < size_TestData;j++){
+    myMem.put(address,test.test_data[j]);
+    myMem.get(address,myRead_time);
+    Serial.print(j, DEC); Serial.println(" th ");
+    Serial.print(address, DEC); Serial.println(" th ");Serial.print(myRead_time, DEC); Serial.println(" s -> ");
+    address = psi.EEPROM_Check(address);
+    j++;
     myMem.put(address,test.test_data[j]);
     myMem.get(address,readAltitude);
      Serial.print(j, DEC); Serial.println(" th ");
-    Serial.print(address, DEC); Serial.println(" th ");Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
+    Serial.print(address, DEC); Serial.println(" th ");Serial.print(readAltitude, DEC); Serial.println(" m -> ");
     address = psi.EEPROM_Check(address);
   }
+    psi.buzzer_powerOn(Buzzer_Set);
+}
+
 
   
-}
 
 
 void loop() {

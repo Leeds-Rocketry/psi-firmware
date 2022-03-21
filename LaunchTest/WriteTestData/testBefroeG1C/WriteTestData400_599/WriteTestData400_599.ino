@@ -51,7 +51,7 @@ void setup() {
   Wire.begin();
   Wire.setClock(400000); //Most EEPROMs can run 400kHz and higher
   // Get reference pressure for relative altitude
-  address = 800;
+  address = 1600;
   relativeAltitude = 0;
   readAltitude;
 

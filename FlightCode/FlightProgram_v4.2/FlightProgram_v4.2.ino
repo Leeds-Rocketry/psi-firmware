@@ -27,8 +27,16 @@
   1.Add CppQueue.h
   2.Updated new apogee detection algorithm. Apogee dection buffer does not read data from eeprom now.
 
-  ==============================================
-*/
+  ==============================================*/
+  /*===============================================
+  Update 16/3/2022
+  Change on PSI.h:
+  1.Deleted unused code
+  Change on FlightProgram:
+  1.shift_size = sample_size. Two samples have no overlapped data.
+  
+
+  ==============================================*/
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -48,7 +56,7 @@
 #define Drogue_Check A0                                      //Pin for Check the status of drogue ematch                                      
 #define Main_Check A7                                        //Pin for Check the status of main ematch
 
-#define  IMPLEMENTATION  FIFO
+#define	IMPLEMENTATION	FIFO
 
 //---Others---
 #define disk1 0x50                                              //Address of 24LC256 eeprom chip    
@@ -57,22 +65,22 @@
 #define ignition_duration  1500                                //Time period for ematches to be ignited. In ms
 #define reading_rate  60                                      //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
 
-#define sample_size  15                                        //The number of data used to determine the apogee point
-#define shift_size  5                                         //The numerr of data skiped until next sample starts
+#define sample_size  15                                        //The number of data used to determine the apogee point. There are two continues samples together to determine the apogee.
+
 
 #define main_release_a  243.8f                                 //The altitude for main parachute to be deployed. 800ft for SAC
 
-#define launch_threshold  0.5f                               // The threshold altitude when EEPROM starts storing data
-#define land_threshold  -3.0f                               // The threshold altitude when EEPROM stop saving data
-#define apogee_threshold -0.5f                              // apogee gradient threshold should be less than gradient_init
-#define gradient_init 0.0f
+#define launch_threshold  20.0f                               // The threshold altitude when EEPROM starts storing data
+#define land_threshold  10.0f                               // The threshold altitude when EEPROM stop saving data
+#define apogee_threshold 1.5f                              // apogee gradient threshold should be less than gradient_init
+#define gradient_init 2.0f
 
-bool enableEmatchCheck = false;
-bool enableBatteryCheck = false;
+bool enableEmatchCheck = true;
+bool enableBatteryCheck = true;
 
 typedef struct strData {
-  float time;
-  float altitude;
+  float	time;
+  float	altitude;
 } Data;
 
 //---Declare general variables. Can be changed according to different flight condition.---
@@ -93,19 +101,19 @@ float drogue_start_time = 0.0;                                   //Time for Drog
 float main_start_time = 0.0;                                     //Time for Drogue e match starts to be ignited
 
 //---Initialization---
-volatile int MODE = 0;                                                 //Initialize flight mode to mode 0;
-uint16_t EEPORM_storage = 64000;                                    //512k 24LC256 eeprom chip has 64k bytes
-uint16_t address = 0;                                              //EEPROM starting address
+volatile int MODE = 0;                                           //Initialize flight mode to mode 0;
+uint16_t EEPORM_storage = 64000;                                 //512k 24LC256 eeprom chip has 64k bytes
+uint16_t address = 0;                                            //EEPROM starting address
 int address_count = 0;
-
+int shift_size = 0;
 //---Initialization for apogee detection algorithm---
 float sum_gradient = 0.0f;                                       //Sum of gradients in each sample
-//float buffer_sum_gradient[3] = {0.0};                           //Up to 3 samples's gradients together determine the apogee point when all the gradients < 0
+
 //---Others---
 int battery_val = 0;
-
+unsigned long beepStart = 0;
 Data time_altitude = {0.0, 0.0};
-float buffer_sum_gradient[2] = {0.0};
+float buffer_sum_gradient[2] = {0.0};                             //Up to 3 samples's gradients together determine the apogee point when all the gradients < 0
 Data readTimeAltitude = {0.0, 0.0};
 Data forPop = {0.0, 0.0};
 
@@ -113,7 +121,7 @@ void eepromStoreData();
 void eepromStoreMark();
 float getSampleGradient(float x[], float y[], int samplesize);
 
-cppQueue  OuterSample(sizeof(Data), sample_size + shift_size, IMPLEMENTATION);  // Instantiate queue
+cppQueue	OuterSample(sizeof(Data), sample_size + shift_size, IMPLEMENTATION);	// Instantiate queue
 //---Create objects---
 MS5611 BMP;
 PSI psi;
@@ -143,8 +151,8 @@ void setup() {
   //---clear eeprom--- (not used now)
   //  myMem.erase();
   //  psi.buzzer_EEPROMEreased(Buzzer_Set);
-  Serial.begin(9600);
-  Serial.println("REBOOT");
+  //Serial.begin(9600);
+  //Serial.println("REBOOT");
   //---initialize BMP sensor---
 
   //---Detect status of EEPROM, Sensor, ematches and power.---
@@ -177,15 +185,19 @@ void setup() {
   referencePressure = BMP.readPressure();
   MODE = 1;
   EEPORM_storage = myMem.length();
-
+  shift_size = sample_size;
+  beepStart = millis();
 
 }
 
 void loop() {
   //Rocket is in ready to lanuch status in mode 1, waiting for current altitude beyond the lanuch_thershold. There is constantly beeping indicating the mode's working condition.
   if (MODE == 1) {
-    delay(reading_rate * 10);                                           //Lower beeping rate
-    psi.buzzer_powerOn(Buzzer_Set);                                     //Keeps beeping indicating PSI's working status
+
+    if (millis() - beepStart >= 3000) {
+      psi.buzzer_powerOn(Buzzer_Set);                               //Keeps beeping indicating PSI's working status
+      beepStart = millis();
+    }
     realPressure =   BMP.readPressure();
     relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
     //absoluteAltitude =   BMP.getAltitude(realPressure);
@@ -199,6 +211,7 @@ void loop() {
       address = psi.EEPROM_Check(address, EEPORM_storage);
       MODE++;
     }
+    delay(reading_rate);
   }
   //Mode 2 is flight ascending mode where the aopgee detection runs.
   //apogee detection: There are two samples average greident are taken as the determiniation for apogee. Those tow deteminations have to be both negative to determine the apogee. The first sample has 20 altitude data and the next sample starts from the 11th data of next sample.
@@ -222,57 +235,37 @@ void loop() {
         OuterSample.peekIdx(&readTimeAltitude, i);
         readAltitude[i] = readTimeAltitude.altitude;
         readTime[i] = readTimeAltitude.time;
-
-        Serial.print(i);
-        Serial.print(" th,  ");
-        Serial.print("time ->");
-        Serial.print(readTime[i]);
-        Serial.print(", altitude ->  ");
-        Serial.println( readAltitude[i]);
-
+        /*
+          Serial.print(i);
+          Serial.print(" th,  ");
+          Serial.print("time ->");
+          Serial.print(readAltitude[i]);
+          Serial.print(", altitude ->  ");
+          Serial.println(readTime[i]);
+        */
       }
       sum_gradient = getSampleGradient(readTime, readAltitude, sample_size);
       buffer_sum_gradient[0] = sum_gradient;
-      Serial.print(" 1th sum_gradient = "); Serial.println(sum_gradient);
+      //Serial.print(" 1th sum_gradient = "); Serial.println(sum_gradient);
 
       for (int i = shift_size; i < sample_size + shift_size; i++) {
         OuterSample.peekIdx(&readTimeAltitude, i);
         readAltitude[i - shift_size] = readTimeAltitude.altitude;
         readTime[i - shift_size] = readTimeAltitude.time;
-
-        Serial.print(i);
-        Serial.print(" th,  ");
-        Serial.print("time ->");
-        Serial.print(readTimeAltitude.time);
-        Serial.print(", altitude ->  ");
-        Serial.println(readTimeAltitude.altitude);
-
+        /*
+          Serial.print(i);
+          Serial.print(" th,  ");
+          Serial.print("time ->");
+          Serial.print(readTimeAltitude.time);
+          Serial.print(", altitude ->  ");
+          Serial.println(readTimeAltitude.altitude);
+        */
       }
       sum_gradient = getSampleGradient(readTime, readAltitude, sample_size);
       buffer_sum_gradient[1] = sum_gradient;
-      Serial.print(" 2nd sum_gradient = "); Serial.println(sum_gradient);
-      OuterSample.pop(&forPop);
+      //Serial.print(" 2nd sum_gradient = "); Serial.println(sum_gradient);
+      OuterSample.pop(&forPop);                                                                             //Shifting
     }
-
-
-    /*
-      // When addresss >=160, it shows there are 20 altitude data already. Put them in a window and calculate the overall linear approximation  to determine the appeage.
-      // If not. the window shifts to next 10 altitude data (data within 0.5 second).
-      // Window size 20 data. Next sample is shifted by 10 data
-      if (address >= (sample_size + shift_size) * 8 && address >= last_address + 8 ) {                                    //Time+altitdue has 8 bytes in total
-      for (int i = 0; i < sample_size; i++) {                                                                           //Get first sample's gradoemt
-        myMem.get(address - 4 - 8 * (sample_size + shift_size- 1 - i), readAltitude[i]);                                //Allocating the right address
-        myMem.get(address - 8 * (sample_size + shift_size - 1 - i), readTime[i]);
-      }
-      sum_gradient = getSampleGradient(readTime,readAltitude);
-      buffer_sum_gradient[0] = sum_gradient;
-      for (int i = 0; i < sample_size; i++) {                                                                           //Shift to the next sample by shift size to get second sample's gradient.
-        myMem.get(address - 4 - 8 * (sample_size - 1 - i), readAltitude[i]);
-        myMem.get(address - 8 * (sample_size  - 1 - i), readTime[i]);
-      }
-      buffer_sum_gradient[1] = sum_gradient;
-      sum_gradient = 0;
-    */                                                                                           //Shifting
 
     if (buffer_sum_gradient[0] < apogee_threshold && buffer_sum_gradient[1] < apogee_threshold ) {
       digitalWrite(Drogue_Release, HIGH);
@@ -286,7 +279,7 @@ void loop() {
       digitalWrite(Drogue_Release, LOW);
       MODE++;
     }
-    delay(reading_rate);
+    delay(reading_rate / 2);                         //reading_rate of 60 has 15Hz, 30 has 20Hz
   }
   //Mode 3 is the flight descending mode where PSI only looks for the altitude where main prarachute deploys.
   if (MODE == 3 ) {

@@ -53,6 +53,7 @@ void setup() {
   address = 4000;
   relativeAltitude = 0;
   readAltitude;
+  float myRead_time =0;
 
   myMem.setMemorySize(512000/8); //In bytes. 512kbit = 64kbyte
   myMem.setPageSize(128); //In bytes. Has 128 byte page size.
@@ -62,17 +63,24 @@ void setup() {
 
   Serial.println("adding memory");
 
+
   size_TestData = sizeof(test.test_data)/4;
 
   
   for(int j = 0; j < size_TestData;j++){
     myMem.put(address,test.test_data[j]);
+    myMem.get(address,myRead_time);
+    Serial.print(j, DEC); Serial.println(" th ");
+    Serial.print(address, DEC); Serial.println(" th ");Serial.print(myRead_time, DEC); Serial.println(" s -> ");
+    address = psi.EEPROM_Check(address);
+    j++;
+    myMem.put(address,test.test_data[j]);
     myMem.get(address,readAltitude);
-    Serial.print("address ->" ); Serial.println(address);
-    Serial.print(readAltitude, DEC); Serial.println(" s/m -> ");
+     Serial.print(j, DEC); Serial.println(" th ");
+    Serial.print(address, DEC); Serial.println(" th ");Serial.print(readAltitude, DEC); Serial.println(" m -> ");
     address = psi.EEPROM_Check(address);
   }
-  Serial.println("Memory added");
+    psi.buzzer_powerOn(Buzzer_Set);
 }
 
 

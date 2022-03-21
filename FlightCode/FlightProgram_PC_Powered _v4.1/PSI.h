@@ -10,12 +10,9 @@ class PSI{
 public:
     PSI();
     //void checkSettings();  
-    void init_last_ten_a(double ten[]);
-    int store_ten(double a,int j);
-    bool calculate_ten_a(double ten[]);
-    int EEPROM_Check(int current_address); // address+4 every update.
-    void writeEEPROM(int deviceaddress, unsigned int eeaddress, byte data);
-    byte readEEPROM(int deviceaddress, unsigned int eeaddress);
+
+    int EEPROM_Check(uint16_t current_address,uint16_t EEPORM_storage); // address+4 every update.
+ 
     float ms2s(unsigned long ms);
     void buzzer_powerOn(int pin_address);
     void buzzer_EEPROM(int pin_address);
@@ -26,22 +23,9 @@ public:
     float simplp (float *x,  float *y,
                int M, float xm1);
 
-private:
-    int buttonState = 0;
-    int MODE = 0;       //initialize mode to zero
-    int t = 0;          //array count number for last_ten_a
-    int address = 0;
-    bool ascending = true ;
-    double drogue_state = 0;
-    double main_state = 0;
-    double current_a = 0;  // The last altitude. Used to determine relsase drouge
+//private:
 
-    double main_release_a = 243.84;
-    int EEPORM_storage = 64000;
-
-    int address_store = 0;
-    int last_stored = 15;
-    double last_ten_a [15] = {0};
+    //uint16_t EEPORM_storage = 64000;
 
 };
 

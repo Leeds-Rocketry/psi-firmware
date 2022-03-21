@@ -3,39 +3,15 @@
 
 PSI::PSI() {
   address_store = 0;
-  last_stored = 15;
 }
 
 
 
-void PSI::init_last_ten_a(double ten[]) {
-  for (int i = 0; i < last_stored ; i++) {
-    ten[i] = 3048;
-  }
-}
 
-int PSI::store_ten(double a, int j) {
-  last_ten_a [j] = a;
-  j++;
-  if (j == last_stored) j = 0;
-  return j;
-}
-
-bool PSI::calculate_ten_a(double ten[]) {
-  double sum, ave_pro_a;
-  double pro_a[14];
-  for (int i = 0; i < last_stored; i++) {
-    pro_a[i] = (ten[i + 1] - ten[0]) / (i + 1);
-    sum += pro_a[i];
-  }
-  ave_pro_a = sum / last_stored;
-  return ave_pro_a;
-}
-
-int PSI::EEPROM_Check(int current_address) {
+int PSI::EEPROM_Check(uint16_t current_address,uint16_t EEPORM_storage) {
   current_address += sizeof(float);
-  if (current_address == EEPORM_storage) {
-    current_address = 0;
+  if (current_address >= EEPORM_storage) {
+    current_address = EEPORM_storage-4;
   }
   return current_address;
 }
@@ -50,32 +26,8 @@ float PSI::simplp (float *x,  float *y,
   }
   return x[M-1];
 }
-void PSI::writeEEPROM(int deviceaddress, unsigned int eeaddress, byte data )
-{
-  Wire.beginTransmission(deviceaddress);
-  Wire.write((int)(eeaddress >> 8));   // MSB
-  Wire.write((int)(eeaddress & 0xFF)); // LSB
-  Wire.write(data);
-  Wire.endTransmission();
 
-  delay(5);
-}
 
-byte PSI::readEEPROM(int deviceaddress, unsigned int eeaddress )
-{
-  byte rdata = 0xFF;
-
-  Wire.beginTransmission(deviceaddress);
-  Wire.write((int)(eeaddress >> 8));   // MSB
-  Wire.write((int)(eeaddress & 0xFF)); // LSB
-  Wire.endTransmission();
-
-  Wire.requestFrom(deviceaddress, 1);
-
-  if (Wire.available()) rdata = Wire.read();
-
-  return rdata;
-}
 
 float PSI::ms2s(unsigned long ms) {
   float s_float = (float)ms / 1000;
@@ -144,7 +96,7 @@ void PSI::buzzer_powerLow(int pin_address) {
 
 void PSI::buzzer_powerOn(int pin_address) {
   digitalWrite(pin_address, HIGH);
-  delay(500);
+  delay(250);
   digitalWrite(pin_address, LOW);
 
 }

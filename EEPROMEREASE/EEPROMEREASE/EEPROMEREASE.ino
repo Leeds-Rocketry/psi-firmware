@@ -1,5 +1,5 @@
 /*
-04/12/2021: v4.1: More user interface is added
+  04/12/2021: v4.1: More user interface is added
 */
 
 #include <Arduino.h>
@@ -25,6 +25,8 @@ float relativeAltitude;
 int address;
 float readAltitude;
 float myRead_time;
+char YES[] = "yes";
+char command[30];
 
 PSI psi;
 ExternalEEPROM myMem;
@@ -55,25 +57,41 @@ void setup() {
   relativeAltitude = 0;
   readAltitude;
 
-  myMem.setMemorySize(512000/8); //In bytes. 512kbit = 64kbyte
+  myMem.setMemorySize(512000 / 8); //In bytes. 512kbit = 64kbyte
   myMem.setPageSize(128); //In bytes. Has 128 byte page size.
   myMem.enablePollForWriteComplete(); //Supports I2C polling of write completion
   myMem.setPageWriteTime(3); //3 ms max write time
+  While(1) {
+    Serial.println("Type yes to erease memory");
+
+    if (Serial.available()) //
+    {
+      for (int i = 0; i < 3; i++) {
+        command[i] = Serial.read();
+      }
+      if (strcmp(command, YES) == 0) {
+        Serial.println("Ereasing memory");
+        Serial.print("size of unsigned int = ");
+        Serial.println(sizeof(float));
+
+        myMem.erase();
+        Serial.println("Memory erased.");
+        psi.buzzer_powerOn(Buzzer_Set);
+      } else {
+        Serial.println("Command not found");
+        Serial.println(command);
+      }
+    }
+    delay(5000)
+  }
 
 
-  Serial.println("Ereasing memory");
-  Serial.print("size of unsigned int = ");
-  Serial.println(sizeof(float));
-  
-  myMem.erase();
-  Serial.println("Memory erased.");
-  psi.buzzer_powerOn(Buzzer_Set);
 
 
-  
+
 }
 
 
 void loop() {
- 
+
 }
