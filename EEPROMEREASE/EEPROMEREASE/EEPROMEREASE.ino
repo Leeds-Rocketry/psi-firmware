@@ -61,7 +61,7 @@ void setup() {
   myMem.setPageSize(128); //In bytes. Has 128 byte page size.
   myMem.enablePollForWriteComplete(); //Supports I2C polling of write completion
   myMem.setPageWriteTime(3); //3 ms max write time
-  While(1) {
+  while(1) {
     Serial.println("Type yes to erease memory");
 
     if (Serial.available()) //
@@ -82,7 +82,7 @@ void setup() {
         Serial.println(command);
       }
     }
-    delay(5000)
+    delay(5000);
   }
 
 
