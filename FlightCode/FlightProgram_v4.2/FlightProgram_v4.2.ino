@@ -71,7 +71,7 @@
 #define sample_size  15                                       //The number of data used to determine the apogee point. There are two continues samples together to determine the apogee.
 
 #define main_release_a  243.8f                                //The altitude for main parachute to be deployed. 800ft for SAC
-#define launch_threshold  20.0f                               // The threshold altitude when EEPROM starts storing data
+#define launch_threshold  0.5f                               // The threshold altitude when EEPROM starts storing data
 #define land_threshold  10.0f                                 // The threshold altitude when EEPROM stop saving data
 #define apogee_threshold 1.5f                                 // apogee gradient threshold should be less than gradient_init
 #define gradient_init 2.0f
@@ -100,7 +100,7 @@ float drogue_start_time = 0.0f;                                   //Time for Dro
 float main_start_time = 0.0f;                                     //Time for Drogue e match starts to be ignited
 
 //---Initialization---
-volatile int MODE = 0;                                           //Initialize flight mode to mode 0;
+int MODE = 0;                                           //Initialize flight mode to mode 0;
 uint16_t EEPORM_storage = 64000;                                 //512k 24LC256 eeprom chip has 64k bytes
 uint16_t address = 0;                                            //EEPROM starting address
 int shift_size = 0;
@@ -117,7 +117,7 @@ void eepromStoreData();
 void eepromStoreMark();
 float getSampleGradient(float x[], float y[], int samplesize);
 
-cppQueue	OuterSample(sizeof(Data), sample_size + shift_size, IMPLEMENTATION);	// Instantiate queue
+cppQueue	OuterSample(sizeof(Data), sample_size + sample_size, IMPLEMENTATION);	// Instantiate queue
 //---Create objects---
 MS5611 BMP;
 PSI psi;
@@ -191,7 +191,6 @@ void setup() {
 void loop() {
   //Rocket is in ready to lanuch status in mode 1, waiting for current altitude beyond the lanuch_thershold. There is constantly beeping indicating the mode's working condition.
   if (MODE == 1) {
-
     if (millis() - beepStart >= 3000) {
       psi.buzzer_powerOn(Buzzer_Set);                               //Keeps beeping indicating PSI's working status
       beepStart = millis();

@@ -52,13 +52,13 @@
 
 //---Others---
 #define disk1 0x50                                              //Address of 24LC256 eeprom chip    
-#define battery_threshold  902                                 // 7.4/(8.4/1024)=902.095
+#define battery_threshold  999                                 // 7.4/(8.4/1024)=902.095
 
 #define ignition_duration  1500                                //Time period for ematches to be ignited. In ms
 #define reading_rate  60                                      //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
 
 #define sample_size  15                                        //The number of data used to determine the apogee point
-#define shift_size  5                                         //The numerr of data skiped until next sample starts
+#define shift_size  15                                         //The numerr of data skiped until next sample starts
 
 #define main_release_a  243.8f                                 //The altitude for main parachute to be deployed. 800ft for SAC
 
@@ -87,6 +87,7 @@ float realPressure = 0.0f;
 //---Variables for timing data---
 unsigned long referenceTime = 0;
 unsigned long time_ms = 0;                                       //Time in milisecond. Unsigned long has 4 bytes
+unsigned long beepStart = 0;
 float time_s_float = 0.0;                                        //Time in second.
 
 float drogue_start_time = 0.0;                                   //Time for Drogue e match starts to be ignited
@@ -177,19 +178,24 @@ void setup() {
   referencePressure = BMP.readPressure();
   MODE = 1;
   EEPORM_storage = myMem.length();
-
+  beepStart = millis();
 
 }
 
 void loop() {
   //Rocket is in ready to lanuch status in mode 1, waiting for current altitude beyond the lanuch_thershold. There is constantly beeping indicating the mode's working condition.
   if (MODE == 1) {
-    delay(reading_rate * 10);                                           //Lower beeping rate
-    psi.buzzer_powerOn(Buzzer_Set);                                     //Keeps beeping indicating PSI's working status
+    if (millis() - beepStart >= 3000) {
+      psi.buzzer_powerOn(Buzzer_Set);                               //Keeps beeping indicating PSI's working status
+      beepStart = millis();
+    }
+                                     //Keeps beeping indicating PSI's working status
     realPressure =   BMP.readPressure();
     relativeAltitude =   BMP.getAltitude(realPressure, referencePressure);
     //absoluteAltitude =   BMP.getAltitude(realPressure);
 
+        Serial.print(",altitude ->  ");
+        Serial.println( relativeAltitude);
 
     if (relativeAltitude > launch_threshold) {
       referenceTime = millis();

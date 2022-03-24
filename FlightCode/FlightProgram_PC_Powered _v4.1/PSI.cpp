@@ -2,7 +2,7 @@
 
 
 PSI::PSI() {
-  address_store = 0;
+  
 }
 
 
