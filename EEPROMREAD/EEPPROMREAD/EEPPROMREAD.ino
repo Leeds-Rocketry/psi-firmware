@@ -1,4 +1,4 @@
-#include <Wire.h>
+wi#include <Wire.h>
 #include "SparkFun_External_EEPROM.h"                                 // Click here to get the library: http://librarymanager/All#SparkFun_External_EEPROM
 ExternalEEPROM myMem;
 

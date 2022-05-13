@@ -74,7 +74,7 @@ void PSI::buzzer_ematch(int pin_address) {
   digitalWrite(pin_address, LOW);
   delay(500);
   digitalWrite(pin_address, HIGH);
-  delay(1000);
+  delay(500);
   digitalWrite(pin_address, LOW);
   delay(1500);
 }

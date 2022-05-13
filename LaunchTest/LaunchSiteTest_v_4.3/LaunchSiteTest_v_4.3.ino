@@ -1,6 +1,5 @@
 //04/12/2021: v4.1: More user interface is added
 
-
 #include <Arduino.h>
 #include <Wire.h>
 
@@ -8,71 +7,86 @@
 #include "PSI.h"
 
 #include <SparkFun_External_EEPROM.h>                       //External EEPROM library. download link: https://github.com/sparkfun/SparkFun_External_EEPROM_Arduino_Library.git
-#include <cppQueue.h>
+#include <cppQueue.h>                                       //https://github.com/SMFSW/Queue.git 
 //---Define relevant pins---
-#define Drogue_Release 3                                    //E-match for drogue parachute
-#define Main_Release 2                                      //E-match for main parachute
-#define Ematch_Check 6
-#define Sensor_Check 7
-#define Battery_Check A6
-#define Buzzer_Set 8
-#define Drogue_Check A0                                      //Pin for Check the status of drogue ematch                                      
-#define Main_Check A7                                        //Pin for Check the status of main ematch
+#define Drogue_Release  3                                    //E-match for drogue parachute
+#define Main_Release    2                                    //E-match for main parachute
+#define Ematch_Check    6
+#define Sensor_Check    7
+#define Battery_Check   A6
+#define Buzzer_Set      8
+#define Drogue_Check    A0                                    //Pin for Check the status of drogue ematch                                      
+#define Main_Check      A7                                    //Pin for Check the status of main ematch
 
-#define  IMPLEMENTATION  FIFO
+#define	IMPLEMENTATION	FIFO
 
-//---Others---
-#define disk1 0x50                                              //Address of 24LC256 eeprom chip    
-#define battery_threshold  999                                 // 7.4/(8.4/1024)=902.095
-#define EEPROM_storage  64000                                  //512k 24LC256 eeprom chip has 64k bytes
-#define ignition_duration  1500                                //Time period for ematches to be ignited. In ms
-#define reading_rate  1                                      //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
+//---Editable Area---
 
-#define sample_size  15                                       //The number of data used to determine the apogee point
+#define ignition_duration         2000                               //Time period for ematches to be ignited. In ms
+#define reading_rate              60                                 //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
+#define sample_size               15                                 //The number of data used to determine the apogee point. There are two continues samples together to determine the apogee.
+#define main_release_a            304.8f                             //The altitude for main parachute to be deployed. 800ft for SAC
+#define launch_threshold          15.0f                              // The threshold altitude when EEPROM starts storing data
+#define land_threshold            15.0f                              // The threshold altitude when EEPROM stop saving data
+#define land_timelimit            5.0f
+#define land_constant_threshold   1.0f
+#define apogee_threshold          1.5f                               // apogee gradient threshold should be less than gradient_init
 
-#define main_release_a  80.0f                                 //The altitude for main parachute to be deployed. 800ft for SAC
-#define launch_threshold  50.0f                                // The threshold altitude when EEPROM starts storing data
-#define land_threshold  0.0f                                 // The threshold altitude when EEPROM stop saving data
-#define apogee_threshold 0.05f
-#define gradient_init 1.0f
 
+//---Non Editable Area---
+
+#define disk1                     0x50                               //Address of 24LC256 eeprom chip    
+#define battery_threshold         999                                // 8.2/(8.4/1024)=999
+#define gradient_init             300
 typedef struct strData {
-  float time;
-  float altitude;
+  float	time;
+  float	altitude;
 } Data;
 
 //---Declare general variables. Can be changed according to different flight condition.---
-bool enableEmatchCheck = false;
-bool enableBatteryCheck = false;
+bool enableEmatchCheck          = true;
+bool enableBatteryCheck         = true;
 
 //Variables used for sensor
-int32_t referencePressure = 0;
-int32_t realPressure = 0;
-float  absoluteAltitude = 0.0f;
-float relativeAltitude = 0.0f;
+int32_t referencePressure       = 0;
+int32_t realPressure            = 0;
+float  absoluteAltitude         = 0.0f;
+float relative_altitude         = 0.0f;
 
-//---Variables for timing data---
-unsigned long referenceTime = 0;
-unsigned long time_ms = 0;                                       //Time in milisecond. Unsigned long has 4 bytes
-float time_s_float = 0.0;                                        //Time in second.
+//---Variables for timing&altitude data---
+unsigned long referenceTime     = 0;
+unsigned long time_ms           = 0;                              //Time in milisecond. Unsigned long has 4 bytes
+float time_s_float              = 0.0f;                           //Time in second.
 
-float drogue_start_time = 0.0;                                   //Time for Drogue e match starts to be ignited
-float main_start_time = 0.0;                                     //Time for Drogue e match starts to be ignited
-
+float drogue_start_time         = 0.0f;                           //Time for Drogue e match starts to be ignited
+float main_start_time           = 0.0f;                           //Time for Drogue e match starts to be ignited
+float land_timelimit_start      = 0.0f;
+float land_timelimit_stop       = 0.0f;
 //---Initialization---
-volatile int MODE = 0;                                           //Initialize flight mode to mode 0;
-uint16_t EEPORM_storage = 64000;                                 //512k 24LC256 eeprom chip has 64k bytes
-uint16_t address = 0;                                            //EEPROM starting address
+int MODE                         = 0;                              //Initialize flight mode to mode 0;
+uint16_t EEPORM_length           = 64000;                          //512k 24LC256 eeprom chip has 64k bytes
+uint16_t address                 = 0;                              //EEPROM starting address
+int shift_size                   = 0;
 //---Initialization for apogee detection algorithm---
-float sum_gradient = 0.0f;                                       //Sum of gradients in each sample
-//---Others---
-unsigned long beepStart = 0;                                     //The beep starting time in MODE 1, lanuch ready mode. Below lanuchThreshold altitude.
-Data time_altitude = {0.0f, 0.0f};                                 //The pair of time and altitude that is pushed to the queue(stack)
-float buffer_sum_gradient[2] = {0.0f};                            //The buffer that contains up to 2 samples's gradients together determine the apogee point when all the gradients < 0
-Data readTimeAltitude = {0.0f, 0.0f};                              //Read data from the queue(stack) for apogee detection algorithm.
-Data forPop = {0.0f, 0.0f};                                        //A place to take the number that is poped out.
+float sum_gradient               = 0.0f;                           //Sum of gradients in each sample
+uint16_t size_of_landSample      = 0;
+float land_max_altitude          = 0.0f;
+float land_min_altitude          = 0.0f;
 
-cppQueue  OuterSample(sizeof(Data), sample_size + sample_size, IMPLEMENTATION); // Instantiate queue
+//---Others---
+unsigned long beep_start         = 0;                                //The beep starting time in MODE 1, lanuch ready mode. Below lanuchThreshold altitude.
+Data time_altitude               = {0.0f, 0.0f};                     //The pair of time and altitude that is pushed to the queue(stack)
+float buffer_sum_gradient[2]     = {0.0f};                           //The buffer that contains up to 2 samples's gradients together determine the apogee point when all the gradients < 0
+Data read_time_altitude          = {0.0f, 0.0f};                     //Read data from the queue(stack) for apogee detection algorithm.
+Data forPop                      = {0.0f, 0.0f};                     //A place to take the number that is poped out.
+
+void eepromStoreData();
+void eepromStoreMark();
+float getSampleGradient(float x[], float y[], int samplesize);
+
+cppQueue	OuterSample(sizeof(Data), sample_size + sample_size, IMPLEMENTATION);	// Instantiate queue
+cppQueue	landSample(sizeof(Data), round(land_timelimit / ((reading_rate + 10) / 1000)), IMPLEMENTATION);	// Instantiate queue
+
 //---Create objects---
 MS5611 BMP;
 PSI psi;
@@ -166,11 +180,6 @@ void setup() {
   myMem.setPageSize(128); //In bytes. Has 128 byte page size.
   myMem.enablePollForWriteComplete(); //Supports I2C polling of write completion
   myMem.setPageWriteTime(3); //3 ms max write time
-  referencePressure = BMP.readPressure();
-  MODE = 1;
-  EEPORM_storage = myMem.length();
-  beepStart = millis();
-
 
   Serial.print(" launch threshold: ");
   Serial.print(launch_threshold);
@@ -183,16 +192,12 @@ void setup() {
   Serial.print("Reading rate ");
   Serial.print(reading_rate);
   Serial.println(" ms");
-  /*
-   float testTime[15] = {
-   }
-   float testAltitude[15] = {
-   }
-      sum_gradient = getSampleGradient(testTime, testAltitude, sample_size);
-      Serial.print("1 sum_gradient = "); Serial.println(sum_gradient);
-      while(1);
-   
-  */
+
+  MODE                = 1;
+  EEPORM_length       = myMem.length();
+  shift_size          = sample_size;                                      
+  beep_start          = millis();
+  size_of_landSample  = round(land_timelimit / ((reading_rate + 10) / 1000));
   
 }
 
@@ -226,11 +231,11 @@ void loop() {
     buffer_sum_gradient[0] = gradient_init;
     buffer_sum_gradient[1] = gradient_init;
     sum_gradient = 0.0f;
-    Serial.print("Time -> "); Serial.println(time_s_float); Serial.print(", Altitude -> "); Serial.println(relativeAltitude);
     myMem.get(address, time_s_float);
     address = psi.EEPROM_Check(address, EEPROM_storage);
     myMem.get(address, relativeAltitude);
     address = psi.EEPROM_Check(address, EEPROM_storage);
+    Serial.print("Time -> "); Serial.print(time_s_float); Serial.print(", Altitude -> "); Serial.println(relativeAltitude);
     /*
         Serial.print(time_s_float);
         Serial.print(" s, ");
@@ -330,11 +335,14 @@ void loop() {
       delay(ignition_duration);
       digitalWrite(Main_Release, LOW);
       MODE++; // Move to mode 3, flight descdending mode;
+      land_timelimit_start = time_ms;
     }
     delay(reading_rate);
   }
   if (MODE == 4 ) { //ACTIVE FLIGHT_TEST mode
     Serial.println("It is now Descending");
+float land_altitude[size_of_landSample] = {0.0f};
+if (address < EEPORM_storage - 5 && relativeAltitude >= land_threshold) {                                                           //Detection of landing and overlap in EEPROM
     myMem.get(address, time_s_float);
     address = psi.EEPROM_Check(address, EEPROM_storage);
     myMem.get(address, relativeAltitude);
@@ -344,10 +352,21 @@ void loop() {
     Serial.print(" s, ");
     Serial.print(relativeAltitude);
     Serial.println(" m");
-    if (address == 0) MODE = 5;
-    if (relativeAltitude < land_threshold || address == 0 ) {    //After landed. Stop transferring data to EEPROM.
-      MODE = 5;
+    } else MODE = 5;
+    land_timelimit_stop = time_ms;
+
+    if (land_timelimit_stop - land_timelimit_start > land_timelimit && landSample.isFull() == 1 ) {
+      for (int i = 0; i < size_of_landSample ; i++) {
+        landSample.peekIdx(&land_altitude, i);
+        land_max_altitude = max(land_altitude[i], land_max_altitude);
+        land_min_altitude = min(land_altitude[i], land_min_altitude);
+      }
+      if (land_max_altitude - land_min_altitude <= land_constant_threshold) {
+        MODE = 5;
+      }
+      land_timelimit_start = land_timelimit_stop;
     }
+    landSample.push(&relative_altitude);
     delay(reading_rate);
   }
   if (MODE == 5) {// When EEPORM full, freeze it here.
