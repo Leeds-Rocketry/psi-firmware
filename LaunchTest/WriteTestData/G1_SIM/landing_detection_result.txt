@@ -1,0 +1,5114 @@
+REBOOT
+ launch threshold: 15.00 m
+ land threshold: 15.00 m
+Reading rate 6 ms
+size_of_landSample = 20
+0.00 s, 0.00 m
+0.01 s, 0.00 m
+0.02 s, 0.00 m
+0.03 s, 0.00 m
+0.04 s, 0.00 m
+0.05 s, 0.00 m
+0.06 s, 0.00 m
+0.07 s, 0.00 m
+0.08 s, 0.00 m
+0.09 s, 0.01 m
+0.10 s, 0.02 m
+0.11 s, 0.04 m
+0.12 s, 0.06 m
+0.13 s, 0.10 m
+0.14 s, 0.14 m
+0.15 s, 0.19 m
+0.16 s, 0.25 m
+0.17 s, 0.31 m
+0.18 s, 0.39 m
+0.19 s, 0.47 m
+0.20 s, 0.56 m
+0.21 s, 0.65 m
+0.22 s, 0.76 m
+0.23 s, 0.86 m
+0.24 s, 0.98 m
+0.25 s, 1.10 m
+0.26 s, 1.23 m
+0.27 s, 1.37 m
+0.28 s, 1.51 m
+0.29 s, 1.66 m
+0.30 s, 1.82 m
+0.31 s, 1.98 m
+0.32 s, 2.15 m
+0.33 s, 2.33 m
+0.34 s, 2.52 m
+0.35 s, 2.71 m
+0.36 s, 2.91 m
+0.37 s, 3.11 m
+0.38 s, 3.33 m
+0.39 s, 3.55 m
+0.40 s, 3.78 m
+0.41 s, 4.01 m
+0.42 s, 4.25 m
+0.43 s, 4.50 m
+0.44 s, 4.76 m
+0.45 s, 5.02 m
+0.46 s, 5.43 m
+0.49 s, 6.08 m
+0.52 s, 7.12 m
+0.57 s, 8.81 m
+0.62 s, 10.70 m
+0.67 s, 12.77 m
+0.72 s, 15.04 m
+Time -> 0.77, Altitude -> 17.49
+Time -> 0.82, Altitude -> 20.14
+Time -> 0.87, Altitude -> 22.98
+Time -> 0.92, Altitude -> 26.02
+Time -> 0.97, Altitude -> 29.25
+Time -> 1.02, Altitude -> 32.68
+Time -> 1.07, Altitude -> 36.31
+Time -> 1.12, Altitude -> 40.14
+Time -> 1.17, Altitude -> 44.16
+Time -> 1.22, Altitude -> 48.38
+Time -> 1.27, Altitude -> 52.79
+Time -> 1.32, Altitude -> 57.40
+Time -> 1.37, Altitude -> 62.21
+Time -> 1.42, Altitude -> 67.21
+Time -> 1.47, Altitude -> 72.40
+Time -> 1.52, Altitude -> 77.79
+Time -> 1.57, Altitude -> 83.38
+Time -> 1.62, Altitude -> 89.15
+Time -> 1.67, Altitude -> 95.13
+Time -> 1.72, Altitude -> 101.29
+Time -> 1.77, Altitude -> 107.64
+Time -> 1.82, Altitude -> 114.18
+Time -> 1.87, Altitude -> 120.91
+Time -> 1.92, Altitude -> 127.83
+Time -> 1.97, Altitude -> 134.94
+Time -> 2.02, Altitude -> 142.23
+Time -> 2.07, Altitude -> 149.70
+Time -> 2.12, Altitude -> 157.35
+Time -> 2.17, Altitude -> 165.19
+Time -> 2.22, Altitude -> 173.20
+ At address 83 
+1 sum_gradient = 78.44
+2 sum_gradient = 136.36
+Time -> 2.27, Altitude -> 181.38
+ At address 84 
+1 sum_gradient = 82.37
+2 sum_gradient = 140.08
+Time -> 2.32, Altitude -> 189.74
+ At address 85 
+1 sum_gradient = 86.29
+2 sum_gradient = 143.78
+Time -> 2.37, Altitude -> 198.28
+ At address 86 
+1 sum_gradient = 90.21
+2 sum_gradient = 147.44
+Time -> 2.42, Altitude -> 206.98
+ At address 87 
+1 sum_gradient = 94.12
+2 sum_gradient = 151.08
+Time -> 2.47, Altitude -> 215.85
+ At address 88 
+1 sum_gradient = 98.03
+2 sum_gradient = 154.69
+Time -> 2.52, Altitude -> 224.89
+ At address 89 
+1 sum_gradient = 101.92
+2 sum_gradient = 158.26
+Time -> 2.57, Altitude -> 234.10
+ At address 90 
+1 sum_gradient = 105.81
+2 sum_gradient = 161.80
+Time -> 2.62, Altitude -> 243.47
+ At address 91 
+1 sum_gradient = 109.68
+2 sum_gradient = 165.31
+Time -> 2.67, Altitude -> 253.00
+ At address 92 
+1 sum_gradient = 113.54
+2 sum_gradient = 168.78
+Time -> 2.72, Altitude -> 262.69
+ At address 93 
+1 sum_gradient = 117.39
+2 sum_gradient = 172.21
+Time -> 2.77, Altitude -> 272.55
+ At address 94 
+1 sum_gradient = 121.23
+2 sum_gradient = 175.61
+Time -> 2.82, Altitude -> 282.56
+ At address 95 
+1 sum_gradient = 125.04
+2 sum_gradient = 178.98
+Time -> 2.87, Altitude -> 292.73
+ At address 96 
+1 sum_gradient = 128.84
+2 sum_gradient = 182.32
+Time -> 2.92, Altitude -> 303.06
+ At address 97 
+1 sum_gradient = 132.61
+2 sum_gradient = 185.62
+Time -> 2.97, Altitude -> 313.55
+ At address 98 
+1 sum_gradient = 136.36
+2 sum_gradient = 188.90
+Time -> 3.02, Altitude -> 324.19
+ At address 99 
+1 sum_gradient = 140.08
+2 sum_gradient = 192.15
+Time -> 3.07, Altitude -> 334.94
+ At address 100 
+1 sum_gradient = 143.78
+2 sum_gradient = 195.35
+Time -> 3.12, Altitude -> 345.86
+ At address 101 
+1 sum_gradient = 147.44
+2 sum_gradient = 198.51
+Time -> 3.17, Altitude -> 356.83
+ At address 102 
+1 sum_gradient = 151.08
+2 sum_gradient = 201.60
+Time -> 3.22, Altitude -> 367.89
+ At address 103 
+1 sum_gradient = 154.69
+2 sum_gradient = 204.58
+Time -> 3.27, Altitude -> 378.99
+ At address 104 
+1 sum_gradient = 158.26
+2 sum_gradient = 207.41
+Time -> 3.32, Altitude -> 390.11
+ At address 105 
+1 sum_gradient = 161.80
+2 sum_gradient = 210.07
+Time -> 3.37, Altitude -> 401.24
+ At address 106 
+1 sum_gradient = 165.31
+2 sum_gradient = 212.50
+Time -> 3.42, Altitude -> 412.39
+ At address 107 
+1 sum_gradient = 168.78
+2 sum_gradient = 214.69
+Time -> 3.47, Altitude -> 423.52
+ At address 108 
+1 sum_gradient = 172.21
+2 sum_gradient = 216.58
+Time -> 3.52, Altitude -> 434.61
+ At address 109 
+1 sum_gradient = 175.61
+2 sum_gradient = 218.16
+Time -> 3.57, Altitude -> 445.71
+ At address 110 
+1 sum_gradient = 178.98
+2 sum_gradient = 219.46
+Time -> 3.62, Altitude -> 456.80
+ At address 111 
+1 sum_gradient = 182.32
+2 sum_gradient = 220.45
+Time -> 3.67, Altitude -> 467.84
+ At address 112 
+1 sum_gradient = 185.62
+2 sum_gradient = 221.15
+Time -> 3.72, Altitude -> 478.84
+ At address 113 
+1 sum_gradient = 188.90
+2 sum_gradient = 221.55
+Time -> 3.77, Altitude -> 489.81
+ At address 114 
+1 sum_gradient = 192.15
+2 sum_gradient = 221.71
+Time -> 3.82, Altitude -> 500.76
+ At address 115 
+1 sum_gradient = 195.35
+2 sum_gradient = 221.68
+Time -> 3.87, Altitude -> 511.67
+ At address 116 
+1 sum_gradient = 198.51
+2 sum_gradient = 221.49
+Time -> 3.92, Altitude -> 522.52
+ At address 117 
+1 sum_gradient = 201.60
+2 sum_gradient = 221.15
+Time -> 3.97, Altitude -> 533.31
+ At address 118 
+1 sum_gradient = 204.58
+2 sum_gradient = 220.69
+Time -> 4.02, Altitude -> 544.07
+ At address 119 
+1 sum_gradient = 207.41
+2 sum_gradient = 220.15
+Time -> 4.07, Altitude -> 554.77
+ At address 120 
+1 sum_gradient = 210.07
+2 sum_gradient = 219.51
+Time -> 4.12, Altitude -> 565.40
+ At address 121 
+1 sum_gradient = 212.50
+2 sum_gradient = 218.80
+Time -> 4.17, Altitude -> 576.01
+ At address 122 
+1 sum_gradient = 214.69
+2 sum_gradient = 218.01
+Time -> 4.22, Altitude -> 586.59
+ At address 123 
+1 sum_gradient = 216.58
+2 sum_gradient = 217.20
+Time -> 4.27, Altitude -> 597.07
+ At address 124 
+1 sum_gradient = 218.16
+2 sum_gradient = 216.32
+Time -> 4.32, Altitude -> 607.56
+ At address 125 
+1 sum_gradient = 219.46
+2 sum_gradient = 215.43
+Time -> 4.37, Altitude -> 617.95
+ At address 126 
+1 sum_gradient = 220.45
+2 sum_gradient = 214.50
+Time -> 4.42, Altitude -> 628.35
+ At address 127 
+1 sum_gradient = 221.15
+2 sum_gradient = 213.57
+Time -> 4.47, Altitude -> 638.65
+ At address 128 
+1 sum_gradient = 221.55
+2 sum_gradient = 212.62
+Time -> 4.52, Altitude -> 648.92
+ At address 129 
+1 sum_gradient = 221.71
+2 sum_gradient = 211.64
+Time -> 4.57, Altitude -> 659.16
+ At address 130 
+1 sum_gradient = 221.68
+2 sum_gradient = 210.69
+Time -> 4.62, Altitude -> 669.34
+ At address 131 
+1 sum_gradient = 221.49
+2 sum_gradient = 209.73
+Time -> 4.67, Altitude -> 679.46
+ At address 132 
+1 sum_gradient = 221.15
+2 sum_gradient = 208.79
+Time -> 4.72, Altitude -> 689.58
+ At address 133 
+1 sum_gradient = 220.69
+2 sum_gradient = 207.86
+Time -> 4.77, Altitude -> 699.61
+ At address 134 
+1 sum_gradient = 220.15
+2 sum_gradient = 206.94
+Time -> 4.82, Altitude -> 709.60
+ At address 135 
+1 sum_gradient = 219.51
+2 sum_gradient = 205.99
+Time -> 4.87, Altitude -> 719.57
+ At address 136 
+1 sum_gradient = 218.80
+2 sum_gradient = 205.08
+Time -> 4.92, Altitude -> 729.48
+ At address 137 
+1 sum_gradient = 218.01
+2 sum_gradient = 204.16
+Time -> 4.97, Altitude -> 739.35
+ At address 138 
+1 sum_gradient = 217.20
+2 sum_gradient = 203.23
+Time -> 5.02, Altitude -> 749.17
+ At address 139 
+1 sum_gradient = 216.32
+2 sum_gradient = 202.30
+Time -> 5.07, Altitude -> 758.95
+ At address 140 
+1 sum_gradient = 215.43
+2 sum_gradient = 201.40
+Time -> 5.12, Altitude -> 768.68
+ At address 141 
+1 sum_gradient = 214.50
+2 sum_gradient = 200.47
+Time -> 5.17, Altitude -> 778.37
+ At address 142 
+1 sum_gradient = 213.57
+2 sum_gradient = 199.60
+Time -> 5.22, Altitude -> 788.03
+ At address 143 
+1 sum_gradient = 212.62
+2 sum_gradient = 198.71
+Time -> 5.27, Altitude -> 797.63
+ At address 144 
+1 sum_gradient = 211.64
+2 sum_gradient = 197.79
+Time -> 5.32, Altitude -> 807.20
+ At address 145 
+1 sum_gradient = 210.69
+2 sum_gradient = 196.93
+Time -> 5.37, Altitude -> 816.71
+ At address 146 
+1 sum_gradient = 209.73
+2 sum_gradient = 196.03
+Time -> 5.42, Altitude -> 826.19
+ At address 147 
+1 sum_gradient = 208.79
+2 sum_gradient = 195.18
+Time -> 5.47, Altitude -> 835.64
+ At address 148 
+1 sum_gradient = 207.86
+2 sum_gradient = 194.31
+Time -> 5.52, Altitude -> 845.03
+ At address 149 
+1 sum_gradient = 206.94
+2 sum_gradient = 193.46
+Time -> 5.57, Altitude -> 854.38
+ At address 150 
+1 sum_gradient = 205.99
+2 sum_gradient = 192.60
+Time -> 5.62, Altitude -> 863.68
+ At address 151 
+1 sum_gradient = 205.08
+2 sum_gradient = 191.73
+Time -> 5.67, Altitude -> 872.95
+ At address 152 
+1 sum_gradient = 204.16
+2 sum_gradient = 190.88
+Time -> 5.72, Altitude -> 882.18
+ At address 153 
+1 sum_gradient = 203.23
+2 sum_gradient = 190.02
+Time -> 5.77, Altitude -> 891.36
+ At address 154 
+1 sum_gradient = 202.30
+2 sum_gradient = 189.14
+Time -> 5.82, Altitude -> 900.50
+ At address 155 
+1 sum_gradient = 201.40
+2 sum_gradient = 188.32
+Time -> 5.87, Altitude -> 909.61
+ At address 156 
+1 sum_gradient = 200.47
+2 sum_gradient = 187.46
+Time -> 5.92, Altitude -> 918.67
+ At address 157 
+1 sum_gradient = 199.60
+2 sum_gradient = 186.65
+Time -> 5.97, Altitude -> 927.69
+ At address 158 
+1 sum_gradient = 198.71
+2 sum_gradient = 185.79
+Time -> 6.02, Altitude -> 936.68
+ At address 159 
+1 sum_gradient = 197.79
+2 sum_gradient = 184.95
+Time -> 6.07, Altitude -> 945.61
+ At address 160 
+1 sum_gradient = 196.93
+2 sum_gradient = 184.15
+Time -> 6.12, Altitude -> 954.51
+ At address 161 
+1 sum_gradient = 196.03
+2 sum_gradient = 183.31
+Time -> 6.17, Altitude -> 963.38
+ At address 162 
+1 sum_gradient = 195.18
+2 sum_gradient = 182.51
+Time -> 6.22, Altitude -> 972.19
+ At address 163 
+1 sum_gradient = 194.31
+2 sum_gradient = 181.65
+Time -> 6.27, Altitude -> 980.97
+ At address 164 
+1 sum_gradient = 193.46
+2 sum_gradient = 180.83
+Time -> 6.32, Altitude -> 989.72
+ At address 165 
+1 sum_gradient = 192.60
+2 sum_gradient = 180.02
+Time -> 6.37, Altitude -> 998.43
+ At address 166 
+1 sum_gradient = 191.73
+2 sum_gradient = 179.26
+Time -> 6.42, Altitude -> 1007.09
+ At address 167 
+1 sum_gradient = 190.88
+2 sum_gradient = 178.43
+Time -> 6.47, Altitude -> 1015.72
+ At address 168 
+1 sum_gradient = 190.02
+2 sum_gradient = 177.63
+Time -> 6.52, Altitude -> 1024.31
+ At address 169 
+1 sum_gradient = 189.14
+2 sum_gradient = 176.84
+Time -> 6.57, Altitude -> 1032.85
+ At address 170 
+1 sum_gradient = 188.32
+2 sum_gradient = 176.03
+Time -> 6.62, Altitude -> 1041.35
+ At address 171 
+1 sum_gradient = 187.46
+2 sum_gradient = 175.25
+Time -> 6.67, Altitude -> 1049.82
+ At address 172 
+1 sum_gradient = 186.65
+2 sum_gradient = 174.47
+Time -> 6.72, Altitude -> 1058.27
+ At address 173 
+1 sum_gradient = 185.79
+2 sum_gradient = 173.68
+Time -> 6.77, Altitude -> 1066.65
+ At address 174 
+1 sum_gradient = 184.95
+2 sum_gradient = 172.90
+Time -> 6.82, Altitude -> 1075.00
+ At address 175 
+1 sum_gradient = 184.15
+2 sum_gradient = 172.12
+Time -> 6.87, Altitude -> 1083.32
+ At address 176 
+1 sum_gradient = 183.31
+2 sum_gradient = 171.33
+Time -> 6.92, Altitude -> 1091.61
+ At address 177 
+1 sum_gradient = 182.51
+2 sum_gradient = 170.60
+Time -> 6.97, Altitude -> 1099.84
+ At address 178 
+1 sum_gradient = 181.65
+2 sum_gradient = 169.81
+Time -> 7.02, Altitude -> 1108.07
+ At address 179 
+1 sum_gradient = 180.83
+2 sum_gradient = 169.05
+Time -> 7.07, Altitude -> 1116.24
+ At address 180 
+1 sum_gradient = 180.02
+2 sum_gradient = 168.28
+Time -> 7.12, Altitude -> 1124.35
+ At address 181 
+1 sum_gradient = 179.26
+2 sum_gradient = 167.56
+Time -> 7.17, Altitude -> 1132.45
+ At address 182 
+1 sum_gradient = 178.43
+2 sum_gradient = 166.80
+Time -> 7.22, Altitude -> 1140.50
+ At address 183 
+1 sum_gradient = 177.63
+2 sum_gradient = 166.02
+Time -> 7.27, Altitude -> 1148.52
+ At address 184 
+1 sum_gradient = 176.84
+2 sum_gradient = 165.27
+Time -> 7.32, Altitude -> 1156.50
+ At address 185 
+1 sum_gradient = 176.03
+2 sum_gradient = 164.48
+Time -> 7.37, Altitude -> 1164.46
+ At address 186 
+1 sum_gradient = 175.25
+2 sum_gradient = 163.76
+Time -> 7.42, Altitude -> 1172.38
+ At address 187 
+1 sum_gradient = 174.47
+2 sum_gradient = 163.02
+Time -> 7.47, Altitude -> 1180.25
+ At address 188 
+1 sum_gradient = 173.68
+2 sum_gradient = 162.23
+Time -> 7.52, Altitude -> 1188.08
+ At address 189 
+1 sum_gradient = 172.90
+2 sum_gradient = 161.54
+Time -> 7.57, Altitude -> 1195.88
+ At address 190 
+1 sum_gradient = 172.12
+2 sum_gradient = 160.76
+Time -> 7.62, Altitude -> 1203.66
+ At address 191 
+1 sum_gradient = 171.33
+2 sum_gradient = 160.03
+Time -> 7.67, Altitude -> 1211.40
+ At address 192 
+1 sum_gradient = 170.60
+2 sum_gradient = 159.31
+Time -> 7.72, Altitude -> 1219.08
+ At address 193 
+1 sum_gradient = 169.81
+2 sum_gradient = 158.57
+Time -> 7.77, Altitude -> 1226.76
+ At address 194 
+1 sum_gradient = 169.05
+2 sum_gradient = 157.90
+Time -> 7.82, Altitude -> 1234.38
+ At address 195 
+1 sum_gradient = 168.28
+2 sum_gradient = 157.15
+Time -> 7.87, Altitude -> 1241.97
+ At address 196 
+1 sum_gradient = 167.56
+2 sum_gradient = 156.44
+Time -> 7.92, Altitude -> 1249.53
+ At address 197 
+1 sum_gradient = 166.80
+2 sum_gradient = 155.74
+Time -> 7.97, Altitude -> 1257.03
+ At address 198 
+1 sum_gradient = 166.02
+2 sum_gradient = 155.01
+Time -> 8.02, Altitude -> 1264.52
+ At address 199 
+1 sum_gradient = 165.27
+2 sum_gradient = 154.30
+Time -> 8.07, Altitude -> 1271.96
+ At address 200 
+1 sum_gradient = 164.48
+2 sum_gradient = 153.59
+Time -> 8.12, Altitude -> 1279.37
+ At address 201 
+1 sum_gradient = 163.76
+2 sum_gradient = 152.85
+Time -> 8.17, Altitude -> 1286.77
+ At address 202 
+1 sum_gradient = 163.02
+2 sum_gradient = 152.17
+Time -> 8.22, Altitude -> 1294.12
+ At address 203 
+1 sum_gradient = 162.23
+2 sum_gradient = 151.47
+Time -> 8.27, Altitude -> 1301.40
+ At address 204 
+1 sum_gradient = 161.54
+2 sum_gradient = 150.79
+Time -> 8.32, Altitude -> 1308.69
+ At address 205 
+1 sum_gradient = 160.76
+2 sum_gradient = 150.00
+Time -> 8.37, Altitude -> 1315.94
+ At address 206 
+1 sum_gradient = 160.03
+2 sum_gradient = 149.36
+Time -> 8.42, Altitude -> 1323.14
+ At address 207 
+1 sum_gradient = 159.31
+2 sum_gradient = 148.68
+Time -> 8.47, Altitude -> 1330.33
+ At address 208 
+1 sum_gradient = 158.57
+2 sum_gradient = 147.94
+Time -> 8.52, Altitude -> 1337.46
+ At address 209 
+1 sum_gradient = 157.90
+2 sum_gradient = 147.24
+Time -> 8.57, Altitude -> 1344.56
+ At address 210 
+1 sum_gradient = 157.15
+2 sum_gradient = 146.53
+Time -> 8.62, Altitude -> 1351.64
+ At address 211 
+1 sum_gradient = 156.44
+2 sum_gradient = 145.89
+Time -> 8.67, Altitude -> 1358.68
+ At address 212 
+1 sum_gradient = 155.74
+2 sum_gradient = 145.21
+Time -> 8.72, Altitude -> 1365.69
+ At address 213 
+1 sum_gradient = 155.01
+2 sum_gradient = 144.55
+Time -> 8.77, Altitude -> 1372.67
+ At address 214 
+1 sum_gradient = 154.30
+2 sum_gradient = 143.85
+Time -> 8.82, Altitude -> 1379.59
+ At address 215 
+1 sum_gradient = 153.59
+2 sum_gradient = 143.14
+Time -> 8.87, Altitude -> 1386.50
+ At address 216 
+1 sum_gradient = 152.85
+2 sum_gradient = 142.47
+Time -> 8.92, Altitude -> 1393.36
+ At address 217 
+1 sum_gradient = 152.17
+2 sum_gradient = 141.81
+Time -> 8.97, Altitude -> 1400.22
+ At address 218 
+1 sum_gradient = 151.47
+2 sum_gradient = 141.12
+Time -> 9.02, Altitude -> 1407.02
+ At address 219 
+1 sum_gradient = 150.79
+2 sum_gradient = 140.40
+Time -> 9.07, Altitude -> 1413.78
+ At address 220 
+1 sum_gradient = 150.00
+2 sum_gradient = 139.74
+Time -> 9.12, Altitude -> 1420.55
+ At address 221 
+1 sum_gradient = 149.36
+2 sum_gradient = 139.09
+Time -> 9.17, Altitude -> 1427.26
+ At address 222 
+1 sum_gradient = 148.68
+2 sum_gradient = 138.45
+Time -> 9.22, Altitude -> 1433.93
+ At address 223 
+1 sum_gradient = 147.94
+2 sum_gradient = 137.84
+Time -> 9.27, Altitude -> 1440.58
+ At address 224 
+1 sum_gradient = 147.24
+2 sum_gradient = 137.19
+Time -> 9.32, Altitude -> 1447.16
+ At address 225 
+1 sum_gradient = 146.53
+2 sum_gradient = 136.47
+Time -> 9.37, Altitude -> 1453.74
+ At address 226 
+1 sum_gradient = 145.89
+2 sum_gradient = 135.78
+Time -> 9.42, Altitude -> 1460.30
+ At address 227 
+1 sum_gradient = 145.21
+2 sum_gradient = 135.14
+Time -> 9.47, Altitude -> 1466.82
+ At address 228 
+1 sum_gradient = 144.55
+2 sum_gradient = 134.52
+Time -> 9.52, Altitude -> 1473.28
+ At address 229 
+1 sum_gradient = 143.85
+2 sum_gradient = 133.83
+Time -> 9.57, Altitude -> 1479.74
+ At address 230 
+1 sum_gradient = 143.14
+2 sum_gradient = 133.17
+Time -> 9.62, Altitude -> 1486.17
+ At address 231 
+1 sum_gradient = 142.47
+2 sum_gradient = 132.52
+Time -> 9.67, Altitude -> 1492.54
+ At address 232 
+1 sum_gradient = 141.81
+2 sum_gradient = 131.81
+Time -> 9.72, Altitude -> 1498.91
+ At address 233 
+1 sum_gradient = 141.12
+2 sum_gradient = 131.19
+Time -> 9.77, Altitude -> 1505.22
+ At address 234 
+1 sum_gradient = 140.40
+2 sum_gradient = 130.57
+Time -> 9.82, Altitude -> 1511.50
+ At address 235 
+1 sum_gradient = 139.74
+2 sum_gradient = 129.98
+Time -> 9.87, Altitude -> 1517.78
+ At address 236 
+1 sum_gradient = 139.09
+2 sum_gradient = 129.31
+Time -> 9.92, Altitude -> 1524.00
+ At address 237 
+1 sum_gradient = 138.45
+2 sum_gradient = 128.69
+Time -> 9.97, Altitude -> 1530.19
+ At address 238 
+1 sum_gradient = 137.84
+2 sum_gradient = 128.05
+Time -> 10.02, Altitude -> 1536.37
+ At address 239 
+1 sum_gradient = 137.19
+2 sum_gradient = 127.40
+Time -> 10.07, Altitude -> 1542.50
+ At address 240 
+1 sum_gradient = 136.47
+2 sum_gradient = 126.81
+Time -> 10.12, Altitude -> 1548.60
+ At address 241 
+1 sum_gradient = 135.78
+2 sum_gradient = 126.14
+Time -> 10.17, Altitude -> 1554.66
+ At address 242 
+1 sum_gradient = 135.14
+2 sum_gradient = 125.55
+Time -> 10.22, Altitude -> 1560.70
+ At address 243 
+1 sum_gradient = 134.52
+2 sum_gradient = 124.90
+Time -> 10.27, Altitude -> 1566.73
+ At address 244 
+1 sum_gradient = 133.83
+2 sum_gradient = 124.33
+Time -> 10.32, Altitude -> 1572.71
+ At address 245 
+1 sum_gradient = 133.17
+2 sum_gradient = 123.69
+Time -> 10.37, Altitude -> 1578.65
+ At address 246 
+1 sum_gradient = 132.52
+2 sum_gradient = 123.04
+Time -> 10.42, Altitude -> 1584.56
+ At address 247 
+1 sum_gradient = 131.81
+2 sum_gradient = 122.42
+Time -> 10.47, Altitude -> 1590.45
+ At address 248 
+1 sum_gradient = 131.19
+2 sum_gradient = 121.78
+Time -> 10.52, Altitude -> 1596.30
+ At address 249 
+1 sum_gradient = 130.57
+2 sum_gradient = 121.18
+Time -> 10.57, Altitude -> 1602.12
+ At address 250 
+1 sum_gradient = 129.98
+2 sum_gradient = 120.47
+Time -> 10.62, Altitude -> 1607.94
+ At address 251 
+1 sum_gradient = 129.31
+2 sum_gradient = 119.88
+Time -> 10.67, Altitude -> 1613.70
+ At address 252 
+1 sum_gradient = 128.69
+2 sum_gradient = 119.26
+Time -> 10.72, Altitude -> 1619.43
+ At address 253 
+1 sum_gradient = 128.05
+2 sum_gradient = 118.69
+Time -> 10.77, Altitude -> 1625.13
+ At address 254 
+1 sum_gradient = 127.40
+2 sum_gradient = 118.03
+Time -> 10.82, Altitude -> 1630.80
+ At address 255 
+1 sum_gradient = 126.81
+2 sum_gradient = 117.38
+Time -> 10.87, Altitude -> 1636.44
+ At address 256 
+1 sum_gradient = 126.14
+2 sum_gradient = 116.81
+Time -> 10.92, Altitude -> 1642.05
+ At address 257 
+1 sum_gradient = 125.55
+2 sum_gradient = 116.21
+Time -> 10.97, Altitude -> 1647.66
+ At address 258 
+1 sum_gradient = 124.90
+2 sum_gradient = 115.59
+Time -> 11.02, Altitude -> 1653.20
+ At address 259 
+1 sum_gradient = 124.33
+2 sum_gradient = 114.98
+Time -> 11.07, Altitude -> 1658.72
+ At address 260 
+1 sum_gradient = 123.69
+2 sum_gradient = 114.43
+Time -> 11.12, Altitude -> 1664.21
+ At address 261 
+1 sum_gradient = 123.04
+2 sum_gradient = 113.81
+Time -> 11.17, Altitude -> 1669.66
+ At address 262 
+1 sum_gradient = 122.42
+2 sum_gradient = 113.23
+Time -> 11.22, Altitude -> 1675.12
+ At address 263 
+1 sum_gradient = 121.78
+2 sum_gradient = 112.64
+Time -> 11.27, Altitude -> 1680.51
+ At address 264 
+1 sum_gradient = 121.18
+2 sum_gradient = 111.93
+Time -> 11.32, Altitude -> 1685.88
+ At address 265 
+1 sum_gradient = 120.47
+2 sum_gradient = 111.32
+Time -> 11.37, Altitude -> 1691.24
+ At address 266 
+1 sum_gradient = 119.88
+2 sum_gradient = 110.70
+Time -> 11.42, Altitude -> 1696.55
+ At address 267 
+1 sum_gradient = 119.26
+2 sum_gradient = 110.14
+Time -> 11.47, Altitude -> 1701.85
+ At address 268 
+1 sum_gradient = 118.69
+2 sum_gradient = 109.53
+Time -> 11.52, Altitude -> 1707.09
+ At address 269 
+1 sum_gradient = 118.03
+2 sum_gradient = 108.95
+Time -> 11.57, Altitude -> 1712.34
+ At address 270 
+1 sum_gradient = 117.38
+2 sum_gradient = 108.31
+Time -> 11.62, Altitude -> 1717.52
+ At address 271 
+1 sum_gradient = 116.81
+2 sum_gradient = 107.79
+Time -> 11.67, Altitude -> 1722.70
+ At address 272 
+1 sum_gradient = 116.21
+2 sum_gradient = 107.14
+Time -> 11.72, Altitude -> 1727.82
+ At address 273 
+1 sum_gradient = 115.59
+2 sum_gradient = 106.58
+Time -> 11.77, Altitude -> 1732.94
+ At address 274 
+1 sum_gradient = 114.98
+2 sum_gradient = 106.02
+Time -> 11.82, Altitude -> 1738.03
+ At address 275 
+1 sum_gradient = 114.43
+2 sum_gradient = 105.42
+Time -> 11.87, Altitude -> 1743.09
+ At address 276 
+1 sum_gradient = 113.81
+2 sum_gradient = 104.82
+Time -> 11.92, Altitude -> 1748.09
+ At address 277 
+1 sum_gradient = 113.23
+2 sum_gradient = 104.26
+Time -> 11.97, Altitude -> 1753.09
+ At address 278 
+1 sum_gradient = 112.64
+2 sum_gradient = 103.66
+Time -> 12.02, Altitude -> 1758.06
+ At address 279 
+1 sum_gradient = 111.93
+2 sum_gradient = 103.00
+Time -> 12.07, Altitude -> 1762.99
+ At address 280 
+1 sum_gradient = 111.32
+2 sum_gradient = 102.46
+Time -> 12.12, Altitude -> 1767.90
+ At address 281 
+1 sum_gradient = 110.70
+2 sum_gradient = 101.87
+Time -> 12.17, Altitude -> 1772.78
+ At address 282 
+1 sum_gradient = 110.14
+2 sum_gradient = 101.27
+Time -> 12.22, Altitude -> 1777.62
+ At address 283 
+1 sum_gradient = 109.53
+2 sum_gradient = 100.74
+Time -> 12.27, Altitude -> 1782.47
+ At address 284 
+1 sum_gradient = 108.95
+2 sum_gradient = 100.26
+Time -> 12.32, Altitude -> 1787.26
+ At address 285 
+1 sum_gradient = 108.31
+2 sum_gradient = 99.65
+Time -> 12.37, Altitude -> 1792.01
+ At address 286 
+1 sum_gradient = 107.79
+2 sum_gradient = 99.14
+Time -> 12.42, Altitude -> 1796.77
+ At address 287 
+1 sum_gradient = 107.14
+2 sum_gradient = 98.51
+Time -> 12.47, Altitude -> 1801.46
+ At address 288 
+1 sum_gradient = 106.58
+2 sum_gradient = 97.95
+Time -> 12.52, Altitude -> 1806.15
+ At address 289 
+1 sum_gradient = 106.02
+2 sum_gradient = 97.37
+Time -> 12.57, Altitude -> 1810.82
+ At address 290 
+1 sum_gradient = 105.42
+2 sum_gradient = 96.77
+Time -> 12.62, Altitude -> 1815.42
+ At address 291 
+1 sum_gradient = 104.82
+2 sum_gradient = 96.15
+Time -> 12.67, Altitude -> 1820.02
+ At address 292 
+1 sum_gradient = 104.26
+2 sum_gradient = 95.65
+Time -> 12.72, Altitude -> 1824.59
+ At address 293 
+1 sum_gradient = 103.66
+2 sum_gradient = 95.01
+Time -> 12.77, Altitude -> 1829.14
+ At address 294 
+1 sum_gradient = 103.00
+2 sum_gradient = 94.56
+Time -> 12.82, Altitude -> 1833.65
+ At address 295 
+1 sum_gradient = 102.46
+2 sum_gradient = 93.87
+Time -> 12.87, Altitude -> 1838.13
+ At address 296 
+1 sum_gradient = 101.87
+2 sum_gradient = 93.43
+Time -> 12.92, Altitude -> 1842.58
+ At address 297 
+1 sum_gradient = 101.27
+2 sum_gradient = 92.84
+Time -> 12.97, Altitude -> 1847.03
+ At address 298 
+1 sum_gradient = 100.74
+2 sum_gradient = 92.25
+Time -> 13.02, Altitude -> 1851.42
+ At address 299 
+1 sum_gradient = 100.26
+2 sum_gradient = 91.70
+Time -> 13.07, Altitude -> 1855.77
+ At address 300 
+1 sum_gradient = 99.65
+2 sum_gradient = 91.11
+Time -> 13.12, Altitude -> 1860.13
+ At address 301 
+1 sum_gradient = 99.14
+2 sum_gradient = 90.54
+Time -> 13.17, Altitude -> 1864.46
+ At address 302 
+1 sum_gradient = 98.51
+2 sum_gradient = 90.00
+Time -> 13.22, Altitude -> 1868.73
+ At address 303 
+1 sum_gradient = 97.95
+2 sum_gradient = 89.41
+Time -> 13.27, Altitude -> 1873.00
+ At address 304 
+1 sum_gradient = 97.37
+2 sum_gradient = 88.81
+Time -> 13.32, Altitude -> 1877.23
+ At address 305 
+1 sum_gradient = 96.77
+2 sum_gradient = 88.30
+Time -> 13.37, Altitude -> 1881.44
+ At address 306 
+1 sum_gradient = 96.15
+2 sum_gradient = 87.76
+Time -> 13.42, Altitude -> 1885.61
+ At address 307 
+1 sum_gradient = 95.65
+2 sum_gradient = 87.19
+Time -> 13.47, Altitude -> 1889.76
+ At address 308 
+1 sum_gradient = 95.01
+2 sum_gradient = 86.67
+Time -> 13.52, Altitude -> 1893.91
+ At address 309 
+1 sum_gradient = 94.56
+2 sum_gradient = 86.14
+Time -> 13.57, Altitude -> 1897.99
+ At address 310 
+1 sum_gradient = 93.87
+2 sum_gradient = 85.57
+Time -> 13.62, Altitude -> 1902.07
+ At address 311 
+1 sum_gradient = 93.43
+2 sum_gradient = 84.98
+Time -> 13.67, Altitude -> 1906.10
+ At address 312 
+1 sum_gradient = 92.84
+2 sum_gradient = 84.46
+Time -> 13.72, Altitude -> 1910.12
+ At address 313 
+1 sum_gradient = 92.25
+2 sum_gradient = 83.79
+Time -> 13.77, Altitude -> 1914.11
+ At address 314 
+1 sum_gradient = 91.70
+2 sum_gradient = 83.25
+Time -> 13.82, Altitude -> 1918.08
+ At address 315 
+1 sum_gradient = 91.11
+2 sum_gradient = 82.73
+Time -> 13.87, Altitude -> 1922.01
+ At address 316 
+1 sum_gradient = 90.54
+2 sum_gradient = 82.24
+Time -> 13.92, Altitude -> 1925.91
+ At address 317 
+1 sum_gradient = 90.00
+2 sum_gradient = 81.78
+Time -> 13.97, Altitude -> 1929.78
+ At address 318 
+1 sum_gradient = 89.41
+2 sum_gradient = 81.24
+Time -> 14.02, Altitude -> 1933.65
+ At address 319 
+1 sum_gradient = 88.81
+2 sum_gradient = 80.62
+Time -> 14.07, Altitude -> 1937.46
+ At address 320 
+1 sum_gradient = 88.30
+2 sum_gradient = 80.13
+Time -> 14.12, Altitude -> 1941.27
+ At address 321 
+1 sum_gradient = 87.76
+2 sum_gradient = 79.49
+Time -> 14.17, Altitude -> 1945.02
+ At address 322 
+1 sum_gradient = 87.19
+2 sum_gradient = 78.98
+Time -> 14.22, Altitude -> 1948.77
+ At address 323 
+1 sum_gradient = 86.67
+2 sum_gradient = 78.35
+Time -> 14.27, Altitude -> 1952.49
+ At address 324 
+1 sum_gradient = 86.14
+2 sum_gradient = 77.88
+Time -> 14.32, Altitude -> 1956.18
+ At address 325 
+1 sum_gradient = 85.57
+2 sum_gradient = 77.31
+Time -> 14.37, Altitude -> 1959.83
+ At address 326 
+1 sum_gradient = 84.98
+2 sum_gradient = 76.86
+Time -> 14.42, Altitude -> 1963.46
+ At address 327 
+1 sum_gradient = 84.46
+2 sum_gradient = 76.11
+Time -> 14.47, Altitude -> 1967.09
+ At address 328 
+1 sum_gradient = 83.79
+2 sum_gradient = 75.53
+Time -> 14.52, Altitude -> 1970.65
+ At address 329 
+1 sum_gradient = 83.25
+2 sum_gradient = 75.09
+Time -> 14.57, Altitude -> 1974.22
+ At address 330 
+1 sum_gradient = 82.73
+2 sum_gradient = 74.57
+Time -> 14.62, Altitude -> 1977.76
+ At address 331 
+1 sum_gradient = 82.24
+2 sum_gradient = 74.02
+Time -> 14.67, Altitude -> 1981.26
+ At address 332 
+1 sum_gradient = 81.78
+2 sum_gradient = 73.50
+Time -> 14.72, Altitude -> 1984.74
+ At address 333 
+1 sum_gradient = 81.24
+2 sum_gradient = 72.90
+Time -> 14.77, Altitude -> 1988.18
+ At address 334 
+1 sum_gradient = 80.62
+2 sum_gradient = 72.43
+Time -> 14.82, Altitude -> 1991.59
+ At address 335 
+1 sum_gradient = 80.13
+2 sum_gradient = 71.84
+Time -> 14.87, Altitude -> 1995.01
+ At address 336 
+1 sum_gradient = 79.49
+2 sum_gradient = 71.28
+Time -> 14.92, Altitude -> 1998.36
+ At address 337 
+1 sum_gradient = 78.98
+2 sum_gradient = 70.71
+Time -> 14.97, Altitude -> 2001.71
+ At address 338 
+1 sum_gradient = 78.35
+2 sum_gradient = 70.23
+Time -> 15.02, Altitude -> 2005.04
+ At address 339 
+1 sum_gradient = 77.88
+2 sum_gradient = 69.83
+Time -> 15.07, Altitude -> 2008.33
+ At address 340 
+1 sum_gradient = 77.31
+2 sum_gradient = 69.26
+Time -> 15.12, Altitude -> 2011.59
+ At address 341 
+1 sum_gradient = 76.86
+2 sum_gradient = 68.78
+Time -> 15.17, Altitude -> 2014.82
+ At address 342 
+1 sum_gradient = 76.11
+2 sum_gradient = 68.19
+Time -> 15.22, Altitude -> 2018.05
+ At address 343 
+1 sum_gradient = 75.53
+2 sum_gradient = 67.59
+Time -> 15.27, Altitude -> 2021.22
+ At address 344 
+1 sum_gradient = 75.09
+2 sum_gradient = 67.07
+Time -> 15.32, Altitude -> 2024.39
+ At address 345 
+1 sum_gradient = 74.57
+2 sum_gradient = 66.55
+Time -> 15.37, Altitude -> 2027.53
+ At address 346 
+1 sum_gradient = 74.02
+2 sum_gradient = 66.05
+Time -> 15.42, Altitude -> 2030.64
+ At address 347 
+1 sum_gradient = 73.50
+2 sum_gradient = 65.55
+Time -> 15.47, Altitude -> 2033.72
+ At address 348 
+1 sum_gradient = 72.90
+2 sum_gradient = 65.10
+Time -> 15.52, Altitude -> 2036.77
+ At address 349 
+1 sum_gradient = 72.43
+2 sum_gradient = 64.52
+Time -> 15.57, Altitude -> 2039.78
+ At address 350 
+1 sum_gradient = 71.84
+2 sum_gradient = 64.00
+Time -> 15.62, Altitude -> 2042.80
+ At address 351 
+1 sum_gradient = 71.28
+2 sum_gradient = 63.48
+Time -> 15.67, Altitude -> 2045.76
+ At address 352 
+1 sum_gradient = 70.71
+2 sum_gradient = 62.95
+Time -> 15.72, Altitude -> 2048.71
+ At address 353 
+1 sum_gradient = 70.23
+2 sum_gradient = 62.38
+Time -> 15.77, Altitude -> 2051.64
+ At address 354 
+1 sum_gradient = 69.83
+2 sum_gradient = 61.93
+Time -> 15.82, Altitude -> 2054.53
+ At address 355 
+1 sum_gradient = 69.26
+2 sum_gradient = 61.38
+Time -> 15.87, Altitude -> 2057.40
+ At address 356 
+1 sum_gradient = 68.78
+2 sum_gradient = 60.81
+Time -> 15.92, Altitude -> 2060.27
+ At address 357 
+1 sum_gradient = 68.19
+2 sum_gradient = 60.31
+Time -> 15.97, Altitude -> 2063.07
+ At address 358 
+1 sum_gradient = 67.59
+2 sum_gradient = 59.81
+Time -> 16.02, Altitude -> 2065.87
+ At address 359 
+1 sum_gradient = 67.07
+2 sum_gradient = 59.31
+Time -> 16.07, Altitude -> 2068.65
+ At address 360 
+1 sum_gradient = 66.55
+2 sum_gradient = 58.69
+Time -> 16.12, Altitude -> 2071.39
+ At address 361 
+1 sum_gradient = 66.05
+2 sum_gradient = 58.15
+Time -> 16.17, Altitude -> 2074.10
+ At address 362 
+1 sum_gradient = 65.55
+2 sum_gradient = 57.55
+Time -> 16.22, Altitude -> 2076.79
+ At address 363 
+1 sum_gradient = 65.10
+2 sum_gradient = 57.16
+Time -> 16.27, Altitude -> 2079.44
+ At address 364 
+1 sum_gradient = 64.52
+2 sum_gradient = 56.74
+Time -> 16.32, Altitude -> 2082.09
+ At address 365 
+1 sum_gradient = 64.00
+2 sum_gradient = 56.14
+Time -> 16.37, Altitude -> 2084.71
+ At address 366 
+1 sum_gradient = 63.48
+2 sum_gradient = 55.63
+Time -> 16.42, Altitude -> 2087.30
+ At address 367 
+1 sum_gradient = 62.95
+2 sum_gradient = 55.04
+Time -> 16.47, Altitude -> 2089.86
+ At address 368 
+1 sum_gradient = 62.38
+2 sum_gradient = 54.56
+Time -> 16.52, Altitude -> 2092.39
+ At address 369 
+1 sum_gradient = 61.93
+2 sum_gradient = 54.12
+Time -> 16.57, Altitude -> 2094.92
+ At address 370 
+1 sum_gradient = 61.38
+2 sum_gradient = 53.71
+Time -> 16.62, Altitude -> 2097.39
+ At address 371 
+1 sum_gradient = 60.81
+2 sum_gradient = 53.11
+Time -> 16.67, Altitude -> 2099.86
+ At address 372 
+1 sum_gradient = 60.31
+2 sum_gradient = 52.52
+Time -> 16.72, Altitude -> 2102.30
+ At address 373 
+1 sum_gradient = 59.81
+2 sum_gradient = 51.99
+Time -> 16.77, Altitude -> 2104.70
+ At address 374 
+1 sum_gradient = 59.31
+2 sum_gradient = 51.47
+Time -> 16.82, Altitude -> 2107.08
+ At address 375 
+1 sum_gradient = 58.69
+2 sum_gradient = 51.00
+Time -> 16.87, Altitude -> 2109.46
+ At address 376 
+1 sum_gradient = 58.15
+2 sum_gradient = 50.52
+Time -> 16.92, Altitude -> 2111.78
+ At address 377 
+1 sum_gradient = 57.55
+2 sum_gradient = 49.96
+Time -> 16.97, Altitude -> 2114.09
+ At address 378 
+1 sum_gradient = 57.16
+2 sum_gradient = 49.38
+Time -> 17.02, Altitude -> 2116.38
+ At address 379 
+1 sum_gradient = 56.74
+2 sum_gradient = 48.90
+Time -> 17.07, Altitude -> 2118.63
+ At address 380 
+1 sum_gradient = 56.14
+2 sum_gradient = 48.44
+Time -> 17.12, Altitude -> 2120.86
+ At address 381 
+1 sum_gradient = 55.63
+2 sum_gradient = 48.03
+Time -> 17.17, Altitude -> 2123.08
+ At address 382 
+1 sum_gradient = 55.04
+2 sum_gradient = 47.52
+Time -> 17.22, Altitude -> 2125.25
+ At address 383 
+1 sum_gradient = 54.56
+2 sum_gradient = 46.95
+Time -> 17.27, Altitude -> 2127.41
+ At address 384 
+1 sum_gradient = 54.12
+2 sum_gradient = 46.46
+Time -> 17.32, Altitude -> 2129.55
+ At address 385 
+1 sum_gradient = 53.71
+2 sum_gradient = 46.03
+Time -> 17.37, Altitude -> 2131.65
+ At address 386 
+1 sum_gradient = 53.11
+2 sum_gradient = 45.46
+Time -> 17.42, Altitude -> 2133.72
+ At address 387 
+1 sum_gradient = 52.52
+2 sum_gradient = 44.95
+Time -> 17.47, Altitude -> 2135.79
+ At address 388 
+1 sum_gradient = 51.99
+2 sum_gradient = 44.43
+Time -> 17.52, Altitude -> 2137.81
+ At address 389 
+1 sum_gradient = 51.47
+2 sum_gradient = 43.94
+Time -> 17.57, Altitude -> 2139.82
+ At address 390 
+1 sum_gradient = 51.00
+2 sum_gradient = 43.38
+Time -> 17.62, Altitude -> 2141.80
+ At address 391 
+1 sum_gradient = 50.52
+2 sum_gradient = 42.89
+Time -> 17.67, Altitude -> 2143.75
+ At address 392 
+1 sum_gradient = 49.96
+2 sum_gradient = 42.33
+Time -> 17.72, Altitude -> 2145.67
+ At address 393 
+1 sum_gradient = 49.38
+2 sum_gradient = 41.86
+Time -> 17.77, Altitude -> 2147.56
+ At address 394 
+1 sum_gradient = 48.90
+2 sum_gradient = 41.41
+Time -> 17.82, Altitude -> 2149.45
+ At address 395 
+1 sum_gradient = 48.44
+2 sum_gradient = 40.76
+Time -> 17.87, Altitude -> 2151.31
+ At address 396 
+1 sum_gradient = 48.03
+2 sum_gradient = 40.45
+Time -> 17.92, Altitude -> 2153.14
+ At address 397 
+1 sum_gradient = 47.52
+2 sum_gradient = 39.81
+Time -> 17.97, Altitude -> 2154.94
+ At address 398 
+1 sum_gradient = 46.95
+2 sum_gradient = 39.33
+Time -> 18.02, Altitude -> 2156.70
+ At address 399 
+1 sum_gradient = 46.46
+2 sum_gradient = 38.67
+Time -> 18.07, Altitude -> 2158.47
+ At address 400 
+1 sum_gradient = 46.03
+2 sum_gradient = 38.41
+Time -> 18.12, Altitude -> 2160.18
+ At address 401 
+1 sum_gradient = 45.46
+2 sum_gradient = 38.00
+Time -> 18.17, Altitude -> 2161.89
+ At address 402 
+1 sum_gradient = 44.95
+2 sum_gradient = 37.39
+Time -> 18.22, Altitude -> 2163.56
+ At address 403 
+1 sum_gradient = 44.43
+2 sum_gradient = 36.86
+Time -> 18.27, Altitude -> 2165.21
+ At address 404 
+1 sum_gradient = 43.94
+2 sum_gradient = 36.38
+Time -> 18.32, Altitude -> 2166.85
+ At address 405 
+1 sum_gradient = 43.38
+2 sum_gradient = 35.90
+Time -> 18.37, Altitude -> 2168.44
+ At address 406 
+1 sum_gradient = 42.89
+2 sum_gradient = 35.28
+Time -> 18.42, Altitude -> 2170.02
+ At address 407 
+1 sum_gradient = 42.33
+2 sum_gradient = 34.79
+Time -> 18.47, Altitude -> 2171.58
+ At address 408 
+1 sum_gradient = 41.86
+2 sum_gradient = 34.41
+Time -> 18.52, Altitude -> 2173.10
+ At address 409 
+1 sum_gradient = 41.41
+2 sum_gradient = 33.71
+Time -> 18.57, Altitude -> 2174.60
+ At address 410 
+1 sum_gradient = 40.76
+2 sum_gradient = 33.36
+Time -> 18.62, Altitude -> 2176.09
+ At address 411 
+1 sum_gradient = 40.45
+2 sum_gradient = 32.83
+Time -> 18.67, Altitude -> 2177.55
+ At address 412 
+1 sum_gradient = 39.81
+2 sum_gradient = 32.24
+Time -> 18.72, Altitude -> 2178.98
+ At address 413 
+1 sum_gradient = 39.33
+2 sum_gradient = 31.69
+Time -> 18.77, Altitude -> 2180.39
+ At address 414 
+1 sum_gradient = 38.67
+2 sum_gradient = 31.24
+Time -> 18.82, Altitude -> 2181.76
+ At address 415 
+1 sum_gradient = 38.41
+2 sum_gradient = 30.83
+Time -> 18.87, Altitude -> 2183.10
+ At address 416 
+1 sum_gradient = 38.00
+2 sum_gradient = 30.43
+Time -> 18.92, Altitude -> 2184.44
+ At address 417 
+1 sum_gradient = 37.39
+2 sum_gradient = 29.86
+Time -> 18.97, Altitude -> 2185.75
+ At address 418 
+1 sum_gradient = 36.86
+2 sum_gradient = 29.24
+Time -> 19.02, Altitude -> 2187.03
+ At address 419 
+1 sum_gradient = 36.38
+2 sum_gradient = 28.78
+Time -> 19.07, Altitude -> 2188.28
+ At address 420 
+1 sum_gradient = 35.90
+2 sum_gradient = 28.26
+Time -> 19.12, Altitude -> 2189.53
+ At address 421 
+1 sum_gradient = 35.28
+2 sum_gradient = 27.86
+Time -> 19.17, Altitude -> 2190.72
+ At address 422 
+1 sum_gradient = 34.79
+2 sum_gradient = 27.37
+Time -> 19.22, Altitude -> 2191.91
+ At address 423 
+1 sum_gradient = 34.41
+2 sum_gradient = 26.88
+Time -> 19.27, Altitude -> 2193.07
+ At address 424 
+1 sum_gradient = 33.71
+2 sum_gradient = 26.29
+Time -> 19.32, Altitude -> 2194.19
+ At address 425 
+1 sum_gradient = 33.36
+2 sum_gradient = 25.92
+Time -> 19.37, Altitude -> 2195.32
+ At address 426 
+1 sum_gradient = 32.83
+2 sum_gradient = 25.50
+Time -> 19.42, Altitude -> 2196.39
+ At address 427 
+1 sum_gradient = 32.24
+2 sum_gradient = 25.03
+Time -> 19.47, Altitude -> 2197.46
+ At address 428 
+1 sum_gradient = 31.69
+2 sum_gradient = 24.48
+Time -> 19.52, Altitude -> 2198.49
+ At address 429 
+1 sum_gradient = 31.24
+2 sum_gradient = 24.02
+Time -> 19.57, Altitude -> 2199.50
+ At address 430 
+1 sum_gradient = 30.83
+2 sum_gradient = 23.45
+Time -> 19.62, Altitude -> 2200.50
+ At address 431 
+1 sum_gradient = 30.43
+2 sum_gradient = 22.92
+Time -> 19.67, Altitude -> 2201.45
+ At address 432 
+1 sum_gradient = 29.86
+2 sum_gradient = 22.44
+Time -> 19.72, Altitude -> 2202.39
+ At address 433 
+1 sum_gradient = 29.24
+2 sum_gradient = 21.92
+Time -> 19.77, Altitude -> 2203.31
+ At address 434 
+1 sum_gradient = 28.78
+2 sum_gradient = 21.32
+Time -> 19.82, Altitude -> 2204.19
+ At address 435 
+1 sum_gradient = 28.26
+2 sum_gradient = 20.95
+Time -> 19.87, Altitude -> 2205.05
+ At address 436 
+1 sum_gradient = 27.86
+2 sum_gradient = 20.45
+Time -> 19.92, Altitude -> 2205.90
+ At address 437 
+1 sum_gradient = 27.37
+2 sum_gradient = 19.88
+Time -> 19.97, Altitude -> 2206.72
+ At address 438 
+1 sum_gradient = 26.88
+2 sum_gradient = 19.35
+Time -> 20.02, Altitude -> 2207.48
+ At address 439 
+1 sum_gradient = 26.29
+2 sum_gradient = 18.97
+Time -> 20.07, Altitude -> 2208.28
+ At address 440 
+1 sum_gradient = 25.92
+2 sum_gradient = 18.48
+Time -> 20.12, Altitude -> 2209.01
+ At address 441 
+1 sum_gradient = 25.50
+2 sum_gradient = 18.26
+Time -> 20.17, Altitude -> 2209.71
+ At address 442 
+1 sum_gradient = 25.03
+2 sum_gradient = 17.62
+Time -> 20.22, Altitude -> 2210.41
+ At address 443 
+1 sum_gradient = 24.48
+2 sum_gradient = 17.12
+Time -> 20.27, Altitude -> 2211.08
+ At address 444 
+1 sum_gradient = 24.02
+2 sum_gradient = 16.49
+Time -> 20.32, Altitude -> 2211.72
+ At address 445 
+1 sum_gradient = 23.45
+2 sum_gradient = 16.11
+Time -> 20.37, Altitude -> 2212.33
+ At address 446 
+1 sum_gradient = 22.92
+2 sum_gradient = 15.70
+Time -> 20.42, Altitude -> 2212.94
+ At address 447 
+1 sum_gradient = 22.44
+2 sum_gradient = 15.06
+Time -> 20.47, Altitude -> 2213.49
+ At address 448 
+1 sum_gradient = 21.92
+2 sum_gradient = 14.55
+Time -> 20.52, Altitude -> 2214.04
+ At address 449 
+1 sum_gradient = 21.32
+2 sum_gradient = 14.00
+Time -> 20.57, Altitude -> 2214.55
+ At address 450 
+1 sum_gradient = 20.95
+2 sum_gradient = 13.53
+Time -> 20.62, Altitude -> 2215.07
+ At address 451 
+1 sum_gradient = 20.45
+2 sum_gradient = 13.03
+Time -> 20.67, Altitude -> 2215.53
+ At address 452 
+1 sum_gradient = 19.88
+2 sum_gradient = 12.59
+Time -> 20.72, Altitude -> 2215.99
+ At address 453 
+1 sum_gradient = 19.35
+2 sum_gradient = 12.38
+Time -> 20.77, Altitude -> 2216.41
+ At address 454 
+1 sum_gradient = 18.97
+2 sum_gradient = 11.72
+Time -> 20.82, Altitude -> 2216.81
+ At address 455 
+1 sum_gradient = 18.48
+2 sum_gradient = 11.14
+Time -> 20.87, Altitude -> 2217.18
+ At address 456 
+1 sum_gradient = 18.26
+2 sum_gradient = 10.65
+Time -> 20.92, Altitude -> 2217.54
+ At address 457 
+1 sum_gradient = 17.62
+2 sum_gradient = 10.29
+Time -> 20.97, Altitude -> 2217.85
+ At address 458 
+1 sum_gradient = 17.12
+2 sum_gradient = 9.79
+Time -> 21.02, Altitude -> 2218.15
+ At address 459 
+1 sum_gradient = 16.49
+2 sum_gradient = 9.14
+Time -> 21.07, Altitude -> 2218.43
+ At address 460 
+1 sum_gradient = 16.11
+2 sum_gradient = 8.58
+Time -> 21.12, Altitude -> 2218.67
+ At address 461 
+1 sum_gradient = 15.70
+2 sum_gradient = 8.18
+Time -> 21.17, Altitude -> 2218.91
+ At address 462 
+1 sum_gradient = 15.06
+2 sum_gradient = 7.62
+Time -> 21.22, Altitude -> 2219.13
+ At address 463 
+1 sum_gradient = 14.55
+2 sum_gradient = 7.23
+Time -> 21.27, Altitude -> 2219.31
+ At address 464 
+1 sum_gradient = 14.00
+2 sum_gradient = 6.76
+Time -> 21.32, Altitude -> 2219.46
+ At address 465 
+1 sum_gradient = 13.53
+2 sum_gradient = 6.19
+Time -> 21.37, Altitude -> 2219.58
+ At address 466 
+1 sum_gradient = 13.03
+2 sum_gradient = 5.80
+Time -> 21.42, Altitude -> 2219.71
+ At address 467 
+1 sum_gradient = 12.59
+2 sum_gradient = 5.14
+Time -> 21.47, Altitude -> 2219.77
+ At address 468 
+1 sum_gradient = 12.38
+2 sum_gradient = 4.84
+Time -> 21.52, Altitude -> 2219.83
+ At address 469 
+1 sum_gradient = 11.72
+2 sum_gradient = 4.38
+Time -> 21.57, Altitude -> 2219.89
+ At address 470 
+1 sum_gradient = 11.14
+2 sum_gradient = 3.81
+Time -> 21.62, Altitude -> 2219.89
+ At address 471 
+1 sum_gradient = 10.65
+2 sum_gradient = 3.42
+Time -> 21.67, Altitude -> 2219.89
+ At address 472 
+1 sum_gradient = 10.29
+2 sum_gradient = 3.05
+Time -> 21.71, Altitude -> 2219.86
+ At address 473 
+1 sum_gradient = 9.79
+2 sum_gradient = 2.70
+Time -> 21.74, Altitude -> 2219.83
+ At address 474 
+1 sum_gradient = 9.14
+2 sum_gradient = 1.89
+Time -> 21.77, Altitude -> 2219.77
+ At address 475 
+1 sum_gradient = 8.58
+2 sum_gradient = 1.67
+Time -> 21.80, Altitude -> 2219.74
+ At address 476 
+1 sum_gradient = 8.18
+2 sum_gradient = 1.32
+Time -> 21.84, Altitude -> 2219.68
+ At address 477 
+1 sum_gradient = 7.62
+2 sum_gradient = 0.93
+Time -> 21.87, Altitude -> 2219.58
+ At address 478 
+1 sum_gradient = 7.23
+2 sum_gradient = 0.37
+Time -> 21.91, Altitude -> 2219.49
+ At address 479 
+1 sum_gradient = 6.76
+2 sum_gradient = -0.13
+Time -> 21.95, Altitude -> 2219.40
+ At address 480 
+1 sum_gradient = 6.19
+2 sum_gradient = -0.43
+Time -> 21.99, Altitude -> 2219.28
+ At address 481 
+1 sum_gradient = 5.80
+2 sum_gradient = -0.76
+Time -> 22.03, Altitude -> 2219.13
+ At address 482 
+1 sum_gradient = 5.14
+2 sum_gradient = -0.97
+Time -> 22.07, Altitude -> 2218.97
+ At address 483 
+1 sum_gradient = 4.84
+2 sum_gradient = -1.36
+Time -> 22.11, Altitude -> 2218.82
+ At address 484 
+1 sum_gradient = 4.38
+2 sum_gradient = -1.93
+Time -> 22.15, Altitude -> 2218.61
+ At address 485 
+1 sum_gradient = 3.81
+2 sum_gradient = -2.48
+Time -> 22.19, Altitude -> 2218.43
+ At address 486 
+1 sum_gradient = 3.42
+2 sum_gradient = -3.15
+Time -> 22.23, Altitude -> 2218.18
+ At address 487 
+1 sum_gradient = 3.05
+2 sum_gradient = -3.19
+Time -> 22.28, Altitude -> 2217.94
+ At address 488 
+1 sum_gradient = 2.70
+2 sum_gradient = -3.53
+Time -> 22.32, Altitude -> 2217.69
+ At address 489 
+1 sum_gradient = 1.89
+2 sum_gradient = -3.85
+Time -> 22.37, Altitude -> 2217.39
+ At address 490 
+1 sum_gradient = 1.67
+2 sum_gradient = -4.41
+Time -> 22.42, Altitude -> 2217.08
+ At address 491 
+1 sum_gradient = 1.32
+2 sum_gradient = -4.34
+Apogee detected.
+At address 491 Time -> 22.42
+, Altitude -> 2217.08
+ Drogue released  
+It is now Descending.
+22.46 s, 2216.75 m
+It is now Descending.
+22.51 s, 2216.38 m
+It is now Descending.
+22.56 s, 2216.02 m
+It is now Descending.
+22.61 s, 2215.62 m
+It is now Descending.
+22.67 s, 2215.16 m
+It is now Descending.
+22.72 s, 2214.71 m
+It is now Descending.
+22.77 s, 2214.22 m
+It is now Descending.
+22.83 s, 2213.70 m
+It is now Descending.
+22.88 s, 2213.15 m
+It is now Descending.
+22.94 s, 2212.57 m
+It is now Descending.
+23.00 s, 2211.96 m
+It is now Descending.
+23.06 s, 2211.29 m
+It is now Descending.
+23.12 s, 2210.62 m
+It is now Descending.
+23.18 s, 2209.89 m
+It is now Descending.
+23.25 s, 2209.13 m
+It is now Descending.
+23.31 s, 2208.31 m
+It is now Descending.
+23.38 s, 2207.45 m
+It is now Descending.
+23.45 s, 2206.57 m
+It is now Descending.
+23.52 s, 2205.62 m
+It is now Descending.
+23.59 s, 2204.62 m
+It is now Descending.
+23.66 s, 2203.58 m
+It is now Descending.
+23.74 s, 2202.48 m
+It is now Descending.
+23.81 s, 2201.33 m
+It is now Descending.
+23.89 s, 2200.08 m
+It is now Descending.
+23.97 s, 2198.80 m
+It is now Descending.
+24.06 s, 2197.42 m
+It is now Descending.
+24.15 s, 2195.99 m
+It is now Descending.
+24.24 s, 2194.47 m
+It is now Descending.
+24.33 s, 2192.85 m
+It is now Descending.
+24.42 s, 2191.18 m
+It is now Descending.
+24.52 s, 2189.38 m
+It is now Descending.
+24.63 s, 2187.49 m
+It is now Descending.
+24.73 s, 2185.48 m
+It is now Descending.
+24.84 s, 2183.31 m
+It is now Descending.
+24.96 s, 2181.06 m
+It is now Descending.
+25.08 s, 2178.65 m
+It is now Descending.
+25.21 s, 2176.06 m
+It is now Descending.
+25.34 s, 2173.35 m
+It is now Descending.
+25.48 s, 2170.42 m
+It is now Descending.
+25.63 s, 2167.25 m
+It is now Descending.
+25.79 s, 2163.84 m
+It is now Descending.
+25.96 s, 2160.15 m
+It is now Descending.
+26.15 s, 2156.06 m
+It is now Descending.
+26.35 s, 2151.58 m
+It is now Descending.
+26.58 s, 2146.43 m
+It is now Descending.
+26.84 s, 2140.55 m
+It is now Descending.
+27.12 s, 2134.09 m
+It is now Descending.
+27.43 s, 2126.80 m
+It is now Descending.
+27.78 s, 2118.60 m
+It is now Descending.
+28.21 s, 2108.30 m
+It is now Descending.
+28.71 s, 2096.41 m
+It is now Descending.
+29.21 s, 2084.44 m
+It is now Descending.
+29.71 s, 2072.46 m
+It is now Descending.
+30.21 s, 2060.42 m
+It is now Descending.
+30.71 s, 2048.41 m
+It is now Descending.
+31.21 s, 2036.37 m
+It is now Descending.
+31.71 s, 2024.36 m
+It is now Descending.
+32.21 s, 2012.32 m
+It is now Descending.
+32.71 s, 2000.31 m
+It is now Descending.
+33.21 s, 1988.27 m
+It is now Descending.
+33.71 s, 1976.26 m
+It is now Descending.
+34.21 s, 1964.25 m
+It is now Descending.
+34.71 s, 1952.27 m
+It is now Descending.
+35.21 s, 1940.27 m
+It is now Descending.
+35.71 s, 1928.29 m
+It is now Descending.
+36.21 s, 1916.31 m
+It is now Descending.
+36.71 s, 1904.33 m
+It is now Descending.
+37.21 s, 1892.38 m
+It is now Descending.
+37.71 s, 1880.43 m
+It is now Descending.
+38.21 s, 1868.48 m
+It is now Descending.
+38.71 s, 1856.54 m
+It is now Descending.
+39.21 s, 1844.59 m
+It is now Descending.
+39.71 s, 1832.67 m
+It is now Descending.
+40.21 s, 1820.75 m
+It is now Descending.
+40.71 s, 1808.84 m
+It is now Descending.
+41.21 s, 1796.95 m
+It is now Descending.
+41.71 s, 1785.03 m
+It is now Descending.
+42.21 s, 1773.14 m
+It is now Descending.
+42.71 s, 1761.26 m
+It is now Descending.
+43.21 s, 1749.40 m
+It is now Descending.
+43.71 s, 1737.51 m
+It is now Descending.
+44.21 s, 1725.66 m
+It is now Descending.
+44.71 s, 1713.80 m
+It is now Descending.
+45.21 s, 1701.94 m
+It is now Descending.
+45.71 s, 1690.12 m
+It is now Descending.
+46.21 s, 1678.29 m
+It is now Descending.
+46.71 s, 1666.46 m
+It is now Descending.
+47.21 s, 1654.64 m
+It is now Descending.
+47.71 s, 1642.81 m
+It is now Descending.
+48.21 s, 1631.02 m
+It is now Descending.
+48.71 s, 1619.22 m
+It is now Descending.
+49.21 s, 1607.42 m
+It is now Descending.
+49.71 s, 1595.63 m
+It is now Descending.
+50.21 s, 1583.86 m
+It is now Descending.
+50.71 s, 1572.07 m
+It is now Descending.
+51.21 s, 1560.30 m
+It is now Descending.
+51.71 s, 1548.57 m
+It is now Descending.
+52.21 s, 1536.80 m
+It is now Descending.
+52.71 s, 1525.07 m
+It is now Descending.
+53.21 s, 1513.33 m
+It is now Descending.
+53.71 s, 1501.60 m
+It is now Descending.
+54.21 s, 1489.86 m
+It is now Descending.
+54.71 s, 1478.13 m
+It is now Descending.
+55.21 s, 1466.42 m
+It is now Descending.
+55.71 s, 1454.72 m
+It is now Descending.
+56.21 s, 1443.01 m
+It is now Descending.
+56.71 s, 1431.34 m
+It is now Descending.
+57.21 s, 1419.64 m
+It is now Descending.
+57.71 s, 1407.96 m
+It is now Descending.
+58.21 s, 1396.29 m
+It is now Descending.
+58.71 s, 1384.65 m
+It is now Descending.
+59.21 s, 1372.97 m
+It is now Descending.
+59.71 s, 1361.33 m
+It is now Descending.
+60.21 s, 1349.68 m
+It is now Descending.
+60.71 s, 1338.04 m
+It is now Descending.
+61.21 s, 1326.43 m
+It is now Descending.
+61.71 s, 1314.82 m
+It is now Descending.
+62.21 s, 1303.17 m
+It is now Descending.
+62.71 s, 1291.59 m
+It is now Descending.
+63.21 s, 1279.98 m
+It is now Descending.
+63.71 s, 1268.39 m
+It is now Descending.
+64.21 s, 1256.78 m
+It is now Descending.
+64.71 s, 1245.20 m
+It is now Descending.
+65.21 s, 1233.65 m
+It is now Descending.
+65.71 s, 1222.07 m
+It is now Descending.
+66.21 s, 1210.51 m
+It is now Descending.
+66.71 s, 1198.93 m
+It is now Descending.
+67.21 s, 1187.41 m
+It is now Descending.
+67.71 s, 1175.86 m
+It is now Descending.
+68.21 s, 1164.31 m
+It is now Descending.
+68.71 s, 1152.78 m
+It is now Descending.
+69.21 s, 1141.26 m
+It is now Descending.
+69.71 s, 1129.74 m
+It is now Descending.
+70.21 s, 1118.25 m
+It is now Descending.
+70.71 s, 1106.73 m
+It is now Descending.
+71.21 s, 1095.24 m
+It is now Descending.
+71.71 s, 1083.75 m
+It is now Descending.
+72.21 s, 1072.26 m
+It is now Descending.
+72.71 s, 1060.77 m
+It is now Descending.
+73.21 s, 1049.30 m
+It is now Descending.
+73.71 s, 1037.84 m
+It is now Descending.
+74.21 s, 1026.38 m
+It is now Descending.
+74.71 s, 1014.92 m
+It is now Descending.
+75.21 s, 1003.49 m
+It is now Descending.
+75.71 s, 992.03 m
+It is now Descending.
+76.21 s, 980.60 m
+It is now Descending.
+76.71 s, 969.17 m
+It is now Descending.
+77.21 s, 957.74 m
+It is now Descending.
+77.71 s, 946.34 m
+It is now Descending.
+78.21 s, 934.94 m
+It is now Descending.
+78.71 s, 923.54 m
+It is now Descending.
+79.21 s, 912.14 m
+It is now Descending.
+79.71 s, 900.74 m
+It is now Descending.
+80.21 s, 889.38 m
+It is now Descending.
+80.71 s, 877.98 m
+It is now Descending.
+81.21 s, 866.61 m
+It is now Descending.
+81.71 s, 855.27 m
+It is now Descending.
+82.21 s, 843.90 m
+It is now Descending.
+82.71 s, 832.56 m
+It is now Descending.
+83.21 s, 821.19 m
+It is now Descending.
+83.71 s, 809.85 m
+It is now Descending.
+84.21 s, 798.55 m
+It is now Descending.
+84.71 s, 787.21 m
+It is now Descending.
+85.21 s, 775.90 m
+It is now Descending.
+85.71 s, 764.59 m
+It is now Descending.
+86.21 s, 753.28 m
+It is now Descending.
+86.71 s, 741.97 m
+It is now Descending.
+87.21 s, 730.70 m
+It is now Descending.
+87.71 s, 719.39 m
+It is now Descending.
+88.21 s, 708.11 m
+It is now Descending.
+88.71 s, 696.83 m
+It is now Descending.
+89.21 s, 685.59 m
+It is now Descending.
+89.71 s, 674.31 m
+It is now Descending.
+90.21 s, 663.06 m
+It is now Descending.
+90.71 s, 651.81 m
+It is now Descending.
+91.21 s, 640.57 m
+It is now Descending.
+91.71 s, 629.32 m
+It is now Descending.
+92.21 s, 618.07 m
+It is now Descending.
+92.71 s, 606.86 m
+It is now Descending.
+93.21 s, 595.64 m
+It is now Descending.
+93.71 s, 584.42 m
+It is now Descending.
+94.21 s, 573.21 m
+It is now Descending.
+94.71 s, 562.02 m
+It is now Descending.
+95.21 s, 550.83 m
+It is now Descending.
+95.71 s, 539.65 m
+It is now Descending.
+96.21 s, 528.46 m
+It is now Descending.
+96.71 s, 517.28 m
+It is now Descending.
+97.21 s, 506.09 m
+It is now Descending.
+97.71 s, 494.93 m
+It is now Descending.
+98.21 s, 483.78 m
+It is now Descending.
+98.71 s, 472.62 m
+It is now Descending.
+99.21 s, 461.47 m
+It is now Descending.
+99.71 s, 450.34 m
+It is now Descending.
+100.21 s, 439.19 m
+It is now Descending.
+100.71 s, 428.06 m
+It is now Descending.
+101.21 s, 416.94 m
+It is now Descending.
+101.71 s, 405.81 m
+It is now Descending.
+102.21 s, 394.72 m
+It is now Descending.
+102.71 s, 383.62 m
+It is now Descending.
+103.21 s, 372.50 m
+It is now Descending.
+103.71 s, 361.40 m
+It is now Descending.
+104.21 s, 350.34 m
+It is now Descending.
+104.71 s, 339.24 m
+It is now Descending.
+105.21 s, 328.18 m
+It is now Descending.
+105.71 s, 317.11 m
+It is now Descending.
+106.21 s, 306.05 m
+It is now Descending.
+106.71 s, 294.98 m
+Main deployed
+It is now Descending
+107.21 s, 283.93 m
+Number of record stored 0
+the Updated element is 283.93and 283.93
+It is now Descending
+107.22 s, 283.87 m
+Number of record stored 1
+the Updated element is 283.87and 283.87
+It is now Descending
+107.22 s, 283.81 m
+Number of record stored 2
+the Updated element is 283.81and 283.81
+It is now Descending
+107.22 s, 283.75 m
+Number of record stored 3
+the Updated element is 283.75and 283.75
+It is now Descending
+107.23 s, 283.69 m
+Number of record stored 4
+the Updated element is 283.69and 283.69
+It is now Descending
+107.23 s, 283.63 m
+Number of record stored 5
+the Updated element is 283.63and 283.63
+It is now Descending
+107.23 s, 283.56 m
+Number of record stored 6
+the Updated element is 283.56and 283.56
+It is now Descending
+107.24 s, 283.49 m
+Number of record stored 7
+the Updated element is 283.49and 283.49
+It is now Descending
+107.24 s, 283.42 m
+Number of record stored 8
+the Updated element is 283.42and 283.42
+It is now Descending
+107.24 s, 283.35 m
+Number of record stored 9
+the Updated element is 283.35and 283.35
+It is now Descending
+107.25 s, 283.28 m
+Number of record stored 10
+the Updated element is 283.28and 283.28
+It is now Descending
+107.25 s, 283.20 m
+Number of record stored 11
+the Updated element is 283.20and 283.20
+It is now Descending
+107.26 s, 283.12 m
+Number of record stored 12
+the Updated element is 283.12and 283.12
+It is now Descending
+107.26 s, 283.03 m
+Number of record stored 13
+the Updated element is 283.03and 283.03
+It is now Descending
+107.27 s, 282.95 m
+Number of record stored 14
+the Updated element is 282.95and 282.95
+It is now Descending
+107.27 s, 282.86 m
+Number of record stored 15
+the Updated element is 282.86and 282.86
+It is now Descending
+107.28 s, 282.76 m
+Number of record stored 16
+the Updated element is 282.76and 282.76
+It is now Descending
+107.29 s, 282.67 m
+Number of record stored 17
+the Updated element is 282.67and 282.67
+It is now Descending
+107.30 s, 282.56 m
+Number of record stored 18
+the Updated element is 282.56and 282.56
+It is now Descending
+107.30 s, 282.46 m
+Number of record stored 19
+the Updated element is 282.46and 282.46
+It is now Descending
+107.31 s, 282.34 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.93
+at i = 1, altitude = 283.87
+at i = 2, altitude = 283.81
+at i = 3, altitude = 283.75
+at i = 4, altitude = 283.69
+at i = 5, altitude = 283.63
+at i = 6, altitude = 283.56
+at i = 7, altitude = 283.49
+at i = 8, altitude = 283.42
+at i = 9, altitude = 283.35
+at i = 10, altitude = 283.28
+at i = 11, altitude = 283.20
+at i = 12, altitude = 283.12
+at i = 13, altitude = 283.03
+at i = 14, altitude = 282.95
+at i = 15, altitude = 282.86
+at i = 16, altitude = 282.76
+at i = 17, altitude = 282.67
+at i = 18, altitude = 282.56
+at i = 19, altitude = 282.46
+max is 283.93
+min is 282.46
+the Updated element is 282.34and 282.34
+It is now Descending
+107.32 s, 282.22 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.87
+at i = 1, altitude = 283.81
+at i = 2, altitude = 283.75
+at i = 3, altitude = 283.69
+at i = 4, altitude = 283.63
+at i = 5, altitude = 283.56
+at i = 6, altitude = 283.49
+at i = 7, altitude = 283.42
+at i = 8, altitude = 283.35
+at i = 9, altitude = 283.28
+at i = 10, altitude = 283.20
+at i = 11, altitude = 283.12
+at i = 12, altitude = 283.03
+at i = 13, altitude = 282.95
+at i = 14, altitude = 282.86
+at i = 15, altitude = 282.76
+at i = 16, altitude = 282.67
+at i = 17, altitude = 282.56
+at i = 18, altitude = 282.46
+at i = 19, altitude = 282.34
+max is 283.87
+min is 282.34
+the Updated element is 282.22and 282.22
+It is now Descending
+107.33 s, 282.10 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.81
+at i = 1, altitude = 283.75
+at i = 2, altitude = 283.69
+at i = 3, altitude = 283.63
+at i = 4, altitude = 283.56
+at i = 5, altitude = 283.49
+at i = 6, altitude = 283.42
+at i = 7, altitude = 283.35
+at i = 8, altitude = 283.28
+at i = 9, altitude = 283.20
+at i = 10, altitude = 283.12
+at i = 11, altitude = 283.03
+at i = 12, altitude = 282.95
+at i = 13, altitude = 282.86
+at i = 14, altitude = 282.76
+at i = 15, altitude = 282.67
+at i = 16, altitude = 282.56
+at i = 17, altitude = 282.46
+at i = 18, altitude = 282.34
+at i = 19, altitude = 282.22
+max is 283.81
+min is 282.22
+the Updated element is 282.10and 282.10
+It is now Descending
+107.35 s, 281.96 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.75
+at i = 1, altitude = 283.69
+at i = 2, altitude = 283.63
+at i = 3, altitude = 283.56
+at i = 4, altitude = 283.49
+at i = 5, altitude = 283.42
+at i = 6, altitude = 283.35
+at i = 7, altitude = 283.28
+at i = 8, altitude = 283.20
+at i = 9, altitude = 283.12
+at i = 10, altitude = 283.03
+at i = 11, altitude = 282.95
+at i = 12, altitude = 282.86
+at i = 13, altitude = 282.76
+at i = 14, altitude = 282.67
+at i = 15, altitude = 282.56
+at i = 16, altitude = 282.46
+at i = 17, altitude = 282.34
+at i = 18, altitude = 282.22
+at i = 19, altitude = 282.10
+max is 283.75
+min is 282.10
+the Updated element is 281.96and 281.96
+It is now Descending
+107.36 s, 281.82 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.69
+at i = 1, altitude = 283.63
+at i = 2, altitude = 283.56
+at i = 3, altitude = 283.49
+at i = 4, altitude = 283.42
+at i = 5, altitude = 283.35
+at i = 6, altitude = 283.28
+at i = 7, altitude = 283.20
+at i = 8, altitude = 283.12
+at i = 9, altitude = 283.03
+at i = 10, altitude = 282.95
+at i = 11, altitude = 282.86
+at i = 12, altitude = 282.76
+at i = 13, altitude = 282.67
+at i = 14, altitude = 282.56
+at i = 15, altitude = 282.46
+at i = 16, altitude = 282.34
+at i = 17, altitude = 282.22
+at i = 18, altitude = 282.10
+at i = 19, altitude = 281.96
+max is 283.69
+min is 281.96
+the Updated element is 281.82and 281.82
+It is now Descending
+107.38 s, 281.66 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.63
+at i = 1, altitude = 283.56
+at i = 2, altitude = 283.49
+at i = 3, altitude = 283.42
+at i = 4, altitude = 283.35
+at i = 5, altitude = 283.28
+at i = 6, altitude = 283.20
+at i = 7, altitude = 283.12
+at i = 8, altitude = 283.03
+at i = 9, altitude = 282.95
+at i = 10, altitude = 282.86
+at i = 11, altitude = 282.76
+at i = 12, altitude = 282.67
+at i = 13, altitude = 282.56
+at i = 14, altitude = 282.46
+at i = 15, altitude = 282.34
+at i = 16, altitude = 282.22
+at i = 17, altitude = 282.10
+at i = 18, altitude = 281.96
+at i = 19, altitude = 281.82
+max is 283.63
+min is 281.82
+the Updated element is 281.66and 281.66
+It is now Descending
+107.39 s, 281.49 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.56
+at i = 1, altitude = 283.49
+at i = 2, altitude = 283.42
+at i = 3, altitude = 283.35
+at i = 4, altitude = 283.28
+at i = 5, altitude = 283.20
+at i = 6, altitude = 283.12
+at i = 7, altitude = 283.03
+at i = 8, altitude = 282.95
+at i = 9, altitude = 282.86
+at i = 10, altitude = 282.76
+at i = 11, altitude = 282.67
+at i = 12, altitude = 282.56
+at i = 13, altitude = 282.46
+at i = 14, altitude = 282.34
+at i = 15, altitude = 282.22
+at i = 16, altitude = 282.10
+at i = 17, altitude = 281.96
+at i = 18, altitude = 281.82
+at i = 19, altitude = 281.66
+max is 283.56
+min is 281.66
+the Updated element is 281.49and 281.49
+It is now Descending
+107.42 s, 281.31 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.49
+at i = 1, altitude = 283.42
+at i = 2, altitude = 283.35
+at i = 3, altitude = 283.28
+at i = 4, altitude = 283.20
+at i = 5, altitude = 283.12
+at i = 6, altitude = 283.03
+at i = 7, altitude = 282.95
+at i = 8, altitude = 282.86
+at i = 9, altitude = 282.76
+at i = 10, altitude = 282.67
+at i = 11, altitude = 282.56
+at i = 12, altitude = 282.46
+at i = 13, altitude = 282.34
+at i = 14, altitude = 282.22
+at i = 15, altitude = 282.10
+at i = 16, altitude = 281.96
+at i = 17, altitude = 281.82
+at i = 18, altitude = 281.66
+at i = 19, altitude = 281.49
+max is 283.49
+min is 281.49
+the Updated element is 281.31and 281.31
+It is now Descending
+107.44 s, 281.10 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.42
+at i = 1, altitude = 283.35
+at i = 2, altitude = 283.28
+at i = 3, altitude = 283.20
+at i = 4, altitude = 283.12
+at i = 5, altitude = 283.03
+at i = 6, altitude = 282.95
+at i = 7, altitude = 282.86
+at i = 8, altitude = 282.76
+at i = 9, altitude = 282.67
+at i = 10, altitude = 282.56
+at i = 11, altitude = 282.46
+at i = 12, altitude = 282.34
+at i = 13, altitude = 282.22
+at i = 14, altitude = 282.10
+at i = 15, altitude = 281.96
+at i = 16, altitude = 281.82
+at i = 17, altitude = 281.66
+at i = 18, altitude = 281.49
+at i = 19, altitude = 281.31
+max is 283.42
+min is 281.31
+the Updated element is 281.10and 281.10
+It is now Descending
+107.47 s, 280.87 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.35
+at i = 1, altitude = 283.28
+at i = 2, altitude = 283.20
+at i = 3, altitude = 283.12
+at i = 4, altitude = 283.03
+at i = 5, altitude = 282.95
+at i = 6, altitude = 282.86
+at i = 7, altitude = 282.76
+at i = 8, altitude = 282.67
+at i = 9, altitude = 282.56
+at i = 10, altitude = 282.46
+at i = 11, altitude = 282.34
+at i = 12, altitude = 282.22
+at i = 13, altitude = 282.10
+at i = 14, altitude = 281.96
+at i = 15, altitude = 281.82
+at i = 16, altitude = 281.66
+at i = 17, altitude = 281.49
+at i = 18, altitude = 281.31
+at i = 19, altitude = 281.10
+max is 283.35
+min is 281.10
+the Updated element is 280.87and 280.87
+It is now Descending
+107.51 s, 280.60 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.28
+at i = 1, altitude = 283.20
+at i = 2, altitude = 283.12
+at i = 3, altitude = 283.03
+at i = 4, altitude = 282.95
+at i = 5, altitude = 282.86
+at i = 6, altitude = 282.76
+at i = 7, altitude = 282.67
+at i = 8, altitude = 282.56
+at i = 9, altitude = 282.46
+at i = 10, altitude = 282.34
+at i = 11, altitude = 282.22
+at i = 12, altitude = 282.10
+at i = 13, altitude = 281.96
+at i = 14, altitude = 281.82
+at i = 15, altitude = 281.66
+at i = 16, altitude = 281.49
+at i = 17, altitude = 281.31
+at i = 18, altitude = 281.10
+at i = 19, altitude = 280.87
+max is 283.28
+min is 280.87
+the Updated element is 280.60and 280.60
+It is now Descending
+107.55 s, 280.28 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.20
+at i = 1, altitude = 283.12
+at i = 2, altitude = 283.03
+at i = 3, altitude = 282.95
+at i = 4, altitude = 282.86
+at i = 5, altitude = 282.76
+at i = 6, altitude = 282.67
+at i = 7, altitude = 282.56
+at i = 8, altitude = 282.46
+at i = 9, altitude = 282.34
+at i = 10, altitude = 282.22
+at i = 11, altitude = 282.10
+at i = 12, altitude = 281.96
+at i = 13, altitude = 281.82
+at i = 14, altitude = 281.66
+at i = 15, altitude = 281.49
+at i = 16, altitude = 281.31
+at i = 17, altitude = 281.10
+at i = 18, altitude = 280.87
+at i = 19, altitude = 280.60
+max is 283.20
+min is 280.60
+the Updated element is 280.28and 280.28
+It is now Descending
+107.62 s, 279.88 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.12
+at i = 1, altitude = 283.03
+at i = 2, altitude = 282.95
+at i = 3, altitude = 282.86
+at i = 4, altitude = 282.76
+at i = 5, altitude = 282.67
+at i = 6, altitude = 282.56
+at i = 7, altitude = 282.46
+at i = 8, altitude = 282.34
+at i = 9, altitude = 282.22
+at i = 10, altitude = 282.10
+at i = 11, altitude = 281.96
+at i = 12, altitude = 281.82
+at i = 13, altitude = 281.66
+at i = 14, altitude = 281.49
+at i = 15, altitude = 281.31
+at i = 16, altitude = 281.10
+at i = 17, altitude = 280.87
+at i = 18, altitude = 280.60
+at i = 19, altitude = 280.28
+max is 283.12
+min is 280.28
+the Updated element is 279.88and 279.88
+It is now Descending
+107.71 s, 279.33 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 283.03
+at i = 1, altitude = 282.95
+at i = 2, altitude = 282.86
+at i = 3, altitude = 282.76
+at i = 4, altitude = 282.67
+at i = 5, altitude = 282.56
+at i = 6, altitude = 282.46
+at i = 7, altitude = 282.34
+at i = 8, altitude = 282.22
+at i = 9, altitude = 282.10
+at i = 10, altitude = 281.96
+at i = 11, altitude = 281.82
+at i = 12, altitude = 281.66
+at i = 13, altitude = 281.49
+at i = 14, altitude = 281.31
+at i = 15, altitude = 281.10
+at i = 16, altitude = 280.87
+at i = 17, altitude = 280.60
+at i = 18, altitude = 280.28
+at i = 19, altitude = 279.88
+max is 283.03
+min is 279.88
+the Updated element is 279.33and 279.33
+It is now Descending
+107.88 s, 278.42 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.95
+at i = 1, altitude = 282.86
+at i = 2, altitude = 282.76
+at i = 3, altitude = 282.67
+at i = 4, altitude = 282.56
+at i = 5, altitude = 282.46
+at i = 6, altitude = 282.34
+at i = 7, altitude = 282.22
+at i = 8, altitude = 282.10
+at i = 9, altitude = 281.96
+at i = 10, altitude = 281.82
+at i = 11, altitude = 281.66
+at i = 12, altitude = 281.49
+at i = 13, altitude = 281.31
+at i = 14, altitude = 281.10
+at i = 15, altitude = 280.87
+at i = 16, altitude = 280.60
+at i = 17, altitude = 280.28
+at i = 18, altitude = 279.88
+at i = 19, altitude = 279.33
+max is 282.95
+min is 279.33
+the Updated element is 278.42and 278.42
+It is now Descending
+108.38 s, 275.96 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.86
+at i = 1, altitude = 282.76
+at i = 2, altitude = 282.67
+at i = 3, altitude = 282.56
+at i = 4, altitude = 282.46
+at i = 5, altitude = 282.34
+at i = 6, altitude = 282.22
+at i = 7, altitude = 282.10
+at i = 8, altitude = 281.96
+at i = 9, altitude = 281.82
+at i = 10, altitude = 281.66
+at i = 11, altitude = 281.49
+at i = 12, altitude = 281.31
+at i = 13, altitude = 281.10
+at i = 14, altitude = 280.87
+at i = 15, altitude = 280.60
+at i = 16, altitude = 280.28
+at i = 17, altitude = 279.88
+at i = 18, altitude = 279.33
+at i = 19, altitude = 278.42
+max is 282.86
+min is 278.42
+the Updated element is 275.96and 275.96
+It is now Descending
+108.88 s, 273.51 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.76
+at i = 1, altitude = 282.67
+at i = 2, altitude = 282.56
+at i = 3, altitude = 282.46
+at i = 4, altitude = 282.34
+at i = 5, altitude = 282.22
+at i = 6, altitude = 282.10
+at i = 7, altitude = 281.96
+at i = 8, altitude = 281.82
+at i = 9, altitude = 281.66
+at i = 10, altitude = 281.49
+at i = 11, altitude = 281.31
+at i = 12, altitude = 281.10
+at i = 13, altitude = 280.87
+at i = 14, altitude = 280.60
+at i = 15, altitude = 280.28
+at i = 16, altitude = 279.88
+at i = 17, altitude = 279.33
+at i = 18, altitude = 278.42
+at i = 19, altitude = 275.96
+max is 282.76
+min is 275.96
+the Updated element is 273.51and 273.51
+It is now Descending
+109.38 s, 271.06 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.67
+at i = 1, altitude = 282.56
+at i = 2, altitude = 282.46
+at i = 3, altitude = 282.34
+at i = 4, altitude = 282.22
+at i = 5, altitude = 282.10
+at i = 6, altitude = 281.96
+at i = 7, altitude = 281.82
+at i = 8, altitude = 281.66
+at i = 9, altitude = 281.49
+at i = 10, altitude = 281.31
+at i = 11, altitude = 281.10
+at i = 12, altitude = 280.87
+at i = 13, altitude = 280.60
+at i = 14, altitude = 280.28
+at i = 15, altitude = 279.88
+at i = 16, altitude = 279.33
+at i = 17, altitude = 278.42
+at i = 18, altitude = 275.96
+at i = 19, altitude = 273.51
+max is 282.67
+min is 273.51
+the Updated element is 271.06and 271.06
+It is now Descending
+109.88 s, 268.61 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.56
+at i = 1, altitude = 282.46
+at i = 2, altitude = 282.34
+at i = 3, altitude = 282.22
+at i = 4, altitude = 282.10
+at i = 5, altitude = 281.96
+at i = 6, altitude = 281.82
+at i = 7, altitude = 281.66
+at i = 8, altitude = 281.49
+at i = 9, altitude = 281.31
+at i = 10, altitude = 281.10
+at i = 11, altitude = 280.87
+at i = 12, altitude = 280.60
+at i = 13, altitude = 280.28
+at i = 14, altitude = 279.88
+at i = 15, altitude = 279.33
+at i = 16, altitude = 278.42
+at i = 17, altitude = 275.96
+at i = 18, altitude = 273.51
+at i = 19, altitude = 271.06
+max is 282.56
+min is 271.06
+the Updated element is 268.61and 268.61
+It is now Descending
+110.25 s, 266.78 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.46
+at i = 1, altitude = 282.34
+at i = 2, altitude = 282.22
+at i = 3, altitude = 282.10
+at i = 4, altitude = 281.96
+at i = 5, altitude = 281.82
+at i = 6, altitude = 281.66
+at i = 7, altitude = 281.49
+at i = 8, altitude = 281.31
+at i = 9, altitude = 281.10
+at i = 10, altitude = 280.87
+at i = 11, altitude = 280.60
+at i = 12, altitude = 280.28
+at i = 13, altitude = 279.88
+at i = 14, altitude = 279.33
+at i = 15, altitude = 278.42
+at i = 16, altitude = 275.96
+at i = 17, altitude = 273.51
+at i = 18, altitude = 271.06
+at i = 19, altitude = 268.61
+max is 282.46
+min is 268.61
+the Updated element is 266.78and 266.78
+It is now Descending
+110.75 s, 264.33 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.34
+at i = 1, altitude = 282.22
+at i = 2, altitude = 282.10
+at i = 3, altitude = 281.96
+at i = 4, altitude = 281.82
+at i = 5, altitude = 281.66
+at i = 6, altitude = 281.49
+at i = 7, altitude = 281.31
+at i = 8, altitude = 281.10
+at i = 9, altitude = 280.87
+at i = 10, altitude = 280.60
+at i = 11, altitude = 280.28
+at i = 12, altitude = 279.88
+at i = 13, altitude = 279.33
+at i = 14, altitude = 278.42
+at i = 15, altitude = 275.96
+at i = 16, altitude = 273.51
+at i = 17, altitude = 271.06
+at i = 18, altitude = 268.61
+at i = 19, altitude = 266.78
+max is 282.34
+min is 266.78
+the Updated element is 264.33and 264.33
+It is now Descending
+111.25 s, 261.88 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.22
+at i = 1, altitude = 282.10
+at i = 2, altitude = 281.96
+at i = 3, altitude = 281.82
+at i = 4, altitude = 281.66
+at i = 5, altitude = 281.49
+at i = 6, altitude = 281.31
+at i = 7, altitude = 281.10
+at i = 8, altitude = 280.87
+at i = 9, altitude = 280.60
+at i = 10, altitude = 280.28
+at i = 11, altitude = 279.88
+at i = 12, altitude = 279.33
+at i = 13, altitude = 278.42
+at i = 14, altitude = 275.96
+at i = 15, altitude = 273.51
+at i = 16, altitude = 271.06
+at i = 17, altitude = 268.61
+at i = 18, altitude = 266.78
+at i = 19, altitude = 264.33
+max is 282.22
+min is 264.33
+the Updated element is 261.88and 261.88
+It is now Descending
+111.75 s, 259.43 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 282.10
+at i = 1, altitude = 281.96
+at i = 2, altitude = 281.82
+at i = 3, altitude = 281.66
+at i = 4, altitude = 281.49
+at i = 5, altitude = 281.31
+at i = 6, altitude = 281.10
+at i = 7, altitude = 280.87
+at i = 8, altitude = 280.60
+at i = 9, altitude = 280.28
+at i = 10, altitude = 279.88
+at i = 11, altitude = 279.33
+at i = 12, altitude = 278.42
+at i = 13, altitude = 275.96
+at i = 14, altitude = 273.51
+at i = 15, altitude = 271.06
+at i = 16, altitude = 268.61
+at i = 17, altitude = 266.78
+at i = 18, altitude = 264.33
+at i = 19, altitude = 261.88
+max is 282.10
+min is 261.88
+the Updated element is 259.43and 259.43
+It is now Descending
+112.25 s, 256.98 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 281.96
+at i = 1, altitude = 281.82
+at i = 2, altitude = 281.66
+at i = 3, altitude = 281.49
+at i = 4, altitude = 281.31
+at i = 5, altitude = 281.10
+at i = 6, altitude = 280.87
+at i = 7, altitude = 280.60
+at i = 8, altitude = 280.28
+at i = 9, altitude = 279.88
+at i = 10, altitude = 279.33
+at i = 11, altitude = 278.42
+at i = 12, altitude = 275.96
+at i = 13, altitude = 273.51
+at i = 14, altitude = 271.06
+at i = 15, altitude = 268.61
+at i = 16, altitude = 266.78
+at i = 17, altitude = 264.33
+at i = 18, altitude = 261.88
+at i = 19, altitude = 259.43
+max is 281.96
+min is 259.43
+the Updated element is 256.98and 256.98
+It is now Descending
+112.75 s, 254.53 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 281.82
+at i = 1, altitude = 281.66
+at i = 2, altitude = 281.49
+at i = 3, altitude = 281.31
+at i = 4, altitude = 281.10
+at i = 5, altitude = 280.87
+at i = 6, altitude = 280.60
+at i = 7, altitude = 280.28
+at i = 8, altitude = 279.88
+at i = 9, altitude = 279.33
+at i = 10, altitude = 278.42
+at i = 11, altitude = 275.96
+at i = 12, altitude = 273.51
+at i = 13, altitude = 271.06
+at i = 14, altitude = 268.61
+at i = 15, altitude = 266.78
+at i = 16, altitude = 264.33
+at i = 17, altitude = 261.88
+at i = 18, altitude = 259.43
+at i = 19, altitude = 256.98
+max is 281.82
+min is 256.98
+the Updated element is 254.53and 254.53
+It is now Descending
+113.25 s, 252.08 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 281.66
+at i = 1, altitude = 281.49
+at i = 2, altitude = 281.31
+at i = 3, altitude = 281.10
+at i = 4, altitude = 280.87
+at i = 5, altitude = 280.60
+at i = 6, altitude = 280.28
+at i = 7, altitude = 279.88
+at i = 8, altitude = 279.33
+at i = 9, altitude = 278.42
+at i = 10, altitude = 275.96
+at i = 11, altitude = 273.51
+at i = 12, altitude = 271.06
+at i = 13, altitude = 268.61
+at i = 14, altitude = 266.78
+at i = 15, altitude = 264.33
+at i = 16, altitude = 261.88
+at i = 17, altitude = 259.43
+at i = 18, altitude = 256.98
+at i = 19, altitude = 254.53
+max is 281.66
+min is 254.53
+the Updated element is 252.08and 252.08
+It is now Descending
+113.75 s, 249.63 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 281.49
+at i = 1, altitude = 281.31
+at i = 2, altitude = 281.10
+at i = 3, altitude = 280.87
+at i = 4, altitude = 280.60
+at i = 5, altitude = 280.28
+at i = 6, altitude = 279.88
+at i = 7, altitude = 279.33
+at i = 8, altitude = 278.42
+at i = 9, altitude = 275.96
+at i = 10, altitude = 273.51
+at i = 11, altitude = 271.06
+at i = 12, altitude = 268.61
+at i = 13, altitude = 266.78
+at i = 14, altitude = 264.33
+at i = 15, altitude = 261.88
+at i = 16, altitude = 259.43
+at i = 17, altitude = 256.98
+at i = 18, altitude = 254.53
+at i = 19, altitude = 252.08
+max is 281.49
+min is 252.08
+the Updated element is 249.63and 249.63
+It is now Descending
+114.25 s, 247.18 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 281.31
+at i = 1, altitude = 281.10
+at i = 2, altitude = 280.87
+at i = 3, altitude = 280.60
+at i = 4, altitude = 280.28
+at i = 5, altitude = 279.88
+at i = 6, altitude = 279.33
+at i = 7, altitude = 278.42
+at i = 8, altitude = 275.96
+at i = 9, altitude = 273.51
+at i = 10, altitude = 271.06
+at i = 11, altitude = 268.61
+at i = 12, altitude = 266.78
+at i = 13, altitude = 264.33
+at i = 14, altitude = 261.88
+at i = 15, altitude = 259.43
+at i = 16, altitude = 256.98
+at i = 17, altitude = 254.53
+at i = 18, altitude = 252.08
+at i = 19, altitude = 249.63
+max is 281.31
+min is 249.63
+the Updated element is 247.18and 247.18
+It is now Descending
+114.75 s, 244.73 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 281.10
+at i = 1, altitude = 280.87
+at i = 2, altitude = 280.60
+at i = 3, altitude = 280.28
+at i = 4, altitude = 279.88
+at i = 5, altitude = 279.33
+at i = 6, altitude = 278.42
+at i = 7, altitude = 275.96
+at i = 8, altitude = 273.51
+at i = 9, altitude = 271.06
+at i = 10, altitude = 268.61
+at i = 11, altitude = 266.78
+at i = 12, altitude = 264.33
+at i = 13, altitude = 261.88
+at i = 14, altitude = 259.43
+at i = 15, altitude = 256.98
+at i = 16, altitude = 254.53
+at i = 17, altitude = 252.08
+at i = 18, altitude = 249.63
+at i = 19, altitude = 247.18
+max is 281.10
+min is 247.18
+the Updated element is 244.73and 244.73
+It is now Descending
+115.25 s, 242.28 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 280.87
+at i = 1, altitude = 280.60
+at i = 2, altitude = 280.28
+at i = 3, altitude = 279.88
+at i = 4, altitude = 279.33
+at i = 5, altitude = 278.42
+at i = 6, altitude = 275.96
+at i = 7, altitude = 273.51
+at i = 8, altitude = 271.06
+at i = 9, altitude = 268.61
+at i = 10, altitude = 266.78
+at i = 11, altitude = 264.33
+at i = 12, altitude = 261.88
+at i = 13, altitude = 259.43
+at i = 14, altitude = 256.98
+at i = 15, altitude = 254.53
+at i = 16, altitude = 252.08
+at i = 17, altitude = 249.63
+at i = 18, altitude = 247.18
+at i = 19, altitude = 244.73
+max is 280.87
+min is 244.73
+the Updated element is 242.28and 242.28
+It is now Descending
+115.65 s, 240.37 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 280.60
+at i = 1, altitude = 280.28
+at i = 2, altitude = 279.88
+at i = 3, altitude = 279.33
+at i = 4, altitude = 278.42
+at i = 5, altitude = 275.96
+at i = 6, altitude = 273.51
+at i = 7, altitude = 271.06
+at i = 8, altitude = 268.61
+at i = 9, altitude = 266.78
+at i = 10, altitude = 264.33
+at i = 11, altitude = 261.88
+at i = 12, altitude = 259.43
+at i = 13, altitude = 256.98
+at i = 14, altitude = 254.53
+at i = 15, altitude = 252.08
+at i = 16, altitude = 249.63
+at i = 17, altitude = 247.18
+at i = 18, altitude = 244.73
+at i = 19, altitude = 242.28
+max is 280.60
+min is 242.28
+the Updated element is 240.37and 240.37
+It is now Descending
+116.15 s, 237.91 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 280.28
+at i = 1, altitude = 279.88
+at i = 2, altitude = 279.33
+at i = 3, altitude = 278.42
+at i = 4, altitude = 275.96
+at i = 5, altitude = 273.51
+at i = 6, altitude = 271.06
+at i = 7, altitude = 268.61
+at i = 8, altitude = 266.78
+at i = 9, altitude = 264.33
+at i = 10, altitude = 261.88
+at i = 11, altitude = 259.43
+at i = 12, altitude = 256.98
+at i = 13, altitude = 254.53
+at i = 14, altitude = 252.08
+at i = 15, altitude = 249.63
+at i = 16, altitude = 247.18
+at i = 17, altitude = 244.73
+at i = 18, altitude = 242.28
+at i = 19, altitude = 240.37
+max is 280.28
+min is 240.37
+the Updated element is 237.91and 237.91
+It is now Descending
+116.65 s, 235.47 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 279.88
+at i = 1, altitude = 279.33
+at i = 2, altitude = 278.42
+at i = 3, altitude = 275.96
+at i = 4, altitude = 273.51
+at i = 5, altitude = 271.06
+at i = 6, altitude = 268.61
+at i = 7, altitude = 266.78
+at i = 8, altitude = 264.33
+at i = 9, altitude = 261.88
+at i = 10, altitude = 259.43
+at i = 11, altitude = 256.98
+at i = 12, altitude = 254.53
+at i = 13, altitude = 252.08
+at i = 14, altitude = 249.63
+at i = 15, altitude = 247.18
+at i = 16, altitude = 244.73
+at i = 17, altitude = 242.28
+at i = 18, altitude = 240.37
+at i = 19, altitude = 237.91
+max is 279.88
+min is 237.91
+the Updated element is 235.47and 235.47
+It is now Descending
+117.15 s, 233.03 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 279.33
+at i = 1, altitude = 278.42
+at i = 2, altitude = 275.96
+at i = 3, altitude = 273.51
+at i = 4, altitude = 271.06
+at i = 5, altitude = 268.61
+at i = 6, altitude = 266.78
+at i = 7, altitude = 264.33
+at i = 8, altitude = 261.88
+at i = 9, altitude = 259.43
+at i = 10, altitude = 256.98
+at i = 11, altitude = 254.53
+at i = 12, altitude = 252.08
+at i = 13, altitude = 249.63
+at i = 14, altitude = 247.18
+at i = 15, altitude = 244.73
+at i = 16, altitude = 242.28
+at i = 17, altitude = 240.37
+at i = 18, altitude = 237.91
+at i = 19, altitude = 235.47
+max is 279.33
+min is 235.47
+the Updated element is 233.03and 233.03
+It is now Descending
+117.65 s, 230.58 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 278.42
+at i = 1, altitude = 275.96
+at i = 2, altitude = 273.51
+at i = 3, altitude = 271.06
+at i = 4, altitude = 268.61
+at i = 5, altitude = 266.78
+at i = 6, altitude = 264.33
+at i = 7, altitude = 261.88
+at i = 8, altitude = 259.43
+at i = 9, altitude = 256.98
+at i = 10, altitude = 254.53
+at i = 11, altitude = 252.08
+at i = 12, altitude = 249.63
+at i = 13, altitude = 247.18
+at i = 14, altitude = 244.73
+at i = 15, altitude = 242.28
+at i = 16, altitude = 240.37
+at i = 17, altitude = 237.91
+at i = 18, altitude = 235.47
+at i = 19, altitude = 233.03
+max is 278.42
+min is 233.03
+the Updated element is 230.58and 230.58
+It is now Descending
+118.15 s, 228.13 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 275.96
+at i = 1, altitude = 273.51
+at i = 2, altitude = 271.06
+at i = 3, altitude = 268.61
+at i = 4, altitude = 266.78
+at i = 5, altitude = 264.33
+at i = 6, altitude = 261.88
+at i = 7, altitude = 259.43
+at i = 8, altitude = 256.98
+at i = 9, altitude = 254.53
+at i = 10, altitude = 252.08
+at i = 11, altitude = 249.63
+at i = 12, altitude = 247.18
+at i = 13, altitude = 244.73
+at i = 14, altitude = 242.28
+at i = 15, altitude = 240.37
+at i = 16, altitude = 237.91
+at i = 17, altitude = 235.47
+at i = 18, altitude = 233.03
+at i = 19, altitude = 230.58
+max is 275.96
+min is 230.58
+the Updated element is 228.13and 228.13
+It is now Descending
+118.65 s, 225.68 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 273.51
+at i = 1, altitude = 271.06
+at i = 2, altitude = 268.61
+at i = 3, altitude = 266.78
+at i = 4, altitude = 264.33
+at i = 5, altitude = 261.88
+at i = 6, altitude = 259.43
+at i = 7, altitude = 256.98
+at i = 8, altitude = 254.53
+at i = 9, altitude = 252.08
+at i = 10, altitude = 249.63
+at i = 11, altitude = 247.18
+at i = 12, altitude = 244.73
+at i = 13, altitude = 242.28
+at i = 14, altitude = 240.37
+at i = 15, altitude = 237.91
+at i = 16, altitude = 235.47
+at i = 17, altitude = 233.03
+at i = 18, altitude = 230.58
+at i = 19, altitude = 228.13
+max is 273.51
+min is 228.13
+the Updated element is 225.68and 225.68
+It is now Descending
+119.15 s, 223.24 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 271.06
+at i = 1, altitude = 268.61
+at i = 2, altitude = 266.78
+at i = 3, altitude = 264.33
+at i = 4, altitude = 261.88
+at i = 5, altitude = 259.43
+at i = 6, altitude = 256.98
+at i = 7, altitude = 254.53
+at i = 8, altitude = 252.08
+at i = 9, altitude = 249.63
+at i = 10, altitude = 247.18
+at i = 11, altitude = 244.73
+at i = 12, altitude = 242.28
+at i = 13, altitude = 240.37
+at i = 14, altitude = 237.91
+at i = 15, altitude = 235.47
+at i = 16, altitude = 233.03
+at i = 17, altitude = 230.58
+at i = 18, altitude = 228.13
+at i = 19, altitude = 225.68
+max is 271.06
+min is 225.68
+the Updated element is 223.24and 223.24
+It is now Descending
+119.65 s, 220.79 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 268.61
+at i = 1, altitude = 266.78
+at i = 2, altitude = 264.33
+at i = 3, altitude = 261.88
+at i = 4, altitude = 259.43
+at i = 5, altitude = 256.98
+at i = 6, altitude = 254.53
+at i = 7, altitude = 252.08
+at i = 8, altitude = 249.63
+at i = 9, altitude = 247.18
+at i = 10, altitude = 244.73
+at i = 11, altitude = 242.28
+at i = 12, altitude = 240.37
+at i = 13, altitude = 237.91
+at i = 14, altitude = 235.47
+at i = 15, altitude = 233.03
+at i = 16, altitude = 230.58
+at i = 17, altitude = 228.13
+at i = 18, altitude = 225.68
+at i = 19, altitude = 223.24
+max is 268.61
+min is 223.24
+the Updated element is 220.79and 220.79
+It is now Descending
+120.08 s, 218.65 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 266.78
+at i = 1, altitude = 264.33
+at i = 2, altitude = 261.88
+at i = 3, altitude = 259.43
+at i = 4, altitude = 256.98
+at i = 5, altitude = 254.53
+at i = 6, altitude = 252.08
+at i = 7, altitude = 249.63
+at i = 8, altitude = 247.18
+at i = 9, altitude = 244.73
+at i = 10, altitude = 242.28
+at i = 11, altitude = 240.37
+at i = 12, altitude = 237.91
+at i = 13, altitude = 235.47
+at i = 14, altitude = 233.03
+at i = 15, altitude = 230.58
+at i = 16, altitude = 228.13
+at i = 17, altitude = 225.68
+at i = 18, altitude = 223.24
+at i = 19, altitude = 220.79
+max is 266.78
+min is 220.79
+the Updated element is 218.65and 218.65
+It is now Descending
+120.58 s, 216.21 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 264.33
+at i = 1, altitude = 261.88
+at i = 2, altitude = 259.43
+at i = 3, altitude = 256.98
+at i = 4, altitude = 254.53
+at i = 5, altitude = 252.08
+at i = 6, altitude = 249.63
+at i = 7, altitude = 247.18
+at i = 8, altitude = 244.73
+at i = 9, altitude = 242.28
+at i = 10, altitude = 240.37
+at i = 11, altitude = 237.91
+at i = 12, altitude = 235.47
+at i = 13, altitude = 233.03
+at i = 14, altitude = 230.58
+at i = 15, altitude = 228.13
+at i = 16, altitude = 225.68
+at i = 17, altitude = 223.24
+at i = 18, altitude = 220.79
+at i = 19, altitude = 218.65
+max is 264.33
+min is 218.65
+the Updated element is 216.21and 216.21
+It is now Descending
+121.08 s, 213.76 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 261.88
+at i = 1, altitude = 259.43
+at i = 2, altitude = 256.98
+at i = 3, altitude = 254.53
+at i = 4, altitude = 252.08
+at i = 5, altitude = 249.63
+at i = 6, altitude = 247.18
+at i = 7, altitude = 244.73
+at i = 8, altitude = 242.28
+at i = 9, altitude = 240.37
+at i = 10, altitude = 237.91
+at i = 11, altitude = 235.47
+at i = 12, altitude = 233.03
+at i = 13, altitude = 230.58
+at i = 14, altitude = 228.13
+at i = 15, altitude = 225.68
+at i = 16, altitude = 223.24
+at i = 17, altitude = 220.79
+at i = 18, altitude = 218.65
+at i = 19, altitude = 216.21
+max is 261.88
+min is 216.21
+the Updated element is 213.76and 213.76
+It is now Descending
+121.58 s, 211.31 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 259.43
+at i = 1, altitude = 256.98
+at i = 2, altitude = 254.53
+at i = 3, altitude = 252.08
+at i = 4, altitude = 249.63
+at i = 5, altitude = 247.18
+at i = 6, altitude = 244.73
+at i = 7, altitude = 242.28
+at i = 8, altitude = 240.37
+at i = 9, altitude = 237.91
+at i = 10, altitude = 235.47
+at i = 11, altitude = 233.03
+at i = 12, altitude = 230.58
+at i = 13, altitude = 228.13
+at i = 14, altitude = 225.68
+at i = 15, altitude = 223.24
+at i = 16, altitude = 220.79
+at i = 17, altitude = 218.65
+at i = 18, altitude = 216.21
+at i = 19, altitude = 213.76
+max is 259.43
+min is 213.76
+the Updated element is 211.31and 211.31
+It is now Descending
+122.08 s, 208.87 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 256.98
+at i = 1, altitude = 254.53
+at i = 2, altitude = 252.08
+at i = 3, altitude = 249.63
+at i = 4, altitude = 247.18
+at i = 5, altitude = 244.73
+at i = 6, altitude = 242.28
+at i = 7, altitude = 240.37
+at i = 8, altitude = 237.91
+at i = 9, altitude = 235.47
+at i = 10, altitude = 233.03
+at i = 11, altitude = 230.58
+at i = 12, altitude = 228.13
+at i = 13, altitude = 225.68
+at i = 14, altitude = 223.24
+at i = 15, altitude = 220.79
+at i = 16, altitude = 218.65
+at i = 17, altitude = 216.21
+at i = 18, altitude = 213.76
+at i = 19, altitude = 211.31
+max is 256.98
+min is 211.31
+the Updated element is 208.87and 208.87
+It is now Descending
+122.58 s, 206.42 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 254.53
+at i = 1, altitude = 252.08
+at i = 2, altitude = 249.63
+at i = 3, altitude = 247.18
+at i = 4, altitude = 244.73
+at i = 5, altitude = 242.28
+at i = 6, altitude = 240.37
+at i = 7, altitude = 237.91
+at i = 8, altitude = 235.47
+at i = 9, altitude = 233.03
+at i = 10, altitude = 230.58
+at i = 11, altitude = 228.13
+at i = 12, altitude = 225.68
+at i = 13, altitude = 223.24
+at i = 14, altitude = 220.79
+at i = 15, altitude = 218.65
+at i = 16, altitude = 216.21
+at i = 17, altitude = 213.76
+at i = 18, altitude = 211.31
+at i = 19, altitude = 208.87
+max is 254.53
+min is 208.87
+the Updated element is 206.42and 206.42
+It is now Descending
+123.08 s, 203.98 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 252.08
+at i = 1, altitude = 249.63
+at i = 2, altitude = 247.18
+at i = 3, altitude = 244.73
+at i = 4, altitude = 242.28
+at i = 5, altitude = 240.37
+at i = 6, altitude = 237.91
+at i = 7, altitude = 235.47
+at i = 8, altitude = 233.03
+at i = 9, altitude = 230.58
+at i = 10, altitude = 228.13
+at i = 11, altitude = 225.68
+at i = 12, altitude = 223.24
+at i = 13, altitude = 220.79
+at i = 14, altitude = 218.65
+at i = 15, altitude = 216.21
+at i = 16, altitude = 213.76
+at i = 17, altitude = 211.31
+at i = 18, altitude = 208.87
+at i = 19, altitude = 206.42
+max is 252.08
+min is 206.42
+the Updated element is 203.98and 203.98
+It is now Descending
+123.58 s, 201.53 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 249.63
+at i = 1, altitude = 247.18
+at i = 2, altitude = 244.73
+at i = 3, altitude = 242.28
+at i = 4, altitude = 240.37
+at i = 5, altitude = 237.91
+at i = 6, altitude = 235.47
+at i = 7, altitude = 233.03
+at i = 8, altitude = 230.58
+at i = 9, altitude = 228.13
+at i = 10, altitude = 225.68
+at i = 11, altitude = 223.24
+at i = 12, altitude = 220.79
+at i = 13, altitude = 218.65
+at i = 14, altitude = 216.21
+at i = 15, altitude = 213.76
+at i = 16, altitude = 211.31
+at i = 17, altitude = 208.87
+at i = 18, altitude = 206.42
+at i = 19, altitude = 203.98
+max is 249.63
+min is 203.98
+the Updated element is 201.53and 201.53
+It is now Descending
+124.08 s, 199.09 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 247.18
+at i = 1, altitude = 244.73
+at i = 2, altitude = 242.28
+at i = 3, altitude = 240.37
+at i = 4, altitude = 237.91
+at i = 5, altitude = 235.47
+at i = 6, altitude = 233.03
+at i = 7, altitude = 230.58
+at i = 8, altitude = 228.13
+at i = 9, altitude = 225.68
+at i = 10, altitude = 223.24
+at i = 11, altitude = 220.79
+at i = 12, altitude = 218.65
+at i = 13, altitude = 216.21
+at i = 14, altitude = 213.76
+at i = 15, altitude = 211.31
+at i = 16, altitude = 208.87
+at i = 17, altitude = 206.42
+at i = 18, altitude = 203.98
+at i = 19, altitude = 201.53
+max is 247.18
+min is 201.53
+the Updated element is 199.09and 199.09
+It is now Descending
+124.58 s, 196.64 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 244.73
+at i = 1, altitude = 242.28
+at i = 2, altitude = 240.37
+at i = 3, altitude = 237.91
+at i = 4, altitude = 235.47
+at i = 5, altitude = 233.03
+at i = 6, altitude = 230.58
+at i = 7, altitude = 228.13
+at i = 8, altitude = 225.68
+at i = 9, altitude = 223.24
+at i = 10, altitude = 220.79
+at i = 11, altitude = 218.65
+at i = 12, altitude = 216.21
+at i = 13, altitude = 213.76
+at i = 14, altitude = 211.31
+at i = 15, altitude = 208.87
+at i = 16, altitude = 206.42
+at i = 17, altitude = 203.98
+at i = 18, altitude = 201.53
+at i = 19, altitude = 199.09
+max is 244.73
+min is 199.09
+the Updated element is 196.64and 196.64
+It is now Descending
+125.08 s, 194.20 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 242.28
+at i = 1, altitude = 240.37
+at i = 2, altitude = 237.91
+at i = 3, altitude = 235.47
+at i = 4, altitude = 233.03
+at i = 5, altitude = 230.58
+at i = 6, altitude = 228.13
+at i = 7, altitude = 225.68
+at i = 8, altitude = 223.24
+at i = 9, altitude = 220.79
+at i = 10, altitude = 218.65
+at i = 11, altitude = 216.21
+at i = 12, altitude = 213.76
+at i = 13, altitude = 211.31
+at i = 14, altitude = 208.87
+at i = 15, altitude = 206.42
+at i = 16, altitude = 203.98
+at i = 17, altitude = 201.53
+at i = 18, altitude = 199.09
+at i = 19, altitude = 196.64
+max is 242.28
+min is 196.64
+the Updated element is 194.20and 194.20
+It is now Descending
+125.58 s, 191.75 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 240.37
+at i = 1, altitude = 237.91
+at i = 2, altitude = 235.47
+at i = 3, altitude = 233.03
+at i = 4, altitude = 230.58
+at i = 5, altitude = 228.13
+at i = 6, altitude = 225.68
+at i = 7, altitude = 223.24
+at i = 8, altitude = 220.79
+at i = 9, altitude = 218.65
+at i = 10, altitude = 216.21
+at i = 11, altitude = 213.76
+at i = 12, altitude = 211.31
+at i = 13, altitude = 208.87
+at i = 14, altitude = 206.42
+at i = 15, altitude = 203.98
+at i = 16, altitude = 201.53
+at i = 17, altitude = 199.09
+at i = 18, altitude = 196.64
+at i = 19, altitude = 194.20
+max is 240.37
+min is 194.20
+the Updated element is 191.75and 191.75
+It is now Descending
+126.08 s, 189.31 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 237.91
+at i = 1, altitude = 235.47
+at i = 2, altitude = 233.03
+at i = 3, altitude = 230.58
+at i = 4, altitude = 228.13
+at i = 5, altitude = 225.68
+at i = 6, altitude = 223.24
+at i = 7, altitude = 220.79
+at i = 8, altitude = 218.65
+at i = 9, altitude = 216.21
+at i = 10, altitude = 213.76
+at i = 11, altitude = 211.31
+at i = 12, altitude = 208.87
+at i = 13, altitude = 206.42
+at i = 14, altitude = 203.98
+at i = 15, altitude = 201.53
+at i = 16, altitude = 199.09
+at i = 17, altitude = 196.64
+at i = 18, altitude = 194.20
+at i = 19, altitude = 191.75
+max is 237.91
+min is 191.75
+the Updated element is 189.31and 189.31
+It is now Descending
+126.58 s, 186.87 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 235.47
+at i = 1, altitude = 233.03
+at i = 2, altitude = 230.58
+at i = 3, altitude = 228.13
+at i = 4, altitude = 225.68
+at i = 5, altitude = 223.24
+at i = 6, altitude = 220.79
+at i = 7, altitude = 218.65
+at i = 8, altitude = 216.21
+at i = 9, altitude = 213.76
+at i = 10, altitude = 211.31
+at i = 11, altitude = 208.87
+at i = 12, altitude = 206.42
+at i = 13, altitude = 203.98
+at i = 14, altitude = 201.53
+at i = 15, altitude = 199.09
+at i = 16, altitude = 196.64
+at i = 17, altitude = 194.20
+at i = 18, altitude = 191.75
+at i = 19, altitude = 189.31
+max is 235.47
+min is 189.31
+the Updated element is 186.87and 186.87
+It is now Descending
+127.08 s, 184.42 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 233.03
+at i = 1, altitude = 230.58
+at i = 2, altitude = 228.13
+at i = 3, altitude = 225.68
+at i = 4, altitude = 223.24
+at i = 5, altitude = 220.79
+at i = 6, altitude = 218.65
+at i = 7, altitude = 216.21
+at i = 8, altitude = 213.76
+at i = 9, altitude = 211.31
+at i = 10, altitude = 208.87
+at i = 11, altitude = 206.42
+at i = 12, altitude = 203.98
+at i = 13, altitude = 201.53
+at i = 14, altitude = 199.09
+at i = 15, altitude = 196.64
+at i = 16, altitude = 194.20
+at i = 17, altitude = 191.75
+at i = 18, altitude = 189.31
+at i = 19, altitude = 186.87
+max is 233.03
+min is 186.87
+the Updated element is 184.42and 184.42
+It is now Descending
+127.58 s, 181.98 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 230.58
+at i = 1, altitude = 228.13
+at i = 2, altitude = 225.68
+at i = 3, altitude = 223.24
+at i = 4, altitude = 220.79
+at i = 5, altitude = 218.65
+at i = 6, altitude = 216.21
+at i = 7, altitude = 213.76
+at i = 8, altitude = 211.31
+at i = 9, altitude = 208.87
+at i = 10, altitude = 206.42
+at i = 11, altitude = 203.98
+at i = 12, altitude = 201.53
+at i = 13, altitude = 199.09
+at i = 14, altitude = 196.64
+at i = 15, altitude = 194.20
+at i = 16, altitude = 191.75
+at i = 17, altitude = 189.31
+at i = 18, altitude = 186.87
+at i = 19, altitude = 184.42
+max is 230.58
+min is 184.42
+the Updated element is 181.98and 181.98
+It is now Descending
+128.08 s, 179.54 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 228.13
+at i = 1, altitude = 225.68
+at i = 2, altitude = 223.24
+at i = 3, altitude = 220.79
+at i = 4, altitude = 218.65
+at i = 5, altitude = 216.21
+at i = 6, altitude = 213.76
+at i = 7, altitude = 211.31
+at i = 8, altitude = 208.87
+at i = 9, altitude = 206.42
+at i = 10, altitude = 203.98
+at i = 11, altitude = 201.53
+at i = 12, altitude = 199.09
+at i = 13, altitude = 196.64
+at i = 14, altitude = 194.20
+at i = 15, altitude = 191.75
+at i = 16, altitude = 189.31
+at i = 17, altitude = 186.87
+at i = 18, altitude = 184.42
+at i = 19, altitude = 181.98
+max is 228.13
+min is 181.98
+the Updated element is 179.54and 179.54
+It is now Descending
+128.58 s, 177.10 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 225.68
+at i = 1, altitude = 223.24
+at i = 2, altitude = 220.79
+at i = 3, altitude = 218.65
+at i = 4, altitude = 216.21
+at i = 5, altitude = 213.76
+at i = 6, altitude = 211.31
+at i = 7, altitude = 208.87
+at i = 8, altitude = 206.42
+at i = 9, altitude = 203.98
+at i = 10, altitude = 201.53
+at i = 11, altitude = 199.09
+at i = 12, altitude = 196.64
+at i = 13, altitude = 194.20
+at i = 14, altitude = 191.75
+at i = 15, altitude = 189.31
+at i = 16, altitude = 186.87
+at i = 17, altitude = 184.42
+at i = 18, altitude = 181.98
+at i = 19, altitude = 179.54
+max is 225.68
+min is 179.54
+the Updated element is 177.10and 177.10
+It is now Descending
+129.08 s, 174.66 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 223.24
+at i = 1, altitude = 220.79
+at i = 2, altitude = 218.65
+at i = 3, altitude = 216.21
+at i = 4, altitude = 213.76
+at i = 5, altitude = 211.31
+at i = 6, altitude = 208.87
+at i = 7, altitude = 206.42
+at i = 8, altitude = 203.98
+at i = 9, altitude = 201.53
+at i = 10, altitude = 199.09
+at i = 11, altitude = 196.64
+at i = 12, altitude = 194.20
+at i = 13, altitude = 191.75
+at i = 14, altitude = 189.31
+at i = 15, altitude = 186.87
+at i = 16, altitude = 184.42
+at i = 17, altitude = 181.98
+at i = 18, altitude = 179.54
+at i = 19, altitude = 177.10
+max is 223.24
+min is 177.10
+the Updated element is 174.66and 174.66
+It is now Descending
+129.58 s, 172.22 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 220.79
+at i = 1, altitude = 218.65
+at i = 2, altitude = 216.21
+at i = 3, altitude = 213.76
+at i = 4, altitude = 211.31
+at i = 5, altitude = 208.87
+at i = 6, altitude = 206.42
+at i = 7, altitude = 203.98
+at i = 8, altitude = 201.53
+at i = 9, altitude = 199.09
+at i = 10, altitude = 196.64
+at i = 11, altitude = 194.20
+at i = 12, altitude = 191.75
+at i = 13, altitude = 189.31
+at i = 14, altitude = 186.87
+at i = 15, altitude = 184.42
+at i = 16, altitude = 181.98
+at i = 17, altitude = 179.54
+at i = 18, altitude = 177.10
+at i = 19, altitude = 174.66
+max is 220.79
+min is 174.66
+the Updated element is 172.22and 172.22
+It is now Descending
+130.08 s, 169.78 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 218.65
+at i = 1, altitude = 216.21
+at i = 2, altitude = 213.76
+at i = 3, altitude = 211.31
+at i = 4, altitude = 208.87
+at i = 5, altitude = 206.42
+at i = 6, altitude = 203.98
+at i = 7, altitude = 201.53
+at i = 8, altitude = 199.09
+at i = 9, altitude = 196.64
+at i = 10, altitude = 194.20
+at i = 11, altitude = 191.75
+at i = 12, altitude = 189.31
+at i = 13, altitude = 186.87
+at i = 14, altitude = 184.42
+at i = 15, altitude = 181.98
+at i = 16, altitude = 179.54
+at i = 17, altitude = 177.10
+at i = 18, altitude = 174.66
+at i = 19, altitude = 172.22
+max is 218.65
+min is 172.22
+the Updated element is 169.78and 169.78
+It is now Descending
+130.58 s, 167.34 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 216.21
+at i = 1, altitude = 213.76
+at i = 2, altitude = 211.31
+at i = 3, altitude = 208.87
+at i = 4, altitude = 206.42
+at i = 5, altitude = 203.98
+at i = 6, altitude = 201.53
+at i = 7, altitude = 199.09
+at i = 8, altitude = 196.64
+at i = 9, altitude = 194.20
+at i = 10, altitude = 191.75
+at i = 11, altitude = 189.31
+at i = 12, altitude = 186.87
+at i = 13, altitude = 184.42
+at i = 14, altitude = 181.98
+at i = 15, altitude = 179.54
+at i = 16, altitude = 177.10
+at i = 17, altitude = 174.66
+at i = 18, altitude = 172.22
+at i = 19, altitude = 169.78
+max is 216.21
+min is 169.78
+the Updated element is 167.34and 167.34
+It is now Descending
+131.08 s, 164.90 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 213.76
+at i = 1, altitude = 211.31
+at i = 2, altitude = 208.87
+at i = 3, altitude = 206.42
+at i = 4, altitude = 203.98
+at i = 5, altitude = 201.53
+at i = 6, altitude = 199.09
+at i = 7, altitude = 196.64
+at i = 8, altitude = 194.20
+at i = 9, altitude = 191.75
+at i = 10, altitude = 189.31
+at i = 11, altitude = 186.87
+at i = 12, altitude = 184.42
+at i = 13, altitude = 181.98
+at i = 14, altitude = 179.54
+at i = 15, altitude = 177.10
+at i = 16, altitude = 174.66
+at i = 17, altitude = 172.22
+at i = 18, altitude = 169.78
+at i = 19, altitude = 167.34
+max is 213.76
+min is 167.34
+the Updated element is 164.90and 164.90
+It is now Descending
+131.58 s, 162.46 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 211.31
+at i = 1, altitude = 208.87
+at i = 2, altitude = 206.42
+at i = 3, altitude = 203.98
+at i = 4, altitude = 201.53
+at i = 5, altitude = 199.09
+at i = 6, altitude = 196.64
+at i = 7, altitude = 194.20
+at i = 8, altitude = 191.75
+at i = 9, altitude = 189.31
+at i = 10, altitude = 186.87
+at i = 11, altitude = 184.42
+at i = 12, altitude = 181.98
+at i = 13, altitude = 179.54
+at i = 14, altitude = 177.10
+at i = 15, altitude = 174.66
+at i = 16, altitude = 172.22
+at i = 17, altitude = 169.78
+at i = 18, altitude = 167.34
+at i = 19, altitude = 164.90
+max is 211.31
+min is 164.90
+the Updated element is 162.46and 162.46
+It is now Descending
+132.08 s, 160.01 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 208.87
+at i = 1, altitude = 206.42
+at i = 2, altitude = 203.98
+at i = 3, altitude = 201.53
+at i = 4, altitude = 199.09
+at i = 5, altitude = 196.64
+at i = 6, altitude = 194.20
+at i = 7, altitude = 191.75
+at i = 8, altitude = 189.31
+at i = 9, altitude = 186.87
+at i = 10, altitude = 184.42
+at i = 11, altitude = 181.98
+at i = 12, altitude = 179.54
+at i = 13, altitude = 177.10
+at i = 14, altitude = 174.66
+at i = 15, altitude = 172.22
+at i = 16, altitude = 169.78
+at i = 17, altitude = 167.34
+at i = 18, altitude = 164.90
+at i = 19, altitude = 162.46
+max is 208.87
+min is 162.46
+the Updated element is 160.01and 160.01
+It is now Descending
+132.58 s, 157.58 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 206.42
+at i = 1, altitude = 203.98
+at i = 2, altitude = 201.53
+at i = 3, altitude = 199.09
+at i = 4, altitude = 196.64
+at i = 5, altitude = 194.20
+at i = 6, altitude = 191.75
+at i = 7, altitude = 189.31
+at i = 8, altitude = 186.87
+at i = 9, altitude = 184.42
+at i = 10, altitude = 181.98
+at i = 11, altitude = 179.54
+at i = 12, altitude = 177.10
+at i = 13, altitude = 174.66
+at i = 14, altitude = 172.22
+at i = 15, altitude = 169.78
+at i = 16, altitude = 167.34
+at i = 17, altitude = 164.90
+at i = 18, altitude = 162.46
+at i = 19, altitude = 160.01
+max is 206.42
+min is 160.01
+the Updated element is 157.58and 157.58
+It is now Descending
+133.08 s, 155.13 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 203.98
+at i = 1, altitude = 201.53
+at i = 2, altitude = 199.09
+at i = 3, altitude = 196.64
+at i = 4, altitude = 194.20
+at i = 5, altitude = 191.75
+at i = 6, altitude = 189.31
+at i = 7, altitude = 186.87
+at i = 8, altitude = 184.42
+at i = 9, altitude = 181.98
+at i = 10, altitude = 179.54
+at i = 11, altitude = 177.10
+at i = 12, altitude = 174.66
+at i = 13, altitude = 172.22
+at i = 14, altitude = 169.78
+at i = 15, altitude = 167.34
+at i = 16, altitude = 164.90
+at i = 17, altitude = 162.46
+at i = 18, altitude = 160.01
+at i = 19, altitude = 157.58
+max is 203.98
+min is 157.58
+the Updated element is 155.13and 155.13
+It is now Descending
+133.58 s, 152.70 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 201.53
+at i = 1, altitude = 199.09
+at i = 2, altitude = 196.64
+at i = 3, altitude = 194.20
+at i = 4, altitude = 191.75
+at i = 5, altitude = 189.31
+at i = 6, altitude = 186.87
+at i = 7, altitude = 184.42
+at i = 8, altitude = 181.98
+at i = 9, altitude = 179.54
+at i = 10, altitude = 177.10
+at i = 11, altitude = 174.66
+at i = 12, altitude = 172.22
+at i = 13, altitude = 169.78
+at i = 14, altitude = 167.34
+at i = 15, altitude = 164.90
+at i = 16, altitude = 162.46
+at i = 17, altitude = 160.01
+at i = 18, altitude = 157.58
+at i = 19, altitude = 155.13
+max is 201.53
+min is 155.13
+the Updated element is 152.70and 152.70
+It is now Descending
+134.08 s, 150.25 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 199.09
+at i = 1, altitude = 196.64
+at i = 2, altitude = 194.20
+at i = 3, altitude = 191.75
+at i = 4, altitude = 189.31
+at i = 5, altitude = 186.87
+at i = 6, altitude = 184.42
+at i = 7, altitude = 181.98
+at i = 8, altitude = 179.54
+at i = 9, altitude = 177.10
+at i = 10, altitude = 174.66
+at i = 11, altitude = 172.22
+at i = 12, altitude = 169.78
+at i = 13, altitude = 167.34
+at i = 14, altitude = 164.90
+at i = 15, altitude = 162.46
+at i = 16, altitude = 160.01
+at i = 17, altitude = 157.58
+at i = 18, altitude = 155.13
+at i = 19, altitude = 152.70
+max is 199.09
+min is 152.70
+the Updated element is 150.25and 150.25
+It is now Descending
+134.58 s, 147.82 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 196.64
+at i = 1, altitude = 194.20
+at i = 2, altitude = 191.75
+at i = 3, altitude = 189.31
+at i = 4, altitude = 186.87
+at i = 5, altitude = 184.42
+at i = 6, altitude = 181.98
+at i = 7, altitude = 179.54
+at i = 8, altitude = 177.10
+at i = 9, altitude = 174.66
+at i = 10, altitude = 172.22
+at i = 11, altitude = 169.78
+at i = 12, altitude = 167.34
+at i = 13, altitude = 164.90
+at i = 14, altitude = 162.46
+at i = 15, altitude = 160.01
+at i = 16, altitude = 157.58
+at i = 17, altitude = 155.13
+at i = 18, altitude = 152.70
+at i = 19, altitude = 150.25
+max is 196.64
+min is 150.25
+the Updated element is 147.82and 147.82
+It is now Descending
+135.08 s, 145.38 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 194.20
+at i = 1, altitude = 191.75
+at i = 2, altitude = 189.31
+at i = 3, altitude = 186.87
+at i = 4, altitude = 184.42
+at i = 5, altitude = 181.98
+at i = 6, altitude = 179.54
+at i = 7, altitude = 177.10
+at i = 8, altitude = 174.66
+at i = 9, altitude = 172.22
+at i = 10, altitude = 169.78
+at i = 11, altitude = 167.34
+at i = 12, altitude = 164.90
+at i = 13, altitude = 162.46
+at i = 14, altitude = 160.01
+at i = 15, altitude = 157.58
+at i = 16, altitude = 155.13
+at i = 17, altitude = 152.70
+at i = 18, altitude = 150.25
+at i = 19, altitude = 147.82
+max is 194.20
+min is 147.82
+the Updated element is 145.38and 145.38
+It is now Descending
+135.58 s, 142.94 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 191.75
+at i = 1, altitude = 189.31
+at i = 2, altitude = 186.87
+at i = 3, altitude = 184.42
+at i = 4, altitude = 181.98
+at i = 5, altitude = 179.54
+at i = 6, altitude = 177.10
+at i = 7, altitude = 174.66
+at i = 8, altitude = 172.22
+at i = 9, altitude = 169.78
+at i = 10, altitude = 167.34
+at i = 11, altitude = 164.90
+at i = 12, altitude = 162.46
+at i = 13, altitude = 160.01
+at i = 14, altitude = 157.58
+at i = 15, altitude = 155.13
+at i = 16, altitude = 152.70
+at i = 17, altitude = 150.25
+at i = 18, altitude = 147.82
+at i = 19, altitude = 145.38
+max is 191.75
+min is 145.38
+the Updated element is 142.94and 142.94
+It is now Descending
+136.08 s, 140.50 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 189.31
+at i = 1, altitude = 186.87
+at i = 2, altitude = 184.42
+at i = 3, altitude = 181.98
+at i = 4, altitude = 179.54
+at i = 5, altitude = 177.10
+at i = 6, altitude = 174.66
+at i = 7, altitude = 172.22
+at i = 8, altitude = 169.78
+at i = 9, altitude = 167.34
+at i = 10, altitude = 164.90
+at i = 11, altitude = 162.46
+at i = 12, altitude = 160.01
+at i = 13, altitude = 157.58
+at i = 14, altitude = 155.13
+at i = 15, altitude = 152.70
+at i = 16, altitude = 150.25
+at i = 17, altitude = 147.82
+at i = 18, altitude = 145.38
+at i = 19, altitude = 142.94
+max is 189.31
+min is 142.94
+the Updated element is 140.50and 140.50
+It is now Descending
+136.58 s, 138.06 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 186.87
+at i = 1, altitude = 184.42
+at i = 2, altitude = 181.98
+at i = 3, altitude = 179.54
+at i = 4, altitude = 177.10
+at i = 5, altitude = 174.66
+at i = 6, altitude = 172.22
+at i = 7, altitude = 169.78
+at i = 8, altitude = 167.34
+at i = 9, altitude = 164.90
+at i = 10, altitude = 162.46
+at i = 11, altitude = 160.01
+at i = 12, altitude = 157.58
+at i = 13, altitude = 155.13
+at i = 14, altitude = 152.70
+at i = 15, altitude = 150.25
+at i = 16, altitude = 147.82
+at i = 17, altitude = 145.38
+at i = 18, altitude = 142.94
+at i = 19, altitude = 140.50
+max is 186.87
+min is 140.50
+the Updated element is 138.06and 138.06
+It is now Descending
+137.08 s, 135.62 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 184.42
+at i = 1, altitude = 181.98
+at i = 2, altitude = 179.54
+at i = 3, altitude = 177.10
+at i = 4, altitude = 174.66
+at i = 5, altitude = 172.22
+at i = 6, altitude = 169.78
+at i = 7, altitude = 167.34
+at i = 8, altitude = 164.90
+at i = 9, altitude = 162.46
+at i = 10, altitude = 160.01
+at i = 11, altitude = 157.58
+at i = 12, altitude = 155.13
+at i = 13, altitude = 152.70
+at i = 14, altitude = 150.25
+at i = 15, altitude = 147.82
+at i = 16, altitude = 145.38
+at i = 17, altitude = 142.94
+at i = 18, altitude = 140.50
+at i = 19, altitude = 138.06
+max is 184.42
+min is 138.06
+the Updated element is 135.62and 135.62
+It is now Descending
+137.58 s, 133.19 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 181.98
+at i = 1, altitude = 179.54
+at i = 2, altitude = 177.10
+at i = 3, altitude = 174.66
+at i = 4, altitude = 172.22
+at i = 5, altitude = 169.78
+at i = 6, altitude = 167.34
+at i = 7, altitude = 164.90
+at i = 8, altitude = 162.46
+at i = 9, altitude = 160.01
+at i = 10, altitude = 157.58
+at i = 11, altitude = 155.13
+at i = 12, altitude = 152.70
+at i = 13, altitude = 150.25
+at i = 14, altitude = 147.82
+at i = 15, altitude = 145.38
+at i = 16, altitude = 142.94
+at i = 17, altitude = 140.50
+at i = 18, altitude = 138.06
+at i = 19, altitude = 135.62
+max is 181.98
+min is 135.62
+the Updated element is 133.19and 133.19
+It is now Descending
+138.08 s, 130.75 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 179.54
+at i = 1, altitude = 177.10
+at i = 2, altitude = 174.66
+at i = 3, altitude = 172.22
+at i = 4, altitude = 169.78
+at i = 5, altitude = 167.34
+at i = 6, altitude = 164.90
+at i = 7, altitude = 162.46
+at i = 8, altitude = 160.01
+at i = 9, altitude = 157.58
+at i = 10, altitude = 155.13
+at i = 11, altitude = 152.70
+at i = 12, altitude = 150.25
+at i = 13, altitude = 147.82
+at i = 14, altitude = 145.38
+at i = 15, altitude = 142.94
+at i = 16, altitude = 140.50
+at i = 17, altitude = 138.06
+at i = 18, altitude = 135.62
+at i = 19, altitude = 133.19
+max is 179.54
+min is 133.19
+the Updated element is 130.75and 130.75
+It is now Descending
+138.58 s, 128.32 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 177.10
+at i = 1, altitude = 174.66
+at i = 2, altitude = 172.22
+at i = 3, altitude = 169.78
+at i = 4, altitude = 167.34
+at i = 5, altitude = 164.90
+at i = 6, altitude = 162.46
+at i = 7, altitude = 160.01
+at i = 8, altitude = 157.58
+at i = 9, altitude = 155.13
+at i = 10, altitude = 152.70
+at i = 11, altitude = 150.25
+at i = 12, altitude = 147.82
+at i = 13, altitude = 145.38
+at i = 14, altitude = 142.94
+at i = 15, altitude = 140.50
+at i = 16, altitude = 138.06
+at i = 17, altitude = 135.62
+at i = 18, altitude = 133.19
+at i = 19, altitude = 130.75
+max is 177.10
+min is 130.75
+the Updated element is 128.32and 128.32
+It is now Descending
+139.08 s, 125.88 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 174.66
+at i = 1, altitude = 172.22
+at i = 2, altitude = 169.78
+at i = 3, altitude = 167.34
+at i = 4, altitude = 164.90
+at i = 5, altitude = 162.46
+at i = 6, altitude = 160.01
+at i = 7, altitude = 157.58
+at i = 8, altitude = 155.13
+at i = 9, altitude = 152.70
+at i = 10, altitude = 150.25
+at i = 11, altitude = 147.82
+at i = 12, altitude = 145.38
+at i = 13, altitude = 142.94
+at i = 14, altitude = 140.50
+at i = 15, altitude = 138.06
+at i = 16, altitude = 135.62
+at i = 17, altitude = 133.19
+at i = 18, altitude = 130.75
+at i = 19, altitude = 128.32
+max is 174.66
+min is 128.32
+the Updated element is 125.88and 125.88
+It is now Descending
+139.58 s, 123.44 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 172.22
+at i = 1, altitude = 169.78
+at i = 2, altitude = 167.34
+at i = 3, altitude = 164.90
+at i = 4, altitude = 162.46
+at i = 5, altitude = 160.01
+at i = 6, altitude = 157.58
+at i = 7, altitude = 155.13
+at i = 8, altitude = 152.70
+at i = 9, altitude = 150.25
+at i = 10, altitude = 147.82
+at i = 11, altitude = 145.38
+at i = 12, altitude = 142.94
+at i = 13, altitude = 140.50
+at i = 14, altitude = 138.06
+at i = 15, altitude = 135.62
+at i = 16, altitude = 133.19
+at i = 17, altitude = 130.75
+at i = 18, altitude = 128.32
+at i = 19, altitude = 125.88
+max is 172.22
+min is 125.88
+the Updated element is 123.44and 123.44
+It is now Descending
+140.08 s, 121.01 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 169.78
+at i = 1, altitude = 167.34
+at i = 2, altitude = 164.90
+at i = 3, altitude = 162.46
+at i = 4, altitude = 160.01
+at i = 5, altitude = 157.58
+at i = 6, altitude = 155.13
+at i = 7, altitude = 152.70
+at i = 8, altitude = 150.25
+at i = 9, altitude = 147.82
+at i = 10, altitude = 145.38
+at i = 11, altitude = 142.94
+at i = 12, altitude = 140.50
+at i = 13, altitude = 138.06
+at i = 14, altitude = 135.62
+at i = 15, altitude = 133.19
+at i = 16, altitude = 130.75
+at i = 17, altitude = 128.32
+at i = 18, altitude = 125.88
+at i = 19, altitude = 123.44
+max is 169.78
+min is 123.44
+the Updated element is 121.01and 121.01
+It is now Descending
+140.58 s, 118.57 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 167.34
+at i = 1, altitude = 164.90
+at i = 2, altitude = 162.46
+at i = 3, altitude = 160.01
+at i = 4, altitude = 157.58
+at i = 5, altitude = 155.13
+at i = 6, altitude = 152.70
+at i = 7, altitude = 150.25
+at i = 8, altitude = 147.82
+at i = 9, altitude = 145.38
+at i = 10, altitude = 142.94
+at i = 11, altitude = 140.50
+at i = 12, altitude = 138.06
+at i = 13, altitude = 135.62
+at i = 14, altitude = 133.19
+at i = 15, altitude = 130.75
+at i = 16, altitude = 128.32
+at i = 17, altitude = 125.88
+at i = 18, altitude = 123.44
+at i = 19, altitude = 121.01
+max is 167.34
+min is 121.01
+the Updated element is 118.57and 118.57
+It is now Descending
+141.08 s, 116.14 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 164.90
+at i = 1, altitude = 162.46
+at i = 2, altitude = 160.01
+at i = 3, altitude = 157.58
+at i = 4, altitude = 155.13
+at i = 5, altitude = 152.70
+at i = 6, altitude = 150.25
+at i = 7, altitude = 147.82
+at i = 8, altitude = 145.38
+at i = 9, altitude = 142.94
+at i = 10, altitude = 140.50
+at i = 11, altitude = 138.06
+at i = 12, altitude = 135.62
+at i = 13, altitude = 133.19
+at i = 14, altitude = 130.75
+at i = 15, altitude = 128.32
+at i = 16, altitude = 125.88
+at i = 17, altitude = 123.44
+at i = 18, altitude = 121.01
+at i = 19, altitude = 118.57
+max is 164.90
+min is 118.57
+the Updated element is 116.14and 116.14
+It is now Descending
+141.58 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 162.46
+at i = 1, altitude = 160.01
+at i = 2, altitude = 157.58
+at i = 3, altitude = 155.13
+at i = 4, altitude = 152.70
+at i = 5, altitude = 150.25
+at i = 6, altitude = 147.82
+at i = 7, altitude = 145.38
+at i = 8, altitude = 142.94
+at i = 9, altitude = 140.50
+at i = 10, altitude = 138.06
+at i = 11, altitude = 135.62
+at i = 12, altitude = 133.19
+at i = 13, altitude = 130.75
+at i = 14, altitude = 128.32
+at i = 15, altitude = 125.88
+at i = 16, altitude = 123.44
+at i = 17, altitude = 121.01
+at i = 18, altitude = 118.57
+at i = 19, altitude = 116.14
+max is 162.46
+min is 116.14
+the Updated element is 113.71and 113.71
+It is now Descending
+142.08 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 160.01
+at i = 1, altitude = 157.58
+at i = 2, altitude = 155.13
+at i = 3, altitude = 152.70
+at i = 4, altitude = 150.25
+at i = 5, altitude = 147.82
+at i = 6, altitude = 145.38
+at i = 7, altitude = 142.94
+at i = 8, altitude = 140.50
+at i = 9, altitude = 138.06
+at i = 10, altitude = 135.62
+at i = 11, altitude = 133.19
+at i = 12, altitude = 130.75
+at i = 13, altitude = 128.32
+at i = 14, altitude = 125.88
+at i = 15, altitude = 123.44
+at i = 16, altitude = 121.01
+at i = 17, altitude = 118.57
+at i = 18, altitude = 116.14
+at i = 19, altitude = 113.71
+max is 160.01
+min is 113.71
+the Updated element is 113.71and 113.71
+It is now Descending
+142.58 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 157.58
+at i = 1, altitude = 155.13
+at i = 2, altitude = 152.70
+at i = 3, altitude = 150.25
+at i = 4, altitude = 147.82
+at i = 5, altitude = 145.38
+at i = 6, altitude = 142.94
+at i = 7, altitude = 140.50
+at i = 8, altitude = 138.06
+at i = 9, altitude = 135.62
+at i = 10, altitude = 133.19
+at i = 11, altitude = 130.75
+at i = 12, altitude = 128.32
+at i = 13, altitude = 125.88
+at i = 14, altitude = 123.44
+at i = 15, altitude = 121.01
+at i = 16, altitude = 118.57
+at i = 17, altitude = 116.14
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 157.58
+min is 113.71
+the Updated element is 113.71and 113.71
+It is now Descending
+143.08 s, 110.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 155.13
+at i = 1, altitude = 152.70
+at i = 2, altitude = 150.25
+at i = 3, altitude = 147.82
+at i = 4, altitude = 145.38
+at i = 5, altitude = 142.94
+at i = 6, altitude = 140.50
+at i = 7, altitude = 138.06
+at i = 8, altitude = 135.62
+at i = 9, altitude = 133.19
+at i = 10, altitude = 130.75
+at i = 11, altitude = 128.32
+at i = 12, altitude = 125.88
+at i = 13, altitude = 123.44
+at i = 14, altitude = 121.01
+at i = 15, altitude = 118.57
+at i = 16, altitude = 116.14
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 155.13
+min is 113.71
+the Updated element is 110.71and 110.71
+It is now Descending
+143.58 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 152.70
+at i = 1, altitude = 150.25
+at i = 2, altitude = 147.82
+at i = 3, altitude = 145.38
+at i = 4, altitude = 142.94
+at i = 5, altitude = 140.50
+at i = 6, altitude = 138.06
+at i = 7, altitude = 135.62
+at i = 8, altitude = 133.19
+at i = 9, altitude = 130.75
+at i = 10, altitude = 128.32
+at i = 11, altitude = 125.88
+at i = 12, altitude = 123.44
+at i = 13, altitude = 121.01
+at i = 14, altitude = 118.57
+at i = 15, altitude = 116.14
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 110.71
+max is 152.70
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+144.08 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 150.25
+at i = 1, altitude = 147.82
+at i = 2, altitude = 145.38
+at i = 3, altitude = 142.94
+at i = 4, altitude = 140.50
+at i = 5, altitude = 138.06
+at i = 6, altitude = 135.62
+at i = 7, altitude = 133.19
+at i = 8, altitude = 130.75
+at i = 9, altitude = 128.32
+at i = 10, altitude = 125.88
+at i = 11, altitude = 123.44
+at i = 12, altitude = 121.01
+at i = 13, altitude = 118.57
+at i = 14, altitude = 116.14
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 110.71
+at i = 19, altitude = 113.71
+max is 150.25
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+144.58 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 147.82
+at i = 1, altitude = 145.38
+at i = 2, altitude = 142.94
+at i = 3, altitude = 140.50
+at i = 4, altitude = 138.06
+at i = 5, altitude = 135.62
+at i = 6, altitude = 133.19
+at i = 7, altitude = 130.75
+at i = 8, altitude = 128.32
+at i = 9, altitude = 125.88
+at i = 10, altitude = 123.44
+at i = 11, altitude = 121.01
+at i = 12, altitude = 118.57
+at i = 13, altitude = 116.14
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 110.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 147.82
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+145.08 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 145.38
+at i = 1, altitude = 142.94
+at i = 2, altitude = 140.50
+at i = 3, altitude = 138.06
+at i = 4, altitude = 135.62
+at i = 5, altitude = 133.19
+at i = 6, altitude = 130.75
+at i = 7, altitude = 128.32
+at i = 8, altitude = 125.88
+at i = 9, altitude = 123.44
+at i = 10, altitude = 121.01
+at i = 11, altitude = 118.57
+at i = 12, altitude = 116.14
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 110.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 145.38
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+145.58 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 142.94
+at i = 1, altitude = 140.50
+at i = 2, altitude = 138.06
+at i = 3, altitude = 135.62
+at i = 4, altitude = 133.19
+at i = 5, altitude = 130.75
+at i = 6, altitude = 128.32
+at i = 7, altitude = 125.88
+at i = 8, altitude = 123.44
+at i = 9, altitude = 121.01
+at i = 10, altitude = 118.57
+at i = 11, altitude = 116.14
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 110.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 142.94
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+146.02 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 140.50
+at i = 1, altitude = 138.06
+at i = 2, altitude = 135.62
+at i = 3, altitude = 133.19
+at i = 4, altitude = 130.75
+at i = 5, altitude = 128.32
+at i = 6, altitude = 125.88
+at i = 7, altitude = 123.44
+at i = 8, altitude = 121.01
+at i = 9, altitude = 118.57
+at i = 10, altitude = 116.14
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 110.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 140.50
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+146.52 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 138.06
+at i = 1, altitude = 135.62
+at i = 2, altitude = 133.19
+at i = 3, altitude = 130.75
+at i = 4, altitude = 128.32
+at i = 5, altitude = 125.88
+at i = 6, altitude = 123.44
+at i = 7, altitude = 121.01
+at i = 8, altitude = 118.57
+at i = 9, altitude = 116.14
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 110.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 138.06
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+147.02 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 135.62
+at i = 1, altitude = 133.19
+at i = 2, altitude = 130.75
+at i = 3, altitude = 128.32
+at i = 4, altitude = 125.88
+at i = 5, altitude = 123.44
+at i = 6, altitude = 121.01
+at i = 7, altitude = 118.57
+at i = 8, altitude = 116.14
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 110.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 135.62
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+147.52 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 133.19
+at i = 1, altitude = 130.75
+at i = 2, altitude = 128.32
+at i = 3, altitude = 125.88
+at i = 4, altitude = 123.44
+at i = 5, altitude = 121.01
+at i = 6, altitude = 118.57
+at i = 7, altitude = 116.14
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 110.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 133.19
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+148.02 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 130.75
+at i = 1, altitude = 128.32
+at i = 2, altitude = 125.88
+at i = 3, altitude = 123.44
+at i = 4, altitude = 121.01
+at i = 5, altitude = 118.57
+at i = 6, altitude = 116.14
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 110.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 130.75
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+148.52 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 128.32
+at i = 1, altitude = 125.88
+at i = 2, altitude = 123.44
+at i = 3, altitude = 121.01
+at i = 4, altitude = 118.57
+at i = 5, altitude = 116.14
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 110.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 128.32
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+149.02 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 125.88
+at i = 1, altitude = 123.44
+at i = 2, altitude = 121.01
+at i = 3, altitude = 118.57
+at i = 4, altitude = 116.14
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 110.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 125.88
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+149.52 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 123.44
+at i = 1, altitude = 121.01
+at i = 2, altitude = 118.57
+at i = 3, altitude = 116.14
+at i = 4, altitude = 113.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 110.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 123.44
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+150.02 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 121.01
+at i = 1, altitude = 118.57
+at i = 2, altitude = 116.14
+at i = 3, altitude = 113.71
+at i = 4, altitude = 113.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 110.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 121.01
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+150.52 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 118.57
+at i = 1, altitude = 116.14
+at i = 2, altitude = 113.71
+at i = 3, altitude = 113.71
+at i = 4, altitude = 113.71
+at i = 5, altitude = 110.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 118.57
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+151.02 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 116.14
+at i = 1, altitude = 113.71
+at i = 2, altitude = 113.71
+at i = 3, altitude = 113.71
+at i = 4, altitude = 110.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 116.14
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+151.45 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 113.71
+at i = 1, altitude = 113.71
+at i = 2, altitude = 113.71
+at i = 3, altitude = 110.71
+at i = 4, altitude = 113.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 113.71
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+151.95 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 113.71
+at i = 1, altitude = 113.71
+at i = 2, altitude = 110.71
+at i = 3, altitude = 113.71
+at i = 4, altitude = 113.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 113.71
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+152.45 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 113.71
+at i = 1, altitude = 110.71
+at i = 2, altitude = 113.71
+at i = 3, altitude = 113.71
+at i = 4, altitude = 113.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 113.71
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+152.95 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 110.71
+at i = 1, altitude = 113.71
+at i = 2, altitude = 113.71
+at i = 3, altitude = 113.71
+at i = 4, altitude = 113.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 113.71
+min is 110.71
+the Updated element is 113.71and 113.71
+It is now Descending
+153.45 s, 113.71 m
+Number of record stored 20
+Detecting constant altitude going on
+at i = 0, altitude = 113.71
+at i = 1, altitude = 113.71
+at i = 2, altitude = 113.71
+at i = 3, altitude = 113.71
+at i = 4, altitude = 113.71
+at i = 5, altitude = 113.71
+at i = 6, altitude = 113.71
+at i = 7, altitude = 113.71
+at i = 8, altitude = 113.71
+at i = 9, altitude = 113.71
+at i = 10, altitude = 113.71
+at i = 11, altitude = 113.71
+at i = 12, altitude = 113.71
+at i = 13, altitude = 113.71
+at i = 14, altitude = 113.71
+at i = 15, altitude = 113.71
+at i = 16, altitude = 113.71
+at i = 17, altitude = 113.71
+at i = 18, altitude = 113.71
+at i = 19, altitude = 113.71
+max is 113.71
+min is 113.71
+Landing detected
+the Updated element is 113.71and 113.71
+ Altitude lower than Land Threshold Altitude: 15.00 m
+EEPROM Writing Inactivated

@@ -44,7 +44,7 @@
 /*===============================================
   Update 13/5/2022
   Update on FlightProgram:
-  1. Add one more landing condition. When a set of altitude in a duration of land_timelimit has less variation within land_constant_threshold, it is considered as constant and the rocket has landed.
+  1. Add one more landing condition. When a set of altitude in a duration of land_det_time has less variation within land_det_margin, it is considered as constant and the rocket has landed.
   ==============================================*/
 
 #include <Arduino.h>
@@ -73,10 +73,10 @@
 #define reading_rate              60                                 //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
 #define sample_size               15                                 //The number of data used to determine the apogee point. There are two continues samples together to determine the apogee.
 #define main_release_a            304.8f                             //The altitude for main parachute to be deployed. 800ft for SAC
-#define launch_threshold          15.0f                              // The threshold altitude when EEPROM starts storing data
-#define land_threshold            15.0f                              // The threshold altitude when EEPROM stop saving data
-#define land_timelimit            5.0f
-#define land_constant_threshold   1.0f
+#define launch_threshold          0.05f                              // The threshold altitude when EEPROM starts storing data
+#define land_threshold            -15.0f                              // The threshold altitude when EEPROM stop saving data
+#define land_det_time             5000
+#define land_det_margin           2.0f
 #define apogee_threshold          1.5f                               // apogee gradient threshold should be less than gradient_init
 
 
@@ -91,8 +91,8 @@ typedef struct strData {
 } Data;
 
 //---Declare general variables. Can be changed according to different flight condition.---
-bool enableEmatchCheck          = true;
-bool enableBatteryCheck         = true;
+bool enableEmatchCheck          = false;
+bool enableBatteryCheck         = false;
 
 //Variables used for sensor
 int32_t referencePressure       = 0;
@@ -107,8 +107,6 @@ float time_s_float              = 0.0f;                           //Time in seco
 
 float drogue_start_time         = 0.0f;                           //Time for Drogue e match starts to be ignited
 float main_start_time           = 0.0f;                           //Time for Drogue e match starts to be ignited
-float land_timelimit_start      = 0.0f;
-float land_timelimit_stop       = 0.0f;
 //---Initialization---
 int MODE                         = 0;                              //Initialize flight mode to mode 0;
 uint16_t EEPORM_length           = 64000;                          //512k 24LC256 eeprom chip has 64k bytes
@@ -132,7 +130,7 @@ void eepromStoreMark();
 float getSampleGradient(float x[], float y[], int samplesize);
 
 cppQueue	OuterSample(sizeof(Data), sample_size + sample_size, IMPLEMENTATION);	// Instantiate queue
-cppQueue	landSample(sizeof(Data), round(land_timelimit / ((reading_rate + 10) / 1000)), IMPLEMENTATION);	// Instantiate queue
+cppQueue	landSample(sizeof(relative_altitude), round(land_det_time / (reading_rate + 10)), IMPLEMENTATION);	// Instantiate queue
 
 //---Create objects---
 MS5611 BMP;
@@ -163,8 +161,8 @@ void setup() {
   //---clear eeprom--- (not used now)
   //  myMem.erase();
   //  psi.buzzer_EEPROMEreased(Buzzer_Set);
-  //Serial.begin(9600);
-  //Serial.println("REBOOT");
+  Serial.begin(9600);
+  Serial.println("REBOOT");
   //---initialize BMP sensor---
 
   //---Detect status of EEPROM, Sensor, ematches and power.---
@@ -201,21 +199,23 @@ void setup() {
   EEPORM_length       = myMem.length();
   shift_size          = sample_size;                                      //No shared data between two data.
   beep_start          = millis();
-  size_of_landSample  = round(land_timelimit / ((reading_rate + 10) / 1000));
-
+  size_of_landSample  = round(land_det_time / (reading_rate + 10));
+Serial.print("size_of_landSample = ");Serial.println(size_of_landSample);
+Serial.print("landSample = ");Serial.println(landSample.sizeOf());
 }
 
 void loop() {
   //Rocket is in ready to lanuch status in mode 1, waiting for current altitude beyond the lanuch_thershold. There is constantly beeping indicating the mode's working condition.
   if (MODE == 1) {
     if (millis() - beep_start >= 3000) {
-      psi.buzzer_powerOn(Buzzer_Set);                               //Keeps beeping indicating PSI's working status
+      //psi.buzzer_powerOn(Buzzer_Set);                               //Keeps beeping indicating PSI's working status
       beep_start = millis();
     }
     realPressure =   BMP.readPressure();
     relative_altitude =   BMP.getAltitude(realPressure, referencePressure);
     //absoluteAltitude =   BMP.getAltitude(realPressure);
-
+    Serial.print(",altitude ->  ");
+    Serial.println( relative_altitude);
 
     if (relative_altitude > launch_threshold) {
       referenceTime = millis();
@@ -231,6 +231,7 @@ void loop() {
   //apogee detection: There are two samples average greident are taken as the determiniation for apogee. Those tow deteminations have to be both negative to determine the apogee. The first sample has 20 altitude data and the next sample starts from the 11th data of next sample.
   //For each two samples there are 30 data in total. The size of two samples together is called biggerSampleSize. The biggerSampleSize shifts by 1 data each time.
   if (MODE == 2 ) {
+    
     float read_alltitude[sample_size] = {0.0f};
     float read_time[sample_size] = {0.0f};
     read_time_altitude = {0.0f, 0.0f};
@@ -251,35 +252,35 @@ void loop() {
         OuterSample.peekIdx(&read_time_altitude, i);
         read_alltitude[i] = read_time_altitude.altitude;
         read_time[i] = read_time_altitude.time;
-        /*
-          Serial.print(i);
-          Serial.print(" th,  ");
-          Serial.print("time ->");
-          Serial.print(read_alltitude[i]);
-          Serial.print(", altitude ->  ");
-          Serial.println(read_time[i]);
-        */
+
+        Serial.print(i);
+        Serial.print(" th,  ");
+        Serial.print("time ->");
+        Serial.print(read_alltitude[i]);
+        Serial.print(", altitude ->  ");
+        Serial.println(read_time[i]);
+
       }
       sum_gradient = getSampleGradient(read_time, read_alltitude, sample_size);
       buffer_sum_gradient[0] = sum_gradient;
-      //Serial.print(" 1th sum_gradient = "); Serial.println(sum_gradient);
+      Serial.print(" 1th sum_gradient = "); Serial.println(sum_gradient);
 
       for (int i = sample_size; i < sample_size + shift_size; i++) {
         OuterSample.peekIdx(&read_time_altitude, i);
         read_alltitude[i - shift_size] = read_time_altitude.altitude;
         read_time[i - shift_size] = read_time_altitude.time;
-        /*
-          Serial.print(i);
-          Serial.print(" th,  ");
-          Serial.print("time ->");
-          Serial.print(read_time_altitude.time);
-          Serial.print(", altitude ->  ");
-          Serial.println(read_time_altitude.altitude);
-        */
+
+        Serial.print(i);
+        Serial.print(" th,  ");
+        Serial.print("time ->");
+        Serial.print(read_time_altitude.time);
+        Serial.print(", altitude ->  ");
+        Serial.println(read_time_altitude.altitude);
+
       }
       sum_gradient = getSampleGradient(read_time, read_alltitude, sample_size);
       buffer_sum_gradient[1] = sum_gradient;
-      //Serial.print(" 2nd sum_gradient = "); Serial.println(sum_gradient);
+      Serial.print(" 2nd sum_gradient = "); Serial.println(sum_gradient);
       OuterSample.pop(&forPop);                                                                             //Shifting
     }
 
@@ -287,6 +288,7 @@ void loop() {
       digitalWrite(Drogue_Release, HIGH);
       //psi.buzzer_powerOn(Buzzer_Set);
       eepromStoreMark();
+      Serial.println("Apogee detected");
       drogue_start_time = millis();
       while (millis() - drogue_start_time  < ignition_duration) {
         eepromStoreData();
@@ -295,14 +297,17 @@ void loop() {
       digitalWrite(Drogue_Release, LOW);
       MODE++;
     }
-    delay(reading_rate / 2);                         //reading_rate of 60 has 15Hz, 30 has 20Hz
+  
+    delay(reading_rate/2);                         //reading_rate of 60 has 15Hz, 30 has 20Hz
   }
   //Mode 3 is the flight descending mode where PSI only looks for the altitude where main prarachute deploys.
   if (MODE == 3 ) {
-    eepromStoreData();                               // ms is transferred to second(float)
+    eepromStoreData();                               // ms is transferred to second(float)  
     if (relative_altitude <= main_release_a) {
       digitalWrite(Main_Release, HIGH);
+      Serial.println("Main threshold altitude detected");
       eepromStoreMark();
+
       main_start_time = millis();
       while (millis() - main_start_time  < ignition_duration) {
         eepromStoreData();
@@ -310,33 +315,43 @@ void loop() {
       }
       digitalWrite(Main_Release, LOW);
       MODE++;
-      land_timelimit_start = time_ms;
+      
     }
-
     delay(reading_rate);
-  }
 
+  }
   //Mode 4 is the flight descending mode where PSI only stores altitude data and time.
   if ( MODE == 4 ) {
-    float land_altitude[size_of_landSample] = {0.0f};
 
+    float land_altitude = 0.0f;
     if (address < EEPORM_length - 5 && relative_altitude >= land_threshold) {                                                           //Detection of landing and overlap in EEPROM
       eepromStoreData();
+      Serial.print(time_s_float);
+      Serial.print(" s, ");
+      Serial.print(relative_altitude);
+      Serial.println(" m");
     } else MODE = 5;
-    land_timelimit_stop = time_ms;
-
-    if (land_timelimit_stop - land_timelimit_start > land_timelimit && landSample.isFull() == 1 ) {
+    Serial.print("Number of record stored ");Serial.println(landSample.getCount());
+    if ( landSample.isFull() == 1 ) {
+      Serial.println("Detecting constant altitude going on");
+      landSample.peekIdx(&land_min_altitude, 0);
       for (int i = 0; i < size_of_landSample ; i++) {
         landSample.peekIdx(&land_altitude, i);
-        land_max_altitude = max(land_altitude[i], land_max_altitude);
-        land_min_altitude = min(land_altitude[i], land_min_altitude);
+        Serial.print("at i = "); Serial.print(i);Serial.print(", altitude = "); Serial.println(land_altitude);
+        land_max_altitude = max(land_altitude, land_max_altitude);
+        land_min_altitude = min(land_altitude, land_min_altitude);
       }
-      if (land_max_altitude - land_min_altitude <= land_constant_threshold) {
+      if (land_max_altitude - land_min_altitude <= land_det_margin) {
+        Serial.print("max is ");Serial.println(land_max_altitude);
+        Serial.print("min is ");Serial.println(land_min_altitude);
         MODE = 5;
+        Serial.println("Landing detected");
       }
-      land_timelimit_start = land_timelimit_stop;
-    }
+      landSample.pop(&forPop);
+      land_max_altitude = 0;
+    }    
     landSample.push(&relative_altitude);
+    
     delay(reading_rate);
   }
 
@@ -345,7 +360,8 @@ void loop() {
   //Mode 5 has a faster beeping , distinguishing from mode 1
   if (MODE == 5) {
     while (1) {
-      psi.buzzer_powerOn(Buzzer_Set);
+      //psi.buzzer_powerOn(Buzzer_Set);
+      Serial.println("MODE in 5");
       delay(reading_rate);
     }
   }
@@ -354,6 +370,7 @@ void loop() {
 void eepromStoreData() {
   realPressure =   BMP.readPressure();
   relative_altitude =   BMP.getAltitude(realPressure, referencePressure);
+  //relative_altitude =   abs(relative_altitude);
   time_ms = millis() - referenceTime;
   time_s_float = psi.ms2s(time_ms);                                              // ms is transferred to second(float)
   myMem.put(address, time_s_float);
@@ -365,11 +382,12 @@ void eepromStoreData() {
 void eepromStoreMark() {
   realPressure =   BMP.readPressure();
   relative_altitude =   BMP.getAltitude(realPressure, referencePressure);
+  //relative_altitude =   abs(relative_altitude);
   time_ms = millis() - referenceTime;
   time_s_float = psi.ms2s(time_ms);                                               // ms is transferred to second(float)
   myMem.put(address, time_s_float);
   address = psi.EEPROM_Check(address, EEPORM_length);
-  if (relative_altitude < 0.00005 && relative_altitude > -0.00005) relative_altitude = 11.111f;
+  if (relative_altitude < 0.00005 ) relative_altitude = 11.111f;
   myMem.put(address, relative_altitude * 1000);
   address = psi.EEPROM_Check(address, EEPORM_length);
 }

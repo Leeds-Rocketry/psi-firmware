@@ -23,13 +23,13 @@
 //---Editable Area---
 
 #define ignition_duration         2000                               //Time period for ematches to be ignited. In ms
-#define reading_rate              60                                 //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
+#define reading_rate              6                                 //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
 #define sample_size               15                                 //The number of data used to determine the apogee point. There are two continues samples together to determine the apogee.
 #define main_release_a            304.8f                             //The altitude for main parachute to be deployed. 800ft for SAC
 #define launch_threshold          15.0f                              // The threshold altitude when EEPROM starts storing data
 #define land_threshold            15.0f                              // The threshold altitude when EEPROM stop saving data
-#define land_timelimit            5.0f
-#define land_constant_threshold   1.0f
+#define land_det_time             5000                               //In ms
+#define land_det_margin           1.0f                                //In meters
 #define apogee_threshold          1.5f                               // apogee gradient threshold should be less than gradient_init
 
 
@@ -44,48 +44,46 @@ typedef struct strData {
 } Data;
 
 //---Declare general variables. Can be changed according to different flight condition.---
-bool enableEmatchCheck          = true;
-bool enableBatteryCheck         = true;
+bool enableEmatchCheck                = false;
+bool enableBatteryCheck               = false;
 
 //Variables used for sensor
-int32_t referencePressure       = 0;
-int32_t realPressure            = 0;
-float  absoluteAltitude         = 0.0f;
-float relative_altitude         = 0.0f;
+int32_t referencePressure              = 0;
+int32_t realPressure                   = 0;
+float  absoluteAltitude                = 0.0f;
+float relative_altitude                = 0.0f;
 
 //---Variables for timing&altitude data---
-unsigned long referenceTime     = 0;
-unsigned long time_ms           = 0;                              //Time in milisecond. Unsigned long has 4 bytes
-float time_s_float              = 0.0f;                           //Time in second.
+unsigned long referenceTime            = 0;
+unsigned long time_ms                  = 0;                              //Time in milisecond. Unsigned long has 4 bytes
+float time_s_float                     = 0.0f;                           //Time in second.
+float drogue_start_time                = 0.0f;                           //Time for Drogue e match starts to be ignited
+float main_start_time                  = 0.0f;                           //Time for Drogue e match starts to be ignited
 
-float drogue_start_time         = 0.0f;                           //Time for Drogue e match starts to be ignited
-float main_start_time           = 0.0f;                           //Time for Drogue e match starts to be ignited
-float land_timelimit_start      = 0.0f;
-float land_timelimit_stop       = 0.0f;
 //---Initialization---
-int MODE                         = 0;                              //Initialize flight mode to mode 0;
-uint16_t EEPORM_length           = 64000;                          //512k 24LC256 eeprom chip has 64k bytes
-uint16_t address                 = 0;                              //EEPROM starting address
-int shift_size                   = 0;
+int MODE                               = 0;                              //Initialize flight mode to mode 0;
+uint16_t EEPORM_length                 = 64000;                          //512k 24LC256 eeprom chip has 64k bytes
+uint16_t address                       = 0;                              //EEPROM starting address
+int shift_size                         = 0;
 //---Initialization for apogee detection algorithm---
-float sum_gradient               = 0.0f;                           //Sum of gradients in each sample
-uint16_t size_of_landSample      = 0;
-float land_max_altitude          = 0.0f;
-float land_min_altitude          = 0.0f;
+float sum_gradient                     = 0.0f;                           //Sum of gradients in each sample
+uint16_t size_of_landSample            = 0;
+float land_max_altitude                = 0.0f;
+float land_min_altitude                = 0.0f;
 
 //---Others---
-unsigned long beep_start         = 0;                                //The beep starting time in MODE 1, lanuch ready mode. Below lanuchThreshold altitude.
-Data time_altitude               = {0.0f, 0.0f};                     //The pair of time and altitude that is pushed to the queue(stack)
-float buffer_sum_gradient[2]     = {0.0f};                           //The buffer that contains up to 2 samples's gradients together determine the apogee point when all the gradients < 0
-Data read_time_altitude          = {0.0f, 0.0f};                     //Read data from the queue(stack) for apogee detection algorithm.
-Data forPop                      = {0.0f, 0.0f};                     //A place to take the number that is poped out.
+unsigned long beep_start               = 0;                                //The beep starting time in MODE 1, lanuch ready mode. Below lanuchThreshold altitude.
+Data time_altitude                     = {0.0f, 0.0f};                     //The pair of time and altitude that is pushed to the queue(stack)
+float buffer_sum_gradient[2]           = {0.0f};                           //The buffer that contains up to 2 samples's gradients together determine the apogee point when all the gradients < 0
+Data read_time_altitude                = {0.0f, 0.0f};                     //Read data from the queue(stack) for apogee detection algorithm.
+Data forPop                            = {0.0f, 0.0f};                     //A place to take the number that is poped out.
 
 void eepromStoreData();
 void eepromStoreMark();
 float getSampleGradient(float x[], float y[], int samplesize);
 
 cppQueue	OuterSample(sizeof(Data), sample_size + sample_size, IMPLEMENTATION);	// Instantiate queue
-cppQueue	landSample(sizeof(Data), round(land_timelimit / ((reading_rate + 10) / 1000)), IMPLEMENTATION);	// Instantiate queue
+cppQueue	landSample(sizeof(relative_altitude), 20, IMPLEMENTATION);	// Instantiate queue
 
 //---Create objects---
 MS5611 BMP;
@@ -195,28 +193,29 @@ void setup() {
 
   MODE                = 1;
   EEPORM_length       = myMem.length();
-  shift_size          = sample_size;                                      
+  shift_size          = sample_size;
   beep_start          = millis();
-  size_of_landSample  = round(land_timelimit / ((reading_rate + 10) / 1000));
-  
+  size_of_landSample  = landSample.sizeOf() / sizeof(relative_altitude);
+  Serial.print("size_of_landSample = "); Serial.println(size_of_landSample);
+
 }
 
 
 void loop() {
   if (MODE == 1) {
     myMem.get(address, time_s_float);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
-    myMem.get(address, relativeAltitude);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
-    if (millis() - beepStart >= 3000) {
-      psi.buzzer_powerOn(Buzzer_Set);                               //Keeps beeping indicating PSI's working status
-      beepStart = millis();
+    address = psi.EEPROM_Check(address, EEPORM_length);
+    myMem.get(address, relative_altitude);
+    address = psi.EEPROM_Check(address, EEPORM_length);
+    if (millis() - beep_start >= 3000) {
+      //psi.buzzer_powerOn(Buzzer_Set);                               //Keeps beeping indicating PSI's working status
+      beep_start = millis();
     }
     Serial.print(time_s_float);
     Serial.print(" s, ");
-    Serial.print(relativeAltitude);
+    Serial.print(relative_altitude);
     Serial.println(" m");
-    if (relativeAltitude > launch_threshold) {
+    if (relative_altitude > launch_threshold) {
       MODE++;
     }
     delay(reading_rate);
@@ -225,25 +224,25 @@ void loop() {
   if (MODE == 2 ) { //ACTIVE FLIGHT_TEST mode
     //Serial.println("It is now ascending.");
 
-    float readAltitude[sample_size] = {0.0f};
-    float readTime[sample_size] = {0.0f};
-    readTimeAltitude = {0.0f, 0.0f};
+    float read_altitude[sample_size] = {0.0f};
+    float read_time[sample_size] = {0.0f};
+    read_time_altitude = {0.0f, 0.0f};
     buffer_sum_gradient[0] = gradient_init;
     buffer_sum_gradient[1] = gradient_init;
     sum_gradient = 0.0f;
     myMem.get(address, time_s_float);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
-    myMem.get(address, relativeAltitude);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
-    Serial.print("Time -> "); Serial.print(time_s_float); Serial.print(", Altitude -> "); Serial.println(relativeAltitude);
+    address = psi.EEPROM_Check(address, EEPORM_length);
+    myMem.get(address, relative_altitude);
+    address = psi.EEPROM_Check(address, EEPORM_length);
+    Serial.print("Time -> "); Serial.print(time_s_float); Serial.print(", Altitude -> "); Serial.println(relative_altitude);
     /*
         Serial.print(time_s_float);
         Serial.print(" s, ");
-        Serial.print(relativeAltitude);
+        Serial.print(relative_altitude);
         Serial.println(" m");
     */
     time_altitude.time = time_s_float;
-    time_altitude.altitude = relativeAltitude;
+    time_altitude.altitude = relative_altitude;
 
     OuterSample.push(&time_altitude);
 
@@ -254,59 +253,59 @@ void loop() {
       Serial.println(" ");
 
       for (int i = 0; i < sample_size; i++) {
-        OuterSample.peekIdx(&readTimeAltitude, i);
-        readAltitude[i] = readTimeAltitude.altitude;
-        readTime[i] = readTimeAltitude.time;
+        OuterSample.peekIdx(&read_time_altitude, i);
+        read_altitude[i] = read_time_altitude.altitude;
+        read_time[i] = read_time_altitude.time;
         /*
           Serial.print(i);
           Serial.print(" th,  ");
           Serial.print("time ->");
-          Serial.print(readTimeAltitude.time);
+          Serial.print(read_time_altitude.time);
           Serial.print(", altitude ->  ");
-          Serial.println(readTimeAltitude.altitude);
+          Serial.println(read_time_altitude.altitude);
         */
       }
-      sum_gradient = getSampleGradient(readTime, readAltitude, sample_size);
+      sum_gradient = getSampleGradient(read_time, read_altitude, sample_size);
       Serial.print("1 sum_gradient = "); Serial.println(sum_gradient);
       /*Serial.print("For the first sample, the data are\n");
-      for (int i = 0; i < sample_size; i++) { //i == 0 -19
-        Serial.print(readTime[i]);Serial.println(", " );
-      }
-      for (int i = 0; i < sample_size; i++) { //
-        Serial.print(readAltitude[i]);Serial.println("," );
-      }*/
+        for (int i = 0; i < sample_size; i++) { //i == 0 -19
+        Serial.print(read_time[i]);Serial.println(", " );
+        }
+        for (int i = 0; i < sample_size; i++) { //
+        Serial.print(read_altitude[i]);Serial.println("," );
+        }*/
       buffer_sum_gradient[0] = sum_gradient;
       for (int i = sample_size; i < sample_size + sample_size; i++) {
-        OuterSample.peekIdx(&readTimeAltitude, i);
-        readAltitude[i - sample_size] = readTimeAltitude.altitude;
-        readTime[i - sample_size] = readTimeAltitude.time;
+        OuterSample.peekIdx(&read_time_altitude, i);
+        read_altitude[i - sample_size] = read_time_altitude.altitude;
+        read_time[i - sample_size] = read_time_altitude.time;
         /*
           Serial.print(i);
           Serial.print(" th,  ");
           Serial.print("time ->");
-          Serial.print(readTimeAltitude.time);
+          Serial.print(read_time_altitude.time);
           Serial.print(", altitude ->  ");
-          Serial.println(readTimeAltitude.altitude);
+          Serial.println(read_time_altitude.altitude);
         */
       }
-      sum_gradient = getSampleGradient(readTime, readAltitude, sample_size);
+      sum_gradient = getSampleGradient(read_time, read_altitude, sample_size);
       Serial.print("2 sum_gradient = "); Serial.println(sum_gradient);
       buffer_sum_gradient[1] = sum_gradient;
 
       /*Serial.print("For the second sample, the data are\n");
-      for (int i = 0; i < sample_size; i++) { //i == 0 -19
-        Serial.print(readTime[i]);Serial.println(", " );
-      }
-      for (int i = 0; i < sample_size; i++) { //i == 0 -19
-        Serial.print(readAltitude[i]);Serial.println(", " );
-      }*/
+        for (int i = 0; i < sample_size; i++) { //i == 0 -19
+        Serial.print(read_time[i]);Serial.println(", " );
+        }
+        for (int i = 0; i < sample_size; i++) { //i == 0 -19
+        Serial.print(read_altitude[i]);Serial.println(", " );
+        }*/
       OuterSample.pop(&forPop);
     }
 
     if (buffer_sum_gradient[0] < apogee_threshold && buffer_sum_gradient[1] < apogee_threshold) { //apogee detection method now
       digitalWrite(Drogue_Release, HIGH);
       Serial.println("Apogee detected.");
-      Serial.print("At address "); Serial.print(address / 8); Serial.print(" Time -> "); Serial.println(time_s_float); Serial.print(", Altitude -> "); Serial.println(relativeAltitude);
+      Serial.print("At address "); Serial.print(address / 8); Serial.print(" Time -> "); Serial.println(time_s_float); Serial.print(", Altitude -> "); Serial.println(relative_altitude);
 
       Serial.println(" Drogue released  ");     // For tesing. Can be deleted for real flight
       delay(ignition_duration);
@@ -320,53 +319,60 @@ void loop() {
   if (MODE == 3 ) { //ACTIVE FLIGHT_TEST mode
     Serial.println("It is now Descending.");
     myMem.get(address, time_s_float);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
-    myMem.get(address, relativeAltitude);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
+    address = psi.EEPROM_Check(address, EEPORM_length);
+    myMem.get(address, relative_altitude);
+    address = psi.EEPROM_Check(address, EEPORM_length);
 
     Serial.print(time_s_float);
     Serial.print(" s, ");
-    Serial.print(relativeAltitude);
+    Serial.print(relative_altitude);
     Serial.println(" m");
 
-    if (relativeAltitude < main_release_a) {
+    if (relative_altitude < main_release_a) {
       digitalWrite(Main_Release, HIGH);
       Serial.println("Main deployed");
       delay(ignition_duration);
       digitalWrite(Main_Release, LOW);
       MODE++; // Move to mode 3, flight descdending mode;
-      land_timelimit_start = time_ms;
     }
     delay(reading_rate);
   }
   if (MODE == 4 ) { //ACTIVE FLIGHT_TEST mode
     Serial.println("It is now Descending");
-float land_altitude[size_of_landSample] = {0.0f};
-if (address < EEPORM_storage - 5 && relativeAltitude >= land_threshold) {                                                           //Detection of landing and overlap in EEPROM
-    myMem.get(address, time_s_float);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
-    myMem.get(address, relativeAltitude);
-    address = psi.EEPROM_Check(address, EEPROM_storage);
-
-    Serial.print(time_s_float);
-    Serial.print(" s, ");
-    Serial.print(relativeAltitude);
-    Serial.println(" m");
+    float land_altitude = 0.0f;
+    //float updataed_altitude = 0;
+    if (address < EEPORM_length - 5 && relative_altitude >= land_threshold) {                                                           //Detection of landing and overlap in EEPROM
+      myMem.get(address, time_s_float);
+      address = psi.EEPROM_Check(address, EEPORM_length);
+      myMem.get(address, relative_altitude);
+      address = psi.EEPROM_Check(address, EEPORM_length);
+      Serial.print(time_s_float);
+      Serial.print(" s, ");
+      Serial.print(relative_altitude);
+      Serial.println(" m");
     } else MODE = 5;
-    land_timelimit_stop = time_ms;
-
-    if (land_timelimit_stop - land_timelimit_start > land_timelimit && landSample.isFull() == 1 ) {
+    Serial.print("Number of record stored "); Serial.println(landSample.getCount());
+    if ( landSample.isFull() == 1 ) {
+      Serial.println("Detecting constant altitude going on");
+      landSample.peekIdx(&land_min_altitude, 0);
       for (int i = 0; i < size_of_landSample ; i++) {
         landSample.peekIdx(&land_altitude, i);
-        land_max_altitude = max(land_altitude[i], land_max_altitude);
-        land_min_altitude = min(land_altitude[i], land_min_altitude);
+        Serial.print("at i = "); Serial.print(i);Serial.print(", altitude = "); Serial.println(land_altitude);
+        land_max_altitude = max(land_altitude, land_max_altitude);
+        land_min_altitude = min(land_altitude, land_min_altitude);
       }
-      if (land_max_altitude - land_min_altitude <= land_constant_threshold) {
+      Serial.print("max is "); Serial.println(land_max_altitude);
+      Serial.print("min is "); Serial.println(land_min_altitude);
+      if (land_max_altitude - land_min_altitude <= land_det_margin) {
         MODE = 5;
+        Serial.println("Landing detected");
       }
-      land_timelimit_start = land_timelimit_stop;
+      landSample.pop(&forPop);
+      land_max_altitude = 0;
     }
     landSample.push(&relative_altitude);
+    //landSample.peekPrevious(&updataed_altitude);
+    //Serial.print("the Updated element is "); Serial.print(updataed_altitude);Serial.print("and ");Serial.println(relative_altitude);
     delay(reading_rate);
   }
   if (MODE == 5) {// When EEPORM full, freeze it here.

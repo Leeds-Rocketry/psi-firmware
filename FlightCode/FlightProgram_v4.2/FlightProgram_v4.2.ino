@@ -44,7 +44,7 @@
 /*===============================================
   Update 13/5/2022
   Update on FlightProgram:
-  1. Add one more landing condition. When a set of altitude in a duration of land_timelimit has less variation within land_constant_threshold, it is considered as constant and the rocket has landed.
+  1. Add one more landing condition. When a set of altitude in a duration of land_det_time has less variation within land_det_margin, it is considered as constant and the rocket has landed.
   ==============================================*/
 
 #include <Arduino.h>
@@ -73,10 +73,10 @@
 #define reading_rate              60                                 //The time delayed for each iteration. 100 gives about 10 Hz reading rate from the Drone test 
 #define sample_size               15                                 //The number of data used to determine the apogee point. There are two continues samples together to determine the apogee.
 #define main_release_a            304.8f                             //The altitude for main parachute to be deployed. 800ft for SAC
-#define launch_threshold          15.0f                              // The threshold altitude when EEPROM starts storing data
-#define land_threshold            15.0f                              // The threshold altitude when EEPROM stop saving data
-#define land_timelimit            5.0f
-#define land_constant_threshold   1.0f
+#define launch_threshold          0.0f                              // The threshold altitude when EEPROM starts storing data
+#define land_threshold            -15.0f                              // The threshold altitude when EEPROM stop saving data
+#define land_det_time             5000                               //In ms
+#define land_det_margin           1.0f                                //In meters
 #define apogee_threshold          1.5f                               // apogee gradient threshold should be less than gradient_init
 
 
@@ -91,48 +91,45 @@ typedef struct strData {
 } Data;
 
 //---Declare general variables. Can be changed according to different flight condition.---
-bool enableEmatchCheck          = true;
-bool enableBatteryCheck         = true;
+bool enableEmatchCheck                = false;
+bool enableBatteryCheck               = false;
 
 //Variables used for sensor
-int32_t referencePressure       = 0;
-int32_t realPressure            = 0;
-float  absoluteAltitude         = 0.0f;
-float relative_altitude         = 0.0f;
+int32_t referencePressure              = 0;
+int32_t realPressure                   = 0;
+float  absoluteAltitude                = 0.0f;
+float relative_altitude                = 0.0f;
 
 //---Variables for timing&altitude data---
-unsigned long referenceTime     = 0;
-unsigned long time_ms           = 0;                              //Time in milisecond. Unsigned long has 4 bytes
-float time_s_float              = 0.0f;                           //Time in second.
-
-float drogue_start_time         = 0.0f;                           //Time for Drogue e match starts to be ignited
-float main_start_time           = 0.0f;                           //Time for Drogue e match starts to be ignited
-float land_timelimit_start      = 0.0f;
-float land_timelimit_stop       = 0.0f;
+unsigned long referenceTime            = 0;
+unsigned long time_ms                  = 0;                              //Time in milisecond. Unsigned long has 4 bytes
+float time_s_float                     = 0.0f;                           //Time in second.
+float drogue_start_time                = 0.0f;                           //Time for Drogue e match starts to be ignited
+float main_start_time                  = 0.0f;                           //Time for Drogue e match starts to be ignited
 //---Initialization---
-int MODE                         = 0;                              //Initialize flight mode to mode 0;
-uint16_t EEPORM_length           = 64000;                          //512k 24LC256 eeprom chip has 64k bytes
-uint16_t address                 = 0;                              //EEPROM starting address
-int shift_size                   = 0;
+int MODE                               = 0;                              //Initialize flight mode to mode 0;
+uint16_t EEPORM_length                 = 64000;                          //512k 24LC256 eeprom chip has 64k bytes
+uint16_t address                       = 0;                              //EEPROM starting address
+int shift_size                         = 0;
 //---Initialization for apogee detection algorithm---
-float sum_gradient               = 0.0f;                           //Sum of gradients in each sample
-uint16_t size_of_landSample      = 0;
-float land_max_altitude          = 0.0f;
-float land_min_altitude          = 0.0f;
+float sum_gradient                     = 0.0f;                           //Sum of gradients in each sample
+uint16_t size_of_landSample            = 0;
+float land_max_altitude                = 0.0f;
+float land_min_altitude                = 0.0f;
 
 //---Others---
-unsigned long beep_start         = 0;                                //The beep starting time in MODE 1, lanuch ready mode. Below lanuchThreshold altitude.
-Data time_altitude               = {0.0f, 0.0f};                     //The pair of time and altitude that is pushed to the queue(stack)
-float buffer_sum_gradient[2]     = {0.0f};                           //The buffer that contains up to 2 samples's gradients together determine the apogee point when all the gradients < 0
-Data read_time_altitude          = {0.0f, 0.0f};                     //Read data from the queue(stack) for apogee detection algorithm.
-Data forPop                      = {0.0f, 0.0f};                     //A place to take the number that is poped out.
+unsigned long beep_start               = 0;                                //The beep starting time in MODE 1, lanuch ready mode. Below lanuchThreshold altitude.
+Data time_altitude                     = {0.0f, 0.0f};                     //The pair of time and altitude that is pushed to the queue(stack)
+float buffer_sum_gradient[2]           = {0.0f};                           //The buffer that contains up to 2 samples's gradients together determine the apogee point when all the gradients < 0
+Data read_time_altitude                = {0.0f, 0.0f};                     //Read data from the queue(stack) for apogee detection algorithm.
+Data forPop                            = {0.0f, 0.0f};                     //A place to take the number that is poped out.
 
 void eepromStoreData();
 void eepromStoreMark();
 float getSampleGradient(float x[], float y[], int samplesize);
 
 cppQueue	OuterSample(sizeof(Data), sample_size + sample_size, IMPLEMENTATION);	// Instantiate queue
-cppQueue	landSample(sizeof(Data), round(land_timelimit / ((reading_rate + 10) / 1000)), IMPLEMENTATION);	// Instantiate queue
+cppQueue	landSample(sizeof(relative_altitude), round(land_det_time / (reading_rate + 10)), IMPLEMENTATION);	// Instantiate queue
 
 //---Create objects---
 MS5611 BMP;
@@ -201,7 +198,7 @@ void setup() {
   EEPORM_length       = myMem.length();
   shift_size          = sample_size;                                      //No shared data between two data.
   beep_start          = millis();
-  size_of_landSample  = round(land_timelimit / ((reading_rate + 10) / 1000));
+  size_of_landSample  = round(land_det_time / (reading_rate + 10));
 
 }
 
@@ -310,7 +307,7 @@ void loop() {
       }
       digitalWrite(Main_Release, LOW);
       MODE++;
-      land_timelimit_start = time_ms;
+  
     }
 
     delay(reading_rate);
@@ -323,18 +320,19 @@ void loop() {
     if (address < EEPORM_length - 5 && relative_altitude >= land_threshold) {                                                           //Detection of landing and overlap in EEPROM
       eepromStoreData();
     } else MODE = 5;
-    land_timelimit_stop = time_ms;
 
-    if (land_timelimit_stop - land_timelimit_start > land_timelimit && landSample.isFull() == 1 ) {
+    if ( landSample.isFull() == 1 ) {
+      landSample.peekIdx(&land_min_altitude, 0);
       for (int i = 0; i < size_of_landSample ; i++) {
         landSample.peekIdx(&land_altitude, i);
         land_max_altitude = max(land_altitude[i], land_max_altitude);
         land_min_altitude = min(land_altitude[i], land_min_altitude);
       }
-      if (land_max_altitude - land_min_altitude <= land_constant_threshold) {
+      if (land_max_altitude - land_min_altitude <= land_det_margin) {
         MODE = 5;
       }
-      land_timelimit_start = land_timelimit_stop;
+      landSample.pop(&forPop);
+      land_max_altitude = 0;
     }
     landSample.push(&relative_altitude);
     delay(reading_rate);
